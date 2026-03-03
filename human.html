@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>人力资源-贵州龙国宴酒业有限公司</title>
+    <meta name="description" content="龙国宴酒业人才招募，加入我们共创品牌未来" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@300;400;500;600;700&family=Cinzel:wght@400;600;700&display=swap"
+        rel="stylesheet" />
+    <style>
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
+            margin: 60px 0;
+        }
+
+        .value-item {
+            text-align: center;
+            padding: 32px 20px;
+        }
+
+        .value-icon {
+            font-size: 44px;
+            margin-bottom: 16px;
+        }
+
+        .value-name {
+            font-size: 18px;
+            color: var(--dark);
+            letter-spacing: 3px;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .value-text {
+            font-size: 13px;
+            color: var(--text-light);
+            letter-spacing: 1px;
+            line-height: 1.7;
+        }
+
+        .job-list {
+            display: flex;
+            flex-direction: column;
+            gap: 0;
+            margin-top: 40px;
+        }
+
+        .job-item {
+            background: var(--white);
+            border: 1px solid var(--border);
+            border-bottom: none;
+            padding: 32px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+            cursor: pointer;
+            transition: all .3s;
+        }
+
+        .job-item:last-child {
+            border-bottom: 1px solid var(--border);
+        }
+
+        .job-item:hover {
+            background: var(--bg-light);
+            border-color: var(--gold);
+            padding-left: 40px;
+        }
+
+        .job-title {
+            font-size: 18px;
+            color: var(--dark);
+            letter-spacing: 2px;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .job-meta {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .job-tag {
+            font-size: 12px;
+            color: var(--text-light);
+            letter-spacing: 1px;
+            background: var(--bg-light);
+            padding: 4px 12px;
+            border: 1px solid var(--border);
+        }
+
+        .job-arrow {
+            color: var(--gold);
+            font-size: 24px;
+            flex-shrink: 0;
+        }
+
+        @media(max-width:900px) {
+            .values-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media(max-width:600px) {
+            .values-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .job-item {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header id="header">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <div class="logo-icon">🐉</div>
+                <div class="logo-text">
+                    <span class="logo-cn">龙国宴</span>
+                    <span class="logo-en">Long Guo Yan · Premium Baijiu</span>
+                </div>
+            </a>
+            <nav>
+                <a href="index.html">首页</a>
+                <a href="about.html">走进龙国宴</a>
+                <a href="product.html">产品中心</a>
+                <a href="news.html">新闻资讯</a>
+                <a href="cooperation.html">招商中心</a>
+                <a href="human.html" class="active">人力资源</a>
+                <a href="contact.html">联系我们</a>
+            </nav>
+            <div class="header-phone">📞 400-159-1958</div>
+        </div>
+    </header>
+
+    <div class="page-banner">
+        <div class="container page-banner-content">
+            <div class="breadcrumb">
+                <a href="index.html">首页</a><span class="breadcrumb-sep">›</span><span>人力资源</span>
+            </div>
+            <h1>人力资源</h1>
+            <div
+                style="font-family:'Cinzel',serif;font-size:13px;color:var(--gold);letter-spacing:4px;margin-top:12px;">
+                HUMAN RESOURCES</div>
+            <div class="page-banner-line"></div>
+        </div>
+    </div>
+
+    <section style="padding:80px 0 120px">
+        <div class="container">
+
+            <!-- Philosophy -->
+            <div style="display:grid;grid-template-columns:1.2fr 1fr;gap:80px;align-items:center;margin-bottom:100px;"
+                class="fade-in">
+                <div>
+                    <div class="section-en">Our Philosophy</div>
+                    <h2 class="section-title" style="text-align:left;font-size:36px;margin-top:8px;">人才理念</h2>
+                    <div style="width:60px;height:3px;background:var(--gold);margin:20px 0 28px;"></div>
+                    <p
+                        style="font-size:15px;color:var(--text-mid);line-height:1.9;letter-spacing:1px;margin-bottom:20px;">
+                        龙国宴酒业深信，人才是企业最宝贵的财富。我们致力于打造一个开放、包容、充满活力的工作环境，让每一位员工都能在这里实现个人价值与职业梦想。
+                    </p>
+                    <p style="font-size:15px;color:var(--text-mid);line-height:1.9;letter-spacing:1px;">
+                        我们坚持"以人为本"的管理理念，提倡平等合作、相互尊重。无论您来自哪个领域，只要您充满热情、志向远大，龙国宴都将是您展示才华、成就事业的最佳平台。
+                    </p>
+                </div>
+                <div
+                    style="background:linear-gradient(135deg,var(--dark),var(--dark2));border:1px solid var(--border);padding:48px;text-align:center;">
+                    <div style="font-size:80px;margin-bottom:24px;">🌟</div>
+                    <p style="font-size:18px;color:var(--gold);letter-spacing:4px;font-weight:600;margin-bottom:16px;">
+                        以人为本</p>
+                    <p style="font-size:13px;color:rgba(255,255,255,.5);letter-spacing:2px;line-height:1.8;">共创·共享·共赢
+                    </p>
+                </div>
+            </div>
+
+            <!-- Values -->
+            <div class="section-head fade-in">
+                <div class="section-en">Core Values</div>
+                <h2 class="section-title">员工福利</h2>
+                <div class="section-line"><span>◆</span></div>
+            </div>
+
+            <div class="values-grid">
+                <div class="value-item fade-in" style="background:var(--white);border:1px solid var(--border);">
+                    <div class="value-icon">💰</div>
+                    <div class="value-name">具竞争力薪酬</div>
+                    <div class="value-text">提供行业具竞争力的薪资待遇，年度绩效奖金，让您的付出获得充分回报</div>
+                </div>
+                <div class="value-item fade-in" style="background:var(--white);border:1px solid var(--border);">
+                    <div class="value-icon">📈</div>
+                    <div class="value-name">晋升通道</div>
+                    <div class="value-text">完善的职业晋升体系，为不同阶段的员工提供清晰的成长路径</div>
+                </div>
+                <div class="value-item fade-in" style="background:var(--white);border:1px solid var(--border);">
+                    <div class="value-icon">🎓</div>
+                    <div class="value-name">培训成长</div>
+                    <div class="value-text">定期内外部培训，行业大咖授课，为员工持续赋能，助力专业发展</div>
+                </div>
+                <div class="value-item fade-in" style="background:var(--white);border:1px solid var(--border);">
+                    <div class="value-icon">🏠</div>
+                    <div class="value-name">员工关怀</div>
+                    <div class="value-text">完善的五险一金，节假日福利，员工活动，让您在工作之余感受家的温暖</div>
+                </div>
+            </div>
+
+            <!-- Jobs -->
+            <div style="margin-top:80px">
+                <div class="section-head fade-in">
+                    <div class="section-en">Open Positions</div>
+                    <h2 class="section-title">招聘职位</h2>
+                    <div class="section-line"><span>◆</span></div>
+                </div>
+
+                <div class="job-list">
+                    <div class="job-item fade-in">
+                        <div>
+                            <div class="job-title">大区销售经理</div>
+                            <div class="job-meta">
+                                <span class="job-tag">全国各省</span>
+                                <span class="job-tag">全职</span>
+                                <span class="job-tag">5-10年经验</span>
+                            </div>
+                        </div>
+                        <div class="job-arrow">›</div>
+                    </div>
+                    <div class="job-item fade-in">
+                        <div>
+                            <div class="job-title">品牌推广专员</div>
+                            <div class="job-meta">
+                                <span class="job-tag">贵州·遵义</span>
+                                <span class="job-tag">全职</span>
+                                <span class="job-tag">3-5年经验</span>
+                            </div>
+                        </div>
+                        <div class="job-arrow">›</div>
+                    </div>
+                    <div class="job-item fade-in">
+                        <div>
+                            <div class="job-title">电商运营主管</div>
+                            <div class="job-meta">
+                                <span class="job-tag">贵州·遵义</span>
+                                <span class="job-tag">全职</span>
+                                <span class="job-tag">3年以上经验</span>
+                            </div>
+                        </div>
+                        <div class="job-arrow">›</div>
+                    </div>
+                    <div class="job-item fade-in">
+                        <div>
+                            <div class="job-title">国际贸易专员</div>
+                            <div class="job-meta">
+                                <span class="job-tag">贵州·遵义</span>
+                                <span class="job-tag">全职</span>
+                                <span class="job-tag">英语流利</span>
+                            </div>
+                        </div>
+                        <div class="job-arrow">›</div>
+                    </div>
+                    <div class="job-item fade-in">
+                        <div>
+                            <div class="job-title">品控检验员</div>
+                            <div class="job-meta">
+                                <span class="job-tag">茅台镇基地</span>
+                                <span class="job-tag">全职</span>
+                                <span class="job-tag">食品专业优先</span>
+                            </div>
+                        </div>
+                        <div class="job-arrow">›</div>
+                    </div>
+                </div>
+
+                <div style="text-align:center;margin-top:48px" class="fade-in">
+                    <p style="font-size:14px;color:var(--text-light);letter-spacing:2px;margin-bottom:24px;">
+                        简历投递邮箱：hr@longguoyan.com &nbsp;｜&nbsp; 招聘热线：400-159-1958</p>
+                    <a href="contact.html" class="btn-primary">立即投递简历</a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <span class="logo-cn">龙国宴</span>
+                    <span class="logo-en">Long Guo Yan Premium Baijiu</span>
+                    <p class="footer-brand-text">贵州龙国宴酒业有限公司，传承百年古法酿造工艺。</p>
+                    <div class="footer-address">📍 贵州省遵义市仁怀市茅台镇椿树村<br />📞 400-159-1958</div>
+                </div>
+                <div class="footer-col">
+                    <h4>走进龙国宴</h4>
+                    <ul>
+                        <li><a href="about.html">公司简介</a></li>
+                        <li><a href="about.html">品牌荣誉</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>产品中心</h4>
+                    <ul>
+                        <li><a href="product.html">酱香酒系列</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>新闻资讯</h4>
+                    <ul>
+                        <li><a href="news.html">公司新闻</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>更多</h4>
+                    <ul>
+                        <li><a href="cooperation.html">全国招商</a></li>
+                        <li><a href="human.html">人才招聘</a></li>
+                        <li><a href="contact.html">联系我们</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-copyright">Copyright © 龙国宴酒业 ALL Rights Reserved ｜ 黔ICP备19010301号-1</div>
+                <div class="footer-links"><a href="contact.html">免责申明</a></div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const header = document.getElementById('header');
+        window.addEventListener('scroll', () => { header.classList.toggle('scrolled', window.scrollY > 60); });
+        const observer = new IntersectionObserver((entries) => { entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); }); }, { threshold: 0.12 });
+        document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+    </script>
+</body>
+
+</html>
