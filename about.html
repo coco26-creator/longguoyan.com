@@ -1,293 +1,210 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>About Us – Guizhou Long Guo Yan Baijiu Co., Ltd.</title>
-    <meta name="description"
-        content="Long Guo Yan Baijiu, a renowned sauce-aroma baijiu brand from Maotai Town, Guizhou – a century of heritage and exceptional quality." />
-    <link rel="stylesheet" href="style.css" />
-    <link
-        href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@300;400;500;600;700&family=Cinzel:wght@400;600;700&display=swap"
-        rel="stylesheet" />
-    <style>
-        .honor-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 24px;
-            margin-top: 60px;
-        }
-
-        .honor-card {
-            background: var(--white);
-            border: 1px solid var(--border);
-            padding: 32px 24px;
-            text-align: center;
-            transition: all 0.3s ease;
-        }
-
-        .honor-card:hover {
-            transform: translateY(-6px);
-            box-shadow: 0 12px 40px rgba(139, 0, 0, 0.1);
-            border-color: var(--gold);
-        }
-
-        .honor-icon {
-            font-size: 48px;
-            margin-bottom: 16px;
-        }
-
-        .honor-name {
-            font-size: 15px;
-            color: var(--dark);
-            letter-spacing: 2px;
-            font-weight: 600;
-            margin-bottom: 8px;
-        }
-
-        .honor-year {
-            font-size: 12px;
-            color: var(--gold);
-            letter-spacing: 2px;
-            font-family: 'Cinzel', serif;
-        }
-
-        @media (max-width: 900px) {
-            .honor-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
-
-        @media (max-width: 600px) {
-            .honor-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us – Longguo Banquet | 龙国宴 Premium Baijiu, Maotai Town</title>
+  <meta name="description" content="Learn about Guizhou Longguo Banquet Baijiu Co., Ltd. — established 1958 in Maotai Town, Guizhou. Century-old brewing heritage, triple-high process, 5-year cellar ageing." />
+  <link rel="canonical" href="https://www.longguoyan.com/about.html" />
+  <meta property="og:title" content="About Longguo Banquet – Heritage Jiangxiang Baijiu" />
+  <meta property="og:description" content="A century of heritage and exceptional sauce-aroma quality from Maotai Town, Guizhou." />
+  <meta property="og:url" content="https://www.longguoyan.com/about.html" />
+  <meta property="og:image" content="https://www.longguoyan.com/images/og_cover.jpg" />
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@300;400;500;600;700&family=Cinzel:wght@400;600;700&display=swap" rel="stylesheet" />
 </head>
-
 <body>
 
-    <header id="header">
-        <div class="container">
-            <a href="index.html" class="logo">
-                <div class="logo-icon">🐉</div>
-                <div class="logo-text">
-                    <span class="logo-cn">Long Guo Yan</span>
-                    <span class="logo-en">Long Guo Yan · Premium Baijiu</span>
-                </div>
-            </a>
-            <nav>
-                <a href="index.html">Home</a>
-                <a href="about.html" class="active">About Us</a>
-                <a href="product.html">Products</a>
-                <a href="news.html">News</a>
-                <a href="cooperation.html">Partnerships</a>
-                <a href="human.html">Careers</a>
-                <a href="contact.html">Contact</a>
-            </nav>
-            <div class="header-phone">📞 400-159-1958</div>
+  <header id="header" role="banner">
+    <div class="container">
+      <a href="index.html" class="logo" aria-label="Longguo Banquet — Home">
+        <div class="logo-icon" aria-hidden="true">🐉</div>
+        <div class="logo-text">
+          <span class="logo-cn" lang="zh">龙国宴</span>
+          <span class="logo-en">Longguo Banquet · Premium Baijiu</span>
         </div>
-    </header>
-
-    <div class="page-banner">
-        <div class="container page-banner-content">
-            <div class="breadcrumb">
-                <a href="index.html">Home</a>
-                <span class="breadcrumb-sep">›</span>
-                <span>About Us</span>
-            </div>
-            <h1>About Us</h1>
-            <div
-                style="font-family:'Cinzel',serif;font-size:13px;color:var(--gold);letter-spacing:4px;margin-top:12px;">
-                ABOUT US</div>
-            <div class="page-banner-line"></div>
-        </div>
+      </a>
+      <nav id="desktop-nav" role="navigation" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="about.html" class="active" aria-current="page">About Us</a>
+        <a href="product.html">Products</a>
+        <a href="news.html">News</a>
+        <a href="cooperation.html">Partnerships</a>
+        <a href="human.html">Careers</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <div class="header-phone">📞 400-159-1958</div>
+      <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobile-nav">
+        <span></span><span></span><span></span>
+      </button>
     </div>
+  </header>
 
+  <nav id="mobile-nav" class="mobile-nav" aria-label="Mobile navigation">
+    <a href="index.html">Home</a>
+    <a href="about.html" class="active">About Us</a>
+    <a href="product.html">Products</a>
+    <a href="news.html">News</a>
+    <a href="cooperation.html">Partnerships</a>
+    <a href="human.html">Careers</a>
+    <a href="contact.html">Contact</a>
+    <div style="margin-top:16px;padding-top:16px;border-top:1px solid rgba(201,162,39,0.2);color:var(--gold);font-family:'Cinzel',serif;font-size:13px;letter-spacing:2px;">📞 400-159-1958</div>
+  </nav>
+
+  <div class="page-banner">
+    <div class="container page-banner-content">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="index.html">Home</a>
+        <span class="breadcrumb-sep" aria-hidden="true">›</span>
+        <span aria-current="page">About Us</span>
+      </nav>
+      <h1>About Us</h1>
+      <div style="font-family:'Cinzel',serif;font-size:13px;color:var(--gold);letter-spacing:4px;margin-top:12px;" aria-hidden="true">ABOUT US</div>
+      <div class="page-banner-line"></div>
+    </div>
+  </div>
+
+  <main>
     <section class="about-page">
-        <div class="container">
+      <div class="container">
 
-            <!-- Company Intro -->
-            <div class="about-page-grid fade-in">
-                <div>
-                    <img class="about-page-img" src="images/about_brewery.png" alt="Long Guo Yan Brewery" />
-                </div>
-                <div class="about-page-content">
-                    <h2>Company Profile</h2>
-                    <p>Guizhou Long Guo Yan Baijiu Co., Ltd. is located in Maotai Town, Renhuai City, Guizhou Province —
-                        the heartland of China's finest sauce-aroma baijiu. Situated along the banks of the Chishui
-                        River, the distillery benefits from an exceptional natural environment and century-old
-                        traditional brewing techniques to craft a uniquely distinctive sauce-aroma spirit.</p>
-                    <p>The company was rebuilt upon the foundation of an ancient traditional distillery and established
-                        as a public-private enterprise. Shaped through generations of master craftsmen, it has grown
-                        into a celebrated Guizhou heritage brand.</p>
-                    <p><strong style="color:var(--primary)">1998–2016:</strong> Long Guo Yan Distillery, Maotai Town,
-                        Renhuai, Guizhou</p>
-                    <p><strong style="color:var(--primary)">2016–Present:</strong> Guizhou Long Guo Yan Baijiu Co., Ltd.
-                        — full brand upgrade, expanding into international markets with sauce-aroma culture.</p>
-                    <p>We hold firm to our core philosophy: "Inherit ancient techniques, brew with mastery, quality
-                        above all." Using Maotai Town's unique microbiological environment and pure Chishui River water,
-                        we strictly follow the "triple high" process — high-temperature starter preparation,
-                        high-temperature accumulation fermentation, and high-temperature distillation — through 7 rounds
-                        of spirit extraction and a minimum of 5 years of cellar ageing, before a bottle of Long Guo Yan
-                        is complete.
-                    </p>
-                </div>
-            </div>
-
-            <!-- Brand Honours -->
-            <div style="margin-top:120px">
-                <div class="section-head fade-in">
-                    <div class="section-en">Brand Honours</div>
-                    <h2 class="section-title">Awards &amp; Recognition</h2>
-                    <div class="section-line"><span>◆</span></div>
-                </div>
-
-                <div class="honor-grid">
-                    <div class="honor-card fade-in">
-                        <div class="honor-icon">🥇</div>
-                        <div class="honor-name">ISGC International Spirits Gold Award</div>
-                        <div class="honor-year">2024</div>
-                    </div>
-                    <div class="honor-card fade-in">
-                        <div class="honor-icon">🏆</div>
-                        <div class="honor-name">Official Baijiu of the China Brand Leaders Summit</div>
-                        <div class="honor-year">2024</div>
-                    </div>
-                    <div class="honor-card fade-in">
-                        <div class="honor-icon">🎖️</div>
-                        <div class="honor-name">Guizhou Time-Honored Heritage Brand</div>
-                        <div class="honor-year">Certified Brand</div>
-                    </div>
-                    <div class="honor-card fade-in">
-                        <div class="honor-icon">⭐</div>
-                        <div class="honor-name">Sauce-Aroma Industry Forum Outstanding Brand</div>
-                        <div class="honor-year">2025</div>
-                    </div>
-                    <div class="honor-card fade-in">
-                        <div class="honor-icon">🌏</div>
-                        <div class="honor-name">Malaysia International Food Expo Premium Brand</div>
-                        <div class="honor-year">2025</div>
-                    </div>
-                    <div class="honor-card fade-in">
-                        <div class="honor-icon">🍶</div>
-                        <div class="honor-name">Japan International Food Expo Special Honor</div>
-                        <div class="honor-year">2025</div>
-                    </div>
-                    <div class="honor-card fade-in">
-                        <div class="honor-icon">🎗️</div>
-                        <div class="honor-name">Hengqin–Macau International Arts Expo Honor</div>
-                        <div class="honor-year">2025</div>
-                    </div>
-                    <div class="honor-card fade-in">
-                        <div class="honor-icon">💎</div>
-                        <div class="honor-name">China High-Quality Development Summit Recommended Brand</div>
-                        <div class="honor-year">2025</div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Brewing Process -->
-            <div style="margin-top:120px">
-                <div class="section-head fade-in">
-                    <div class="section-en">Brewing Craft</div>
-                    <h2 class="section-title">Our Brewing Process</h2>
-                    <div class="section-line"><span>◆</span></div>
-                </div>
-
-                <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:32px;margin-top:40px;">
-                    <div class="fade-in"
-                        style="background:var(--white);border:1px solid var(--border);padding:40px 28px;text-align:center;">
-                        <div style="font-size:48px;margin-bottom:20px;">🌾</div>
-                        <h3 style="font-size:18px;color:var(--dark);letter-spacing:3px;margin-bottom:16px;">Finest
-                            Ingredients</h3>
-                        <p style="font-size:14px;color:var(--text-light);line-height:1.8;letter-spacing:1px;">
-                            We strictly select premium locally-grown glutinous red sorghum from Guizhou, with plump
-                            grains and an amylopectin content of over 98%, laying the structural foundation for our
-                            sauce-aroma spirit.</p>
-                    </div>
-                    <div class="fade-in"
-                        style="background:var(--white);border:1px solid var(--border);padding:40px 28px;text-align:center;">
-                        <div style="font-size:48px;margin-bottom:20px;">🔥</div>
-                        <h3 style="font-size:18px;color:var(--dark);letter-spacing:3px;margin-bottom:16px;">Triple-High
-                            Process</h3>
-                        <p style="font-size:14px;color:var(--text-light);line-height:1.8;letter-spacing:1px;">
-                            We adhere to the triple-high technique — high-temperature starter preparation,
-                            high-temperature accumulation fermentation, and high-temperature distillation — creating the
-                            complex and distinctive aroma profile of our sauce-aroma baijiu.</p>
-                    </div>
-                    <div class="fade-in"
-                        style="background:var(--white);border:1px solid var(--border);padding:40px 28px;text-align:center;">
-                        <div style="font-size:48px;margin-bottom:20px;">🏺</div>
-                        <h3 style="font-size:18px;color:var(--dark);letter-spacing:3px;margin-bottom:16px;">Five-Year
-                            Ageing</h3>
-                        <p style="font-size:14px;color:var(--text-light);line-height:1.8;letter-spacing:1px;">
-                            Through 7 rounds of spirit extraction and a minimum of 5 years of cellar ageing, the spirit
-                            fully esterifies, resulting in a richer, smoother taste and a more enduring, lingering
-                            aroma.</p>
-                    </div>
-                </div>
-            </div>
-
+        <!-- Company Intro -->
+        <div class="about-page-grid fade-in">
+          <div>
+            <img class="about-page-img" src="images/about_brewery.png"
+                 alt="Longguo Banquet Distillery in Maotai Town, Guizhou" data-fallback="🏭"
+                 onerror="this.style.display='none';this.parentElement.innerHTML='<div class=\'about-img-placeholder\'><div class=\'placeholder-icon\'>🏭</div><div class=\'placeholder-text\'>Distillery · Maotai Town</div></div>';" />
+          </div>
+          <div class="about-page-content">
+            <h2>Company Profile</h2>
+            <p>Guizhou Longguo Banquet Baijiu Co., Ltd. is located in Maotai Town, Renhuai City, Guizhou Province —
+               the heartland of China's finest sauce-aroma Jiangxiang baijiu. Situated along the banks of the Chishui
+               River, the distillery benefits from an exceptional natural environment and century-old traditional
+               brewing techniques to craft a uniquely distinctive sauce-aroma spirit.</p>
+            <p>The company was rebuilt upon the foundation of an ancient traditional distillery and established as a
+               public-private enterprise. Shaped through generations of master craftsmen, it has grown into a
+               celebrated Guizhou heritage brand.</p>
+            <p><strong style="color:var(--primary)">1958–1998:</strong> Founded as a traditional public-private distillery in Maotai Town</p>
+            <p><strong style="color:var(--primary)">1998–2016:</strong> Longguo Banquet Distillery, Maotai Town, Renhuai, Guizhou</p>
+            <p><strong style="color:var(--primary)">2016–Present:</strong> Guizhou Longguo Banquet Baijiu Co., Ltd. — full brand upgrade, expanding into international markets with Jiangxiang culture.</p>
+            <p>We hold firm to our core philosophy: <em>"Inherit ancient techniques, brew with mastery, quality above all."</em> Using Maotai Town's unique microbiological environment and pure Chishui River water, we strictly follow the "triple high" process — high-temperature starter preparation, high-temperature accumulation fermentation, and high-temperature distillation — through 7 rounds of spirit extraction and a minimum of 5 years of cellar ageing.</p>
+          </div>
         </div>
+
+        <!-- Brand Honours -->
+        <div style="margin-top:120px">
+          <div class="section-head fade-in">
+            <div class="section-en">Brand Honours</div>
+            <h2 class="section-title">Awards &amp; Recognition</h2>
+            <div class="section-line"><span>◆</span></div>
+          </div>
+
+          <div class="honor-grid">
+            <div class="honor-card fade-in">
+              <div class="honor-icon" aria-hidden="true">🥇</div>
+              <div class="honor-name">ISGC International Spirits Gold Award</div>
+              <div class="honor-year">2024</div>
+            </div>
+            <div class="honor-card fade-in">
+              <div class="honor-icon" aria-hidden="true">🏆</div>
+              <div class="honor-name">Official Baijiu of the China Brand Leaders Summit</div>
+              <div class="honor-year">2024</div>
+            </div>
+            <div class="honor-card fade-in">
+              <div class="honor-icon" aria-hidden="true">🎖️</div>
+              <div class="honor-name">Guizhou Time-Honored Heritage Brand</div>
+              <div class="honor-year">Certified</div>
+            </div>
+            <div class="honor-card fade-in">
+              <div class="honor-icon" aria-hidden="true">⭐</div>
+              <div class="honor-name">Sauce-Aroma Industry Forum Outstanding Brand</div>
+              <div class="honor-year">2025</div>
+            </div>
+            <div class="honor-card fade-in">
+              <div class="honor-icon" aria-hidden="true">🌏</div>
+              <div class="honor-name">Malaysia International Food Expo Premium Brand</div>
+              <div class="honor-year">2025</div>
+            </div>
+            <div class="honor-card fade-in">
+              <div class="honor-icon" aria-hidden="true">🍶</div>
+              <div class="honor-name">Japan International Food Expo Special Honor</div>
+              <div class="honor-year">2025</div>
+            </div>
+            <div class="honor-card fade-in">
+              <div class="honor-icon" aria-hidden="true">🎗️</div>
+              <div class="honor-name">Hengqin–Macau International Arts Expo Honor</div>
+              <div class="honor-year">2025</div>
+            </div>
+            <div class="honor-card fade-in">
+              <div class="honor-icon" aria-hidden="true">💎</div>
+              <div class="honor-name">China High-Quality Development Summit Recommended Brand</div>
+              <div class="honor-year">2025</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Brewing Process -->
+        <div style="margin-top:120px">
+          <div class="section-head fade-in">
+            <div class="section-en">Brewing Craft</div>
+            <h2 class="section-title">Our Brewing Process</h2>
+            <div class="section-line"><span>◆</span></div>
+          </div>
+
+          <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:32px;margin-top:40px;">
+            <div class="fade-in" style="background:var(--white);border:1px solid var(--border);padding:40px 28px;text-align:center;transition:var(--transition);" onmouseenter="this.style.transform='translateY(-6px)';this.style.borderColor='var(--gold)'" onmouseleave="this.style.transform='';this.style.borderColor='var(--border)'">
+              <div style="font-size:48px;margin-bottom:20px;" aria-hidden="true">🌾</div>
+              <h3 style="font-family:'Cinzel',serif;font-size:16px;color:var(--dark);letter-spacing:3px;margin-bottom:16px;">Finest Ingredients</h3>
+              <p style="font-size:14px;color:var(--text-light);line-height:1.8;letter-spacing:1px;">
+                We strictly select premium locally-grown glutinous red sorghum from Guizhou, with plump grains and an
+                amylopectin content of over 98%, laying the structural foundation for our Jiangxiang spirit.</p>
+            </div>
+            <div class="fade-in" style="background:var(--white);border:1px solid var(--border);padding:40px 28px;text-align:center;transition:var(--transition);" onmouseenter="this.style.transform='translateY(-6px)';this.style.borderColor='var(--gold)'" onmouseleave="this.style.transform='';this.style.borderColor='var(--border)'">
+              <div style="font-size:48px;margin-bottom:20px;" aria-hidden="true">🔥</div>
+              <h3 style="font-family:'Cinzel',serif;font-size:16px;color:var(--dark);letter-spacing:3px;margin-bottom:16px;">Triple-High Process</h3>
+              <p style="font-size:14px;color:var(--text-light);line-height:1.8;letter-spacing:1px;">
+                We adhere to the triple-high technique — high-temperature starter preparation, high-temperature
+                accumulation fermentation, and high-temperature distillation — creating the complex and distinctive
+                aroma profile of our sauce-aroma baijiu.</p>
+            </div>
+            <div class="fade-in" style="background:var(--white);border:1px solid var(--border);padding:40px 28px;text-align:center;transition:var(--transition);" onmouseenter="this.style.transform='translateY(-6px)';this.style.borderColor='var(--gold)'" onmouseleave="this.style.transform='';this.style.borderColor='var(--border)'">
+              <div style="font-size:48px;margin-bottom:20px;" aria-hidden="true">🏺</div>
+              <h3 style="font-family:'Cinzel',serif;font-size:16px;color:var(--dark);letter-spacing:3px;margin-bottom:16px;">Five-Year Ageing</h3>
+              <p style="font-size:14px;color:var(--text-light);line-height:1.8;letter-spacing:1px;">
+                Through 7 rounds of spirit extraction and a minimum of 5 years of cellar ageing, the spirit fully
+                esterifies, resulting in a richer, smoother taste and a more enduring, lingering aroma.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
     </section>
+  </main>
 
-    <footer>
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-brand">
-                    <span class="logo-cn">Long Guo Yan</span>
-                    <span class="logo-en">Long Guo Yan Premium Baijiu</span>
-                    <p class="footer-brand-text">Guizhou Long Guo Yan Baijiu Co., Ltd., inheriting century-old
-                        traditional brewing techniques, crafting premium sauce-aroma baijiu.</p>
-                    <div class="footer-address">📍 Chun Shu Village, Maotai Town, Renhuai City, Zunyi, Guizhou<br />📞
-                        400-159-1958</div>
-                </div>
-                <div class="footer-col">
-                    <h4>About Us</h4>
-                    <ul>
-                        <li><a href="about.html">Company Profile</a></li>
-                        <li><a href="about.html">Product Showcase</a></li>
-                        <li><a href="about.html">Brand Awards</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h4>Products</h4>
-                    <ul>
-                        <li><a href="product.html">Sauce-Aroma Series</a></li>
-                        <li><a href="product.html">Limited Edition Series</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h4>News</h4>
-                    <ul>
-                        <li><a href="news.html">Company News</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h4>More</h4>
-                    <ul>
-                        <li><a href="cooperation.html">Partnerships</a></li>
-                        <li><a href="contact.html">Contact Us</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <div class="footer-copyright">Copyright © Long Guo Yan Baijiu Co. ALL Rights Reserved ｜ ICP No.
-                    19010301-1</div>
-                <div class="footer-links"><a href="contact.html">Disclaimer</a></div>
-            </div>
+  <footer role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <span class="logo-cn" lang="zh">龙国宴</span>
+          <span class="logo-en">Longguo Banquet Premium Baijiu</span>
+          <p class="footer-brand-text">Guizhou Longguo Banquet Baijiu Co., Ltd., inheriting century-old traditional brewing techniques, crafting premium Jiangxiang sauce-aroma baijiu.</p>
+          <address class="footer-address" style="font-style:normal;">
+            📍 Chun Shu Village, Maotai Town, Renhuai City, Zunyi, Guizhou<br />
+            📞 <a href="tel:4001591958" style="color:inherit;">400-159-1958</a>
+          </address>
         </div>
-    </footer>
+        <div class="footer-col"><h4>About Us</h4><ul><li><a href="about.html">Company Profile</a></li><li><a href="product.html">Product Showcase</a></li><li><a href="about.html">Brand Awards</a></li></ul></div>
+        <div class="footer-col"><h4>Products</h4><ul><li><a href="product.html">Jiangxiang Series</a></li><li><a href="product.html">Limited Editions</a></li></ul></div>
+        <div class="footer-col"><h4>News</h4><ul><li><a href="news.html">Company News</a></li></ul></div>
+        <div class="footer-col"><h4>More</h4><ul><li><a href="cooperation.html">Partnerships</a></li><li><a href="contact.html">Contact Us</a></li></ul></div>
+      </div>
+      <div class="footer-bottom">
+        <div class="footer-copyright">Copyright © Longguo Banquet Baijiu Co. ALL Rights Reserved ｜ ICP No. 19010301-1</div>
+        <div class="footer-links"><a href="contact.html">Disclaimer</a></div>
+      </div>
+    </div>
+  </footer>
 
-    <script>
-        const header = document.getElementById('header');
-        window.addEventListener('scroll', () => { header.classList.toggle('scrolled', window.scrollY > 60); });
-        const observer = new IntersectionObserver((entries) => { entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); }); }, { threshold: 0.12 });
-        document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
-    </script>
+  <script src="nav.js"></script>
 </body>
-
 </html>
