@@ -1,6 +1,8 @@
 /**
  * nav.js — Longguo Banquet shared navigation & utilities
- * Handles: mobile menu, scroll effects, reveal animations, hero slider
+ * Handles: mobile menu, scroll effects, reveal animations,
+ *          hero slider, video section, cookie banner,
+ *          product detail tabs & gallery, lazy image loading
  */
 
 (function () {
@@ -50,6 +52,22 @@
     revealEls.forEach(el => observer.observe(el));
   }
 
+  /* ── Lazy image fade-in ── */
+  const lazyImgs = document.querySelectorAll('img[loading="lazy"]');
+  if (lazyImgs.length) {
+    const imgObs = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          const img = e.target;
+          img.onload = () => img.classList.add('loaded');
+          if (img.complete) img.classList.add('loaded');
+          imgObs.unobserve(img);
+        }
+      });
+    });
+    lazyImgs.forEach(img => imgObs.observe(img));
+  }
+
   /* ── Hero image slider ── */
   const slides = document.querySelectorAll('.hero-slide');
   const dots   = document.querySelectorAll('.slider-dot');
@@ -77,6 +95,78 @@
         timer = setInterval(() => goToSlide(current + 1), 5000);
       });
     }
+  }
+
+  /* ── Video play button ── */
+  const playBtn   = document.getElementById('playBtn');
+  const poster    = document.getElementById('videoPoster');
+  const brandVid  = document.getElementById('brandVideo');
+  if (playBtn && poster && brandVid) {
+    playBtn.addEventListener('click', () => {
+      poster.style.display   = 'none';
+      brandVid.style.display = 'block';
+      brandVid.play();
+    });
+  }
+
+  /* ── Product detail: thumbnail gallery ── */
+  const thumbs    = document.querySelectorAll('.pd-thumb');
+  const mainImg   = document.getElementById('mainProductImg');
+  if (thumbs.length && mainImg) {
+    thumbs.forEach(thumb => {
+      thumb.addEventListener('click', () => {
+        thumbs.forEach(t => t.classList.remove('active'));
+        thumb.classList.add('active');
+        mainImg.src = thumb.dataset.src;
+      });
+    });
+  }
+
+  /* ── Product detail: tabs ── */
+  const tabBtns   = document.querySelectorAll('.pd-tab-btn');
+  const tabPanels = document.querySelectorAll('.pd-tab-panel');
+  if (tabBtns.length) {
+    tabBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        tabBtns.forEach(b => { b.classList.remove('active'); b.setAttribute('aria-selected', 'false'); });
+        tabPanels.forEach(p => { p.classList.remove('active'); p.hidden = true; });
+        btn.classList.add('active');
+        btn.setAttribute('aria-selected', 'true');
+        const panel = document.getElementById(btn.getAttribute('aria-controls'));
+        if (panel) { panel.classList.add('active'); panel.hidden = false; }
+      });
+    });
+  }
+
+  /* ── Cookie consent banner ── */
+  const cookieBanner  = document.getElementById('cookieBanner');
+  const acceptBtn     = document.getElementById('cookieAccept');
+  const declineBtn    = document.getElementById('cookieDecline');
+
+  function getCookie(name) {
+    return document.cookie.split('; ').find(r => r.startsWith(name + '='));
+  }
+  function setCookie(name, value, days) {
+    const d = new Date();
+    d.setTime(d.getTime() + days * 24 * 60 * 60 * 1000);
+    document.cookie = name + '=' + value + ';expires=' + d.toUTCString() + ';path=/;SameSite=Lax';
+  }
+
+  if (cookieBanner && !getCookie('lgy_cookie_consent')) {
+    setTimeout(() => cookieBanner.classList.add('show'), 1200);
+  }
+
+  if (acceptBtn) {
+    acceptBtn.addEventListener('click', () => {
+      setCookie('lgy_cookie_consent', 'accepted', 365);
+      cookieBanner.classList.remove('show');
+    });
+  }
+  if (declineBtn) {
+    declineBtn.addEventListener('click', () => {
+      setCookie('lgy_cookie_consent', 'declined', 30);
+      cookieBanner.classList.remove('show');
+    });
   }
 
   /* ── Smooth anchor scroll ── */

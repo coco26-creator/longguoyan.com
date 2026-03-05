@@ -50,10 +50,18 @@
   }
   </script>
 
+  <!-- ═══ Performance ═══ -->
+  <link rel="preload" href="https://www.longguoyan.com/_20260302/1632544364.jpg" as="image" />
+  <link rel="preload" href="style.css" as="style" />
+  <link rel="preload" href="nav.js" as="script" />
+  <link rel="dns-prefetch" href="https://www.longguoyan.com" />
+  <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+
   <link rel="stylesheet" href="style.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@300;400;500;600;700&family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@300;400;600;700&family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@300;400;600;700&family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap" rel="stylesheet"></noscript>
 </head>
 
 <body>
@@ -354,6 +362,98 @@
     </div>
   </section>
 
+  <!-- ═══ VIDEO SECTION ═══ -->
+  <section class="video-section" aria-labelledby="video-heading">
+    <div class="container">
+      <div class="section-head reveal">
+        <div class="section-en">Brand Story</div>
+        <h2 class="section-title" id="video-heading">The Art of Jiangxiang</h2>
+        <div class="section-line"><span>◆</span></div>
+        <p style="margin-top:16px;color:var(--text-light);font-size:15px;letter-spacing:2px;">Witness the mastery behind every bottle</p>
+      </div>
+      <div class="video-wrapper reveal">
+        <div class="video-poster" id="videoPoster">
+          <img src="https://www.longguoyan.com/_20250408/1729505479.jpg" alt="Longguo Banquet — Jiangxiang brewing documentary" loading="lazy" />
+          <div class="video-overlay-text">
+            <span class="video-label">BRAND DOCUMENTARY</span>
+            <span class="video-title-txt">龙国宴 · 酱香传承</span>
+          </div>
+          <button class="play-btn" id="playBtn" aria-label="Play brand documentary video">
+            <span class="play-icon">▶</span>
+          </button>
+        </div>
+        <video id="brandVideo" class="brand-video" preload="none" controls poster="https://www.longguoyan.com/_20250408/1729505479.jpg" style="display:none;">
+          <source src="https://www.longguoyan.com/style/img/intro1.mp4" type="video/mp4" />
+          Your browser does not support HTML5 video.
+        </video>
+      </div>
+      <div class="video-features reveal">
+        <div class="vf-item">
+          <div class="vf-icon">🌾</div>
+          <div class="vf-title">Premium Sorghum</div>
+          <div class="vf-desc">Sourced from the red-soil highlands of Guizhou for the purest grain aroma</div>
+        </div>
+        <div class="vf-item">
+          <div class="vf-icon">🔥</div>
+          <div class="vf-title">Triple-High Process</div>
+          <div class="vf-desc">High temperature fermentation, stacking & distillation — the hallmark of authentic Jiangxiang</div>
+        </div>
+        <div class="vf-item">
+          <div class="vf-icon">🏺</div>
+          <div class="vf-title">5-Year Cellar Aging</div>
+          <div class="vf-desc">Sealed in century-old clay cellars, transforming grain into liquid gold over years of patient rest</div>
+        </div>
+        <div class="vf-item">
+          <div class="vf-icon">🎖️</div>
+          <div class="vf-title">Master Blending</div>
+          <div class="vf-desc">Senior blending masters craft each batch to achieve the signature Longguo Banquet profile</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ WECHAT & SOCIAL SECTION ═══ -->
+  <section class="social-section" aria-labelledby="social-heading">
+    <div class="container">
+      <div class="social-inner">
+        <div class="social-content reveal">
+          <div class="section-en" style="color:var(--gold-light)">Follow Us</div>
+          <h2 class="section-title" id="social-heading" style="color:var(--white)">Stay Connected</h2>
+          <div class="section-line"><span>◆</span></div>
+          <p class="social-desc">Follow Longguo Banquet for the latest news, exclusive offers, and behind-the-scenes content from Maotai Town</p>
+          <div class="social-links">
+            <a href="https://weixin.qq.com" class="social-link wechat" target="_blank" rel="noopener" aria-label="Follow us on WeChat">
+              <span class="social-link-icon">💬</span>
+              <span>WeChat Official Account</span>
+            </a>
+            <a href="https://weibo.com" class="social-link weibo" target="_blank" rel="noopener" aria-label="Follow us on Weibo">
+              <span class="social-link-icon">🌐</span>
+              <span>Weibo</span>
+            </a>
+            <a href="https://douyin.com" class="social-link douyin" target="_blank" rel="noopener" aria-label="Follow us on Douyin">
+              <span class="social-link-icon">🎵</span>
+              <span>Douyin / TikTok</span>
+            </a>
+          </div>
+          <div class="social-phone-cta">
+            <span>Partnership Enquiries:</span>
+            <a href="tel:4001591958" class="social-phone">400-159-1958</a>
+          </div>
+        </div>
+        <div class="social-qr reveal rd1">
+          <div class="qr-card">
+            <img src="https://www.longguoyan.com/_20190924/1324283689.png" alt="Longguo Banquet WeChat QR Code — scan to follow official account" loading="lazy" />
+            <div class="qr-label">
+              <span>扫码关注</span>
+              <span>Scan to Follow WeChat</span>
+            </div>
+          </div>
+          <div class="qr-decoration" aria-hidden="true"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- ═══ CONTACT STRIP ═══ -->
   <section class="contact-strip" aria-label="Contact information">
     <div class="container">
@@ -441,6 +541,20 @@
     </div>
   </footer>
 
-  <script src="nav.js"></script>
+  <!-- ═══ COOKIE CONSENT BANNER ═══ -->
+  <div id="cookieBanner" class="cookie-banner" role="dialog" aria-live="polite" aria-label="Cookie consent">
+    <div class="cookie-inner">
+      <div class="cookie-text">
+        <span class="cookie-icon" aria-hidden="true">🍪</span>
+        <p>We use cookies to enhance your browsing experience and analyse site traffic. By clicking <strong>Accept</strong>, you consent to our use of cookies. <a href="contact.html" class="cookie-link">Privacy Policy</a></p>
+      </div>
+      <div class="cookie-actions">
+        <button class="cookie-btn cookie-decline" id="cookieDecline">Decline</button>
+        <button class="cookie-btn cookie-accept" id="cookieAccept">Accept All</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="nav.js" defer></script>
 </body>
 </html>
