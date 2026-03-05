@@ -1,6 +1,6 @@
 /**
  * nav.js — Longguo Banquet shared navigation & utilities
- * Handles: mobile menu, scroll effects, reveal animations, image fallbacks
+ * Handles: mobile menu, scroll effects, reveal animations, hero slider
  */
 
 (function () {
@@ -24,8 +24,6 @@
       hamburger.setAttribute('aria-expanded', open);
       document.body.style.overflow = open ? 'hidden' : '';
     });
-
-    // Close on link click
     mobileNav.querySelectorAll('a').forEach(link => {
       link.addEventListener('click', () => {
         mobileNav.classList.remove('open');
@@ -34,10 +32,8 @@
         document.body.style.overflow = '';
       });
     });
-
-    // Close on outside click
     document.addEventListener('click', (e) => {
-      if (!header.contains(e.target) && !mobileNav.contains(e.target)) {
+      if (header && !header.contains(e.target) && !mobileNav.contains(e.target)) {
         mobileNav.classList.remove('open');
         hamburger.classList.remove('open');
         document.body.style.overflow = '';
@@ -49,49 +45,46 @@
   const revealEls = document.querySelectorAll('.reveal, .fade-in');
   if (revealEls.length) {
     const observer = new IntersectionObserver((entries) => {
-      entries.forEach(e => {
-        if (e.isIntersecting) e.target.classList.add('visible');
-      });
+      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
     }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
     revealEls.forEach(el => observer.observe(el));
   }
 
-  /* ── Image fallback for missing product/news images ── */
-  document.querySelectorAll('img[data-fallback]').forEach(img => {
-    img.addEventListener('error', function () {
-      const wrap = this.closest('.product-img, .news-page-img-wrap, .img-wrap');
-      if (wrap) {
-        const icon = this.dataset.fallback || '🍶';
-        this.style.display = 'none';
-        if (!wrap.querySelector('.img-placeholder')) {
-          const ph = document.createElement('div');
-          ph.className = 'img-placeholder';
-          ph.innerHTML = `<div class="placeholder-icon">${icon}</div>
-                          <div class="placeholder-text">Image Coming Soon</div>`;
-          wrap.appendChild(ph);
-        }
-      }
+  /* ── Hero image slider ── */
+  const slides = document.querySelectorAll('.hero-slide');
+  const dots   = document.querySelectorAll('.slider-dot');
+  if (slides.length > 1) {
+    let current = 0;
+    function goToSlide(n) {
+      slides[current].classList.remove('active');
+      if (dots[current]) dots[current].classList.remove('active');
+      current = (n + slides.length) % slides.length;
+      slides[current].classList.add('active');
+      if (dots[current]) dots[current].classList.add('active');
+    }
+    let timer = setInterval(() => goToSlide(current + 1), 5000);
+    dots.forEach((dot, i) => {
+      dot.addEventListener('click', () => {
+        clearInterval(timer);
+        goToSlide(i);
+        timer = setInterval(() => goToSlide(current + 1), 5000);
+      });
     });
-  });
-
-  /* ── Hero parallax ── */
-  const heroBg = document.querySelector('.hero-bg');
-  if (heroBg) {
-    window.addEventListener('scroll', () => {
-      if (window.scrollY < window.innerHeight) {
-        heroBg.style.transform = `translateY(${window.scrollY * 0.3}px)`;
-      }
-    }, { passive: true });
+    const heroEl = document.querySelector('.hero');
+    if (heroEl) {
+      heroEl.addEventListener('mouseenter', () => clearInterval(timer));
+      heroEl.addEventListener('mouseleave', () => {
+        timer = setInterval(() => goToSlide(current + 1), 5000);
+      });
+    }
   }
 
   /* ── Smooth anchor scroll ── */
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
       const target = document.querySelector(this.getAttribute('href'));
-      if (target) {
-        e.preventDefault();
-        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      }
+      if (target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
     });
   });
+
 })();
