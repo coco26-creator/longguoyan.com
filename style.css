@@ -676,7 +676,8 @@ header.scrolled .logo-icon-img {
 /* ===== HERITAGE & STORY SECTION (Unified) ===== */
 .heritage-story {
   padding: 120px 0;
-  background: var(--dark);
+  background: #0D0A06 !important; /* Force deep ink background for luxury feel */
+  color: rgba(255,255,255,0.85);
   position: relative; overflow: hidden;
   scroll-margin-top: 80px;
 }
@@ -751,7 +752,7 @@ header.scrolled .logo-icon-img {
 .heritage-story .section-head { text-align: left; margin-bottom: 32px; }
 .heritage-story .section-line { justify-content: flex-start; }
 .heritage-story .section-line::before { display: none; }
-.heritage-story .section-title { color: var(--white) !important; }
+.heritage-story .section-title { color: #ffffff !important; }
 
 .heritage-video-wrap {
   margin-top: 100px;
@@ -783,10 +784,12 @@ header.scrolled .logo-icon-img {
 }
 
 .milestone-text {
-  font-size: 14px; color: rgba(255,255,255,0.7);
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.7) !important;
   letter-spacing: 1px;
   border-left: 1px solid var(--border);
-  padding-left: 20px; line-height: 1.6;
+  padding-left: 20px;
+  line-height: 1.6;
 }
 
 /* ===== NEWS SECTION ===== */
@@ -921,7 +924,7 @@ footer {
 
 .footer-top-grid {
   display: grid;
-  grid-template-columns: 1fr 320px;
+  grid-template-columns: 1fr 220px;
   gap: 60px;
   align-items: center;
 }
@@ -991,16 +994,18 @@ footer {
 /* QR Code Card */
 .ft-qr-card {
   background: #fff;
-  padding: 30px;
+  padding: 20px;
   text-align: center;
-  box-shadow: 0 20px 50px rgba(0,0,0,0.4);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
   position: relative;
+  max-width: 220px;
+  margin: 0 auto;
 }
 
 .ft-qr-card img {
-  width: 180px;
-  height: 180px;
-  margin: 0 auto 20px;
+  width: 140px;
+  height: 140px;
+  margin: 0 auto 12px;
   border: 1px solid #eee;
 }
 
@@ -1558,6 +1563,13 @@ footer {
   .honor-grid { grid-template-columns: repeat(2, 1fr); }
   .steps { flex-direction: column; gap: 32px; }
   .steps::before { display: none; }
+  .footer-top-grid { grid-template-columns: 1fr; gap: 40px; text-align: center; }
+  .ft-content .section-title { text-align: center; }
+  .ft-content .section-line { justify-content: center; }
+  .ft-desc { margin: 0 auto 40px; }
+  .ft-social-links { justify-content: center; }
+  .ft-contact-cta { justify-content: center; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 30px; }
+  .ft-qr-card { max-width: 200px; margin: 0 auto; }
 }
 
 @media (max-width: 768px) {
