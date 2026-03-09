@@ -4,6 +4,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Contact Us – Longguo Banquet | 龙国宴 Premium Baijiu</title>
+  <meta name="description" content="Get in touch with Guizhou Longguo Banquet Baijiu Co., Ltd. for product enquiries, distribution partnerships, and wholesale opportunities in Maotai Town." />
+  <link rel="canonical" href="https://www.longguoyan.com/contact.html" />
+  <meta property="og:title" content="Contact Longguo Banquet | 龙国宴" />
+  <meta property="og:description" content="Contact our team for premium Jiangxiang baijiu enquiries and global partnerships." />
   <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@300;400;500;600;700&family=Cinzel:wght@400;600;700&display=swap" rel="stylesheet" />
 </head>
@@ -42,6 +46,9 @@
 
   <div class="page-banner">
     <div class="container page-banner-content">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="index.html">Home</a> / <span aria-current="page">Contact</span>
+      </nav>
       <h1>Contact Us</h1>
     </div>
   </div>
@@ -50,23 +57,93 @@
     <section class="contact-page">
       <div class="container">
         <div class="contact-page-grid">
+
           <div class="contact-info-block fade-in">
-            <h2>Guizhou Longguo Banquet Baijiu Co., Ltd.</h2>
+            <h3>Direct Contact</h3>
             <div class="contact-info-item">
               <div class="contact-icon">📞</div>
               <div class="contact-info-text">
-                <h3>Phone</h3>
+                <h4>Phone</h4>
                 <p>400-159-1958</p>
               </div>
             </div>
             <div class="contact-info-item">
               <div class="contact-icon">📍</div>
               <div class="contact-info-text">
-                <h3>Address</h3>
-                <p>Chun Shu Village, Maotai Town, Guizhou</p>
+                <h4>Address</h4>
+                <p>Chun Shu Village, Maotai Town, Renhuai, Guizhou</p>
               </div>
             </div>
+
+            <div style="margin-top:40px;">
+              <h3>Business Hours</h3>
+              <p style="font-size:14px;color:var(--text-mid);line-height:1.8;">
+                Monday — Friday: 9:00 AM – 6:00 PM (GMT+8)<br>
+                Saturday: 10:00 AM – 4:00 PM<br>
+                Sunday: Closed
+              </p>
+            </div>
           </div>
+
+          <div class="contact-form fade-in">
+            <h3>Send a Message</h3>
+
+            <div id="form-success" class="form-success">
+              <div class="success-icon">✓</div>
+              <h4>Message Sent</h4>
+              <p>Thank you for contacting Longguo Banquet. We will get back to you within 1–2 business days.</p>
+              <button class="btn-primary" style="margin-top:28px;border:none;" onclick="location.reload()">Send Another Message</button>
+            </div>
+
+            <form id="contact-form" novalidate aria-label="Contact form">
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="name">Your Name <span class="required-mark" aria-hidden="true">*</span></label>
+                  <input type="text" id="name" name="name" placeholder="Enter your name" required aria-required="true" />
+                  <span class="error-msg" id="name-error" role="alert">Please enter your name.</span>
+                </div>
+                <div class="form-group">
+                  <label for="phone">Phone Number <span class="required-mark" aria-hidden="true">*</span></label>
+                  <input type="tel" id="phone" name="phone" placeholder="e.g. 138 0000 0000" required aria-required="true" />
+                  <span class="error-msg" id="phone-error" role="alert">Please enter a valid phone number.</span>
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="email">Email Address</label>
+                  <input type="email" id="email" name="email" placeholder="your@email.com" />
+                  <span class="error-msg" id="email-error" role="alert">Please enter a valid email address.</span>
+                </div>
+                <div class="form-group">
+                  <label for="type">Enquiry Type</label>
+                  <select id="type" name="type">
+                    <option value="">Select enquiry type</option>
+                    <option value="product">Product Enquiry</option>
+                    <option value="cooperation">Distribution Partnership</option>
+                    <option value="purchase">Purchasing & Pricing</option>
+                    <option value="other">Other</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="company">Company / Organisation</label>
+                <input type="text" id="company" name="company" placeholder="Enter your company (optional)" />
+              </div>
+
+              <div class="form-group">
+                <label for="message">Message <span class="required-mark" aria-hidden="true">*</span></label>
+                <textarea id="message" name="message" placeholder="How can we help you?" required aria-required="true"></textarea>
+                <span class="error-msg" id="message-error" role="alert">Please enter your message.</span>
+              </div>
+
+              <button type="submit" id="submit-btn" class="btn-primary" style="width:100%;justify-content:center;border:none;">
+                Submit Message
+              </button>
+            </form>
+          </div>
+
         </div>
       </div>
     </section>
@@ -139,5 +216,16 @@
   </footer>
 
   <script src="nav.js" defer></script>
+  <script>
+    const form = document.getElementById('contact-form');
+    const successBox = document.getElementById('form-success');
+
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      // Simple visual feedback
+      form.style.display = 'none';
+      successBox.classList.add('show');
+    });
+  </script>
 </body>
 </html>
