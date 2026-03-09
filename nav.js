@@ -69,9 +69,11 @@
   }
 
   /* ── Hero image slider ── */
-  const slides = document.querySelectorAll('.hero-slide');
-  const dots   = document.querySelectorAll('.slider-dot');
-  if (slides.length > 1) {
+  function initHeroSlider(slideSelector, dotSelector, containerSelector) {
+    const slides = document.querySelectorAll(slideSelector);
+    const dots   = document.querySelectorAll(dotSelector);
+    if (!slides.length) return;
+
     let current = 0;
     function goToSlide(n) {
       slides[current].classList.remove('active');
@@ -80,6 +82,7 @@
       slides[current].classList.add('active');
       if (dots[current]) dots[current].classList.add('active');
     }
+
     let timer = setInterval(() => goToSlide(current + 1), 5000);
     dots.forEach((dot, i) => {
       dot.addEventListener('click', () => {
@@ -88,14 +91,20 @@
         timer = setInterval(() => goToSlide(current + 1), 5000);
       });
     });
-    const heroEl = document.querySelector('.hero');
-    if (heroEl) {
-      heroEl.addEventListener('mouseenter', () => clearInterval(timer));
-      heroEl.addEventListener('mouseleave', () => {
+
+    const container = document.querySelector(containerSelector);
+    if (container) {
+      container.addEventListener('mouseenter', () => clearInterval(timer));
+      container.addEventListener('mouseleave', () => {
         timer = setInterval(() => goToSlide(current + 1), 5000);
       });
     }
   }
+
+  // Legacy hero slider (if any)
+  initHeroSlider('.hero-slide', '.slider-dot', '.hero');
+  // New clean hero slider
+  initHeroSlider('.hc-slide', '.hc-dot', '.hero-clean');
 
   /* ── Video play button ── */
   const playBtn   = document.getElementById('playBtn');
