@@ -16,43 +16,6 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@300;400;600;700&family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap" rel="stylesheet">
-  <style>
-    /* ── CLEAN HERO — image only, zero text ── */
-    .hero-clean{position:relative;height:100vh;min-height:600px;overflow:hidden;}
-    .hero-clean .hc-slider{position:absolute;inset:0;z-index:0;}
-    .hero-clean .hc-slide{position:absolute;inset:0;background-size:cover;background-position:center;opacity:0;transition:opacity 1.4s ease;}
-    .hero-clean .hc-slide.active{opacity:1;}
-    /* edge vignette only — very subtle */
-    .hero-clean::after{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at center,transparent 45%,rgba(13,10,6,0.28) 100%);z-index:1;pointer-events:none;}
-    /* dots — vertical stack right */
-    .hc-dots{position:absolute;right:40px;top:50%;transform:translateY(-50%);z-index:3;display:flex;flex-direction:column;gap:12px;}
-    .hc-dot{width:8px;height:8px;border-radius:50%;background:rgba(201,162,39,0.3);border:1px solid rgba(201,162,39,0.65);cursor:pointer;transition:all .3s ease;padding:0;}
-    .hc-dot.active{background:var(--gold);transform:scale(1.5);}
-    /* scroll cue */
-    .hc-scroll{position:absolute;bottom:36px;left:50%;transform:translateX(-50%);z-index:3;display:flex;flex-direction:column;align-items:center;gap:8px;opacity:0;animation:fadeIn 1s ease forwards 1.8s;}
-    .hc-scroll-line{width:1px;height:52px;background:linear-gradient(to bottom,transparent,var(--gold));}
-
-    /* ── PRODUCTS GRID — 4 columns ── */
-    .prod-4{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;}
-    @media(max-width:1100px){.prod-4{grid-template-columns:repeat(3,1fr);}}
-    @media(max-width:768px){.prod-4{grid-template-columns:repeat(2,1fr);}}
-    @media(max-width:480px){.prod-4{grid-template-columns:1fr;}}
-
-    /* ── NEWS GRID — 4 columns ── */
-    .news-4{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;}
-    @media(max-width:1100px){.news-4{grid-template-columns:repeat(3,1fr);}}
-    @media(max-width:768px){.news-4{grid-template-columns:repeat(2,1fr);}}
-    @media(max-width:480px){.news-4{grid-template-columns:1fr;}}
-
-    .nc{background:var(--white);border:1px solid var(--border);overflow:hidden;display:flex;flex-direction:column;text-decoration:none;transition:var(--transition);}
-    .nc:hover{transform:translateY(-6px);box-shadow:0 16px 40px rgba(139,0,0,.12);}
-    .nc img{width:100%;aspect-ratio:16/10;object-fit:cover;display:block;transition:transform .5s ease;}
-    .nc:hover img{transform:scale(1.05);}
-    .nc-body{padding:18px;flex:1;display:flex;flex-direction:column;gap:8px;}
-    .nc-date{font-family:'Cinzel',serif;font-size:11px;letter-spacing:2px;color:var(--gold);}
-    .nc-title{font-size:13px;font-weight:600;color:var(--dark);line-height:1.5;letter-spacing:.5px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;transition:color .3s;}
-    .nc:hover .nc-title{color:var(--primary);}
-  </style>
 </head>
 <body>
 
@@ -106,17 +69,37 @@
     </div>
   </section>
 
-  <!-- STATS -->
-  <div class="stats-bar">
+  <!-- ABOUT -->
+  <section class="heritage-story" id="heritage-story" aria-labelledby="heritage-heading">
     <div class="container">
-      <div class="stats-grid">
-        <div class="stat-item reveal"><div class="stat-num">66<span style="font-size:28px">+</span></div><div class="stat-label">Years of Heritage</div></div>
-        <div class="stat-item reveal rd1"><div class="stat-num">30</div><div class="stat-label">Years Cellar-Aged</div></div>
-        <div class="stat-item reveal rd2"><div class="stat-num">11</div><div class="stat-label">Collections</div></div>
-        <div class="stat-item reveal rd3"><div class="stat-num">10<span style="font-size:28px">+</span></div><div class="stat-label">International Awards</div></div>
+      <div class="about-grid">
+        <div class="about-img-wrap reveal">
+          <div class="video-wrapper">
+            <div class="video-poster" id="videoPoster">
+              <img src="https://www.longguoyan.com/_20250408/1729505479.jpg" alt="Brand documentary" loading="lazy" />
+              <div class="video-overlay-text"><span class="video-label">BRAND DOCUMENTARY</span><span class="video-title-txt">龙国宴 · 酱香传承</span></div>
+              <button class="play-btn" id="playBtn" aria-label="Play documentary"><span class="play-icon">▶</span></button>
+            </div>
+            <video id="brandVideo" class="brand-video" preload="none" controls poster="https://www.longguoyan.com/_20250408/1729505479.jpg" style="display:none;">
+              <source src="https://www.longguoyan.com/style/img/intro1.mp4" type="video/mp4" />
+            </video>
+          </div>
+          <div class="about-badge"><div class="years">66</div><div class="label">Years of Craft</div></div>
+        </div>
+        <div class="about-content">
+          <div class="section-head reveal"><div class="section-en">About Us</div><h2 class="section-title" id="heritage-heading">Our Heritage</h2><div class="section-line"><span>◆</span></div></div>
+          <p class="about-text reveal">Guizhou Longguo Banquet Baijiu Co., Ltd. is located in Maotai Town — the heartland of China's finest Jiangxiang sauce-aroma baijiu. Blessed with an exceptional natural environment and time-honored traditional brewing techniques.</p>
+          <div class="about-milestones reveal rd2">
+            <div class="milestone"><div class="milestone-year">Est. 1958</div><div class="milestone-text">Founded as a public-private enterprise on traditional distillery foundations</div></div>
+            <div class="milestone"><div class="milestone-year">2016–Present</div><div class="milestone-text">Full brand upgrade and international market expansion</div></div>
+          </div>
+          <div class="reveal rd3">
+            <a href="about.html" class="btn-primary">Discover Our Story</a>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
+  </section>
 
   <!-- ═══ PRODUCTS ═══ -->
   <section class="products-section" aria-labelledby="products-heading">
@@ -150,38 +133,6 @@
 
       </div>
       <div style="text-align:center;margin-top:56px" class="reveal"><a href="product.html" class="btn-primary">View All Collections</a></div>
-    </div>
-  </section>
-
-  <!-- ABOUT -->
-  <section class="heritage-story" id="heritage-story" aria-labelledby="heritage-heading">
-    <div class="container">
-      <div class="about-grid">
-        <div class="about-img-wrap reveal">
-          <div class="video-wrapper">
-            <div class="video-poster" id="videoPoster">
-              <img src="https://www.longguoyan.com/_20250408/1729505479.jpg" alt="Brand documentary" loading="lazy" />
-              <div class="video-overlay-text"><span class="video-label">BRAND DOCUMENTARY</span><span class="video-title-txt">龙国宴 · 酱香传承</span></div>
-              <button class="play-btn" id="playBtn" aria-label="Play documentary"><span class="play-icon">▶</span></button>
-            </div>
-            <video id="brandVideo" class="brand-video" preload="none" controls poster="https://www.longguoyan.com/_20250408/1729505479.jpg" style="display:none;">
-              <source src="https://www.longguoyan.com/style/img/intro1.mp4" type="video/mp4" />
-            </video>
-          </div>
-          <div class="about-badge"><div class="years">66</div><div class="label">Years of Craft</div></div>
-        </div>
-        <div class="about-content">
-          <div class="section-head reveal"><div class="section-en">About Us</div><h2 class="section-title" id="heritage-heading">Our Heritage</h2><div class="section-line"><span>◆</span></div></div>
-          <p class="about-text reveal">Guizhou Longguo Banquet Baijiu Co., Ltd. is located in Maotai Town — the heartland of China's finest Jiangxiang sauce-aroma baijiu. Blessed with an exceptional natural environment and time-honored traditional brewing techniques.</p>
-          <div class="about-milestones reveal rd2">
-            <div class="milestone"><div class="milestone-year">Est. 1958</div><div class="milestone-text">Founded as a public-private enterprise on traditional distillery foundations</div></div>
-            <div class="milestone"><div class="milestone-year">2016–Present</div><div class="milestone-text">Full brand upgrade and international market expansion</div></div>
-          </div>
-          <div class="reveal rd3">
-            <a href="about.html" class="btn-primary">Discover Our Story</a>
-          </div>
-        </div>
-      </div>
     </div>
   </section>
 
@@ -293,23 +244,5 @@
   </div>
 
   <script src="nav.js" defer></script>
-  <script>
-    /* Hero slider */
-    (function(){
-      const slides = document.querySelectorAll('.hc-slide');
-      const dots   = document.querySelectorAll('.hc-dot');
-      if (!slides.length) return;
-      let cur = 0, t;
-      function go(n){
-        slides[cur].classList.remove('active');
-        dots[cur] && dots[cur].classList.remove('active');
-        cur = (n + slides.length) % slides.length;
-        slides[cur].classList.add('active');
-        dots[cur] && dots[cur].classList.add('active');
-      }
-      t = setInterval(()=>go(cur+1), 5000);
-      dots.forEach((d,i)=>d.addEventListener('click',()=>{ clearInterval(t); go(i); t=setInterval(()=>go(cur+1),5000); }));
-    })();
-  </script>
 </body>
 </html>
