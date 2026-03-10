@@ -81,7 +81,7 @@ body {
 .home-page {
   background: var(--ink);
   position: relative;
-  overflow: hidden;
+  overflow: visible;
 }
 
 .home-page::before {
