@@ -381,8 +381,6 @@ nav a.active::after { transform: translateX(-50%) scaleX(1); }
   display: block;
   object-fit: contain;
   transition: var(--transition);
-  /* Refined Imperial Gold Branding Filter */
-  filter: invert(1) brightness(1.2) sepia(1) saturate(5) hue-rotate(10deg);
 }
 
 header.scrolled .logo-icon-img {
@@ -584,7 +582,7 @@ header.scrolled .logo-icon-img {
   background: var(--ink);
   scroll-margin-top: 80px;
   position: relative;
-  overflow: hidden;
+  overflow: visible;
 }
 
 .products-section::before {
