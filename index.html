@@ -15,94 +15,28 @@
   <link rel="stylesheet" href="style.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@300;400;600;700&family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
-  <noscript><link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@300;400;600;700&family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap" rel="stylesheet"></noscript>
-  <style>
-    /* ── CLEAN HERO — image only, zero text ── */
-    .hero-clean{position:relative;height:100vh;min-height:600px;overflow:hidden;}
-    .hero-clean .hc-slider{position:absolute;inset:0;z-index:0;}
-    .hero-clean .hc-slide{position:absolute;inset:0;background-size:cover;background-position:center;opacity:0;transition:opacity 1.4s ease;}
-    .hero-clean .hc-slide.active{opacity:1;}
-    /* edge vignette only — very subtle */
-    .hero-clean::after{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at center,transparent 45%,rgba(13,10,6,0.28) 100%);z-index:1;pointer-events:none;}
-    /* dots — vertical stack right */
-    .hc-dots{position:absolute;right:40px;top:50%;transform:translateY(-50%);z-index:3;display:flex;flex-direction:column;gap:12px;}
-    .hc-dot{width:8px;height:8px;border-radius:50%;background:rgba(201,162,39,0.3);border:1px solid rgba(201,162,39,0.65);cursor:pointer;transition:all .3s ease;padding:0;}
-    .hc-dot.active{background:var(--gold);transform:scale(1.5);}
-    /* scroll cue */
-    .hc-scroll{position:absolute;bottom:36px;left:50%;transform:translateX(-50%);z-index:3;display:flex;flex-direction:column;align-items:center;gap:8px;opacity:0;animation:fadeIn 1s ease forwards 1.8s;}
-    .hc-scroll-line{width:1px;height:52px;background:linear-gradient(to bottom,transparent,var(--gold));}
-
-    /* ── PRODUCTS GRID — 4 columns ── */
-    .prod-4{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;}
-    @media(max-width:1100px){.prod-4{grid-template-columns:repeat(3,1fr);}}
-    @media(max-width:768px){.prod-4{grid-template-columns:repeat(2,1fr);}}
-    @media(max-width:480px){.prod-4{grid-template-columns:1fr;}}
-
-    /* ── NEWS GRID — 4 columns ── */
-    .news-4{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;}
-    @media(max-width:1100px){.news-4{grid-template-columns:repeat(3,1fr);}}
-    @media(max-width:768px){.news-4{grid-template-columns:repeat(2,1fr);}}
-    @media(max-width:480px){.news-4{grid-template-columns:1fr;}}
-
-    .nc{background:var(--white);border:1px solid var(--border);overflow:hidden;display:flex;flex-direction:column;text-decoration:none;transition:var(--transition);}
-    .nc:hover{transform:translateY(-6px);box-shadow:0 16px 40px rgba(139,0,0,.12);}
-    .nc img{width:100%;aspect-ratio:16/10;object-fit:cover;display:block;transition:transform .5s ease;}
-    .nc:hover img{transform:scale(1.05);}
-    .nc-body{padding:18px;flex:1;display:flex;flex-direction:column;gap:8px;}
-    .nc-date{font-family:'Cinzel',serif;font-size:11px;letter-spacing:2px;color:var(--gold);}
-    .nc-title{font-size:13px;font-weight:600;color:var(--dark);line-height:1.5;letter-spacing:.5px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;transition:color .3s;}
-    .nc:hover .nc-title{color:var(--primary);}
-  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@300;400;500;600;700&family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@300;400;500;600;700&family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap" rel="stylesheet"></noscript>
 </head>
-<body>
+<body class="home-page">
 
-    <header id="header" role="banner">
+  <header id="header" role="banner">
     <div class="container">
-
-      <!-- LOGO — official from longguoyan.com -->
       <a href="index.html" class="logo" aria-label="Longguo Banquet — Home">
         <img src="https://www.longguoyan.com/_20191224/1514189302.png"
              class="logo-icon-img"
-             alt="龙国宴 Longguo Banquet Logo"
-             width="56" height="56" />
-        <div class="logo-text">
-          <span class="logo-cn" lang="zh">龙国宴</span>
-          <span class="logo-en">Longguo Banquet · Premium Jiangxiang Baijiu</span>
-        </div>
+             alt="Longguo Banquet Logo" />
       </a>
-
-      <!-- DESKTOP NAV — mirrors official site structure -->
       <nav id="desktop-nav" role="navigation" aria-label="Main navigation">
         <a href="index.html" class="active" aria-current="page">Home</a>
-        <a href="about.html" >About Us</a>
-        <a href="product.html" >Products</a>
-        <a href="news.html" >News</a>
-        <a href="cooperation.html" >Partnerships</a>
-        <a href="human.html" >Careers</a>
-        <a href="contact.html" >Contact</a>
+        <a href="about.html">About Us</a>
+        <a href="product.html">Products</a>
+        <a href="news.html">News</a>
+        <a href="cooperation.html">Partnerships</a>
+        <a href="human.html">Careers</a>
+        <a href="contact.html">Contact</a>
       </nav>
-
-      <!-- HEADER SOCIAL ICONS — international platforms -->
-      <div class="header-social" aria-label="Social media links">
-        <a href="https://www.facebook.com/longguoyan" class="hs-icon" target="_blank" rel="noopener" aria-label="Follow us on Facebook">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.41c0-3.025 1.792-4.697 4.533-4.697 1.312 0 2.686.236 2.686.236v2.97h-1.513c-1.491 0-1.956.93-1.956 1.884v2.27h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/></svg>
-        </a>
-        <a href="https://www.instagram.com/longguoyan" class="hs-icon" target="_blank" rel="noopener" aria-label="Follow us on Instagram">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
-        </a>
-        <a href="https://x.com/longguoyan" class="hs-icon" target="_blank" rel="noopener" aria-label="Follow us on X (Twitter)">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
-        </a>
-        <a href="https://www.tiktok.com/@longguoyan" class="hs-icon" target="_blank" rel="noopener" aria-label="Follow us on TikTok">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.18 8.18 0 004.79 1.52V6.76a4.85 4.85 0 01-1.02-.07z"/></svg>
-        </a>
-        <a href="tel:4001591958" class="hs-phone" aria-label="Call us: 400-159-1958">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
-          <span>400-159-1958</span>
-        </a>
-      </div>
-
+      <div class="header-phone" aria-label="Call us: 400-159-1958">400-159-1958</div>
       <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobile-nav">
         <span></span><span></span><span></span>
       </button>
@@ -111,154 +45,91 @@
 
   <nav id="mobile-nav" class="mobile-nav" aria-label="Mobile navigation">
     <a href="index.html" class="active" aria-current="page">Home</a>
-    <a href="about.html" >About Us</a>
-    <a href="product.html" >Products</a>
-    <a href="news.html" >News</a>
-    <a href="cooperation.html" >Partnerships</a>
-    <a href="human.html" >Careers</a>
-    <a href="contact.html" >Contact</a>
-    <!-- Mobile social row -->
-    <div class="mobile-social-row">
-      <a href="https://www.facebook.com/longguoyan" target="_blank" rel="noopener" aria-label="Facebook">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.41c0-3.025 1.792-4.697 4.533-4.697 1.312 0 2.686.236 2.686.236v2.97h-1.513c-1.491 0-1.956.93-1.956 1.884v2.27h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/></svg>
-      </a>
-      <a href="https://www.instagram.com/longguoyan" target="_blank" rel="noopener" aria-label="Instagram">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
-      </a>
-      <a href="https://x.com/longguoyan" target="_blank" rel="noopener" aria-label="X (Twitter)">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
-      </a>
-      <a href="https://www.tiktok.com/@longguoyan" target="_blank" rel="noopener" aria-label="TikTok">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.18 8.18 0 004.79 1.52V6.76a4.85 4.85 0 01-1.02-.07z"/></svg>
-      </a>
-    </div>
-    <div style="margin-top:8px;color:var(--gold);font-family:'Cinzel',serif;font-size:12px;letter-spacing:2px;text-align:center;">📞 400-159-1958</div>
+    <a href="about.html">About Us</a>
+    <a href="product.html">Products</a>
+    <a href="news.html">News</a>
+    <a href="cooperation.html">Partnerships</a>
+    <a href="human.html">Careers</a>
+    <a href="contact.html">Contact</a>
   </nav>
 
-  <!-- ═══ HERO — PURE IMAGE, NO TEXT ═══ -->
-  <section class="hero-clean" aria-label="Hero banner">
+  <!-- ═══ HERO ═══ -->
+  <section class="hero-clean" id="home">
     <div class="hc-slider">
-      <div class="hc-slide active" style="background-image:url('https://www.longguoyan.com/_20260302/1632544364.jpg')"></div>
-      <div class="hc-slide" style="background-image:url('https://www.longguoyan.com/_20260302/1632406312.jpg')"></div>
-      <div class="hc-slide" style="background-image:url('https://www.longguoyan.com/_20260302/1632192771.jpg')"></div>
-    </div>
-    <div class="hc-dots" role="tablist" aria-label="Slide selector">
-      <button class="hc-dot active" aria-label="Slide 1"></button>
-      <button class="hc-dot" aria-label="Slide 2"></button>
-      <button class="hc-dot" aria-label="Slide 3"></button>
-    </div>
-    <div class="hc-scroll" aria-hidden="true">
-      <div class="hc-scroll-line"></div>
+      <div class="hc-slide active" style="background-image: url('https://www.longguoyan.com/_20260302/1632544364.jpg');"></div>
+      <div class="hc-slide" style="background-image: url('https://www.longguoyan.com/_20260302/1632406312.jpg');"></div>
+      <div class="hc-slide" style="background-image: url('https://www.longguoyan.com/_20260302/1632192771.jpg');"></div>
     </div>
   </section>
 
-  <!-- STATS -->
-  <div class="stats-bar">
+  <!-- ABOUT -->
+  <section class="heritage-story" id="heritage-story" aria-labelledby="heritage-heading">
     <div class="container">
-      <div class="stats-grid">
-        <div class="stat-item reveal"><div class="stat-num">66<span style="font-size:28px">+</span></div><div class="stat-label">Years of Heritage</div></div>
-        <div class="stat-item reveal rd1"><div class="stat-num">30</div><div class="stat-label">Years Cellar-Aged</div></div>
-        <div class="stat-item reveal rd2"><div class="stat-num">11</div><div class="stat-label">Collections</div></div>
-        <div class="stat-item reveal rd3"><div class="stat-num">10<span style="font-size:28px">+</span></div><div class="stat-label">International Awards</div></div>
+      <div class="about-grid">
+        <div class="about-img-wrap reveal">
+          <div class="video-wrapper">
+            <div class="video-poster" id="videoPoster">
+              <img src="https://www.longguoyan.com/_20250408/1729505479.jpg" alt="Brand documentary" loading="lazy" />
+              <div class="video-overlay-text"><span class="video-label">BRAND DOCUMENTARY</span><span class="video-title-txt">龙国宴 · 酱香传承</span></div>
+              <button class="play-btn" id="playBtn" aria-label="Play documentary"><span class="play-icon">▶</span></button>
+            </div>
+            <video id="brandVideo" class="brand-video" preload="none" controls poster="https://www.longguoyan.com/_20250408/1729505479.jpg" style="display:none;">
+              <source src="https://www.longguoyan.com/style/img/intro1.mp4" type="video/mp4" />
+            </video>
+          </div>
+          <div class="about-badge"><div class="years">66</div><div class="label">Years of Craft</div></div>
+        </div>
+        <div class="about-content">
+          <div class="section-head reveal"><div class="section-en">About Us</div><h2 class="section-title" id="heritage-heading">Our Heritage</h2><div class="section-line"><span>◆</span></div></div>
+          <p class="about-text reveal">Guizhou Longguo Banquet Baijiu Co., Ltd. is located in Maotai Town — the heartland of China's finest Jiangxiang sauce-aroma baijiu. Blessed with an exceptional natural environment and time-honored traditional brewing techniques.</p>
+          <div class="about-milestones reveal rd2">
+            <div class="milestone"><div class="milestone-year">Est. 1958</div><div class="milestone-text">Founded as a public-private enterprise on traditional distillery foundations</div></div>
+            <div class="milestone"><div class="milestone-year">2016–Present</div><div class="milestone-text">Full brand upgrade and international market expansion</div></div>
+          </div>
+          <div class="reveal rd3">
+            <a href="about.html" class="btn-primary">Discover Our Story</a>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
+  </section>
 
-  <!-- ═══ ALL 11 PRODUCTS ═══ -->
+  <!-- ═══ PRODUCTS ═══ -->
   <section class="products-section" aria-labelledby="products-heading">
     <div class="container">
       <div class="section-head reveal">
         <div class="section-en">Product Center</div>
         <h2 class="section-title" id="products-heading">Our Collections</h2>
         <div class="section-line"><span>◆</span></div>
-        <p style="margin-top:20px;color:var(--text-light);font-size:15px;letter-spacing:2px;">Jiangxiang Classics, Crafted with Mastery</p>
       </div>
       <div class="prod-4">
 
         <article class="product-card reveal">
-          <div class="product-img"><img src="https://www.longguoyan.com/_20260302/1635001211.jpg" alt="龙国宴酒·窖藏九五至尊30 — Cellar Supreme 30" loading="lazy" /><div class="product-tag">Pinnacle</div></div>
-          <div class="product-info"><div class="product-series">JIANGXIANG · 30 YEARS</div><h3 class="product-name">Cellar Supreme 30</h3><p class="product-desc">30-year cellar-aged Jiangxiang — the pinnacle of luxury embodying imperial grandeur and supreme prestige</p><a href="product-detail.html" class="product-link">Discover →</a></div>
+          <div class="product-img"><img src="https://www.longguoyan.com/_20260302/1635001211.jpg" alt="Cellar Supreme 30" loading="lazy" /></div>
+          <div class="product-info"><div class="product-series">JIANGXIANG · 30 YEARS</div><h3 class="product-name">Cellar Supreme 30</h3><a href="product-detail.html" class="product-link">Discover →</a></div>
         </article>
 
         <article class="product-card reveal rd1">
-          <div class="product-img"><img src="https://www.longguoyan.com/_20260302/1635380732.jpg" alt="龙国宴酒·龙脉30 — Dragon Vein 30" loading="lazy" /><div class="product-tag">Collector's</div></div>
-          <div class="product-info"><div class="product-series">JIANGXIANG · 30 YEARS</div><h3 class="product-name">Dragon Vein 30</h3><p class="product-desc">The essence of 30 years channelled through the Dragon's Vein — rich sauce aroma with a captivating finish</p><a href="product.html" class="product-link">Discover →</a></div>
+          <div class="product-img"><img src="https://www.longguoyan.com/_20260302/1635380732.jpg" alt="Dragon Vein 30" loading="lazy" /></div>
+          <div class="product-info"><div class="product-series">JIANGXIANG · 30 YEARS</div><h3 class="product-name">Dragon Vein 30</h3><a href="product.html" class="product-link">Discover →</a></div>
         </article>
 
         <article class="product-card reveal rd2">
-          <div class="product-img"><img src="https://www.longguoyan.com/_20220830/1421442130.jpg" alt="龙国宴-限量版 — Limited Edition" loading="lazy" /><div class="product-tag">Limited</div></div>
-          <div class="product-info"><div class="product-series">LIMITED EDITION</div><h3 class="product-name">Limited Edition</h3><p class="product-desc">Imperial gold bottle with dragon relief carvings — premium vintage Jiangxiang radiating nobility</p><a href="product.html" class="product-link">Discover →</a></div>
+          <div class="product-img"><img src="https://www.longguoyan.com/_20220830/1421442130.jpg" alt="Limited Edition" loading="lazy" /></div>
+          <div class="product-info"><div class="product-series">LIMITED EDITION</div><h3 class="product-name">Limited Edition</h3><a href="product.html" class="product-link">Discover →</a></div>
         </article>
 
         <article class="product-card reveal rd3">
-          <div class="product-img"><img src="https://www.longguoyan.com/_20260302/1635190095.jpg" alt="龙国宴-龙脉15 — Dragon Vein 15" loading="lazy" /><div class="product-tag">Premium</div></div>
-          <div class="product-info"><div class="product-series">JIANGXIANG · 15 YEARS</div><h3 class="product-name">Dragon Vein 15</h3><p class="product-desc">A 15-year aged spirit carrying the Dragon's Vein mystique — tradition meets the modern palate</p><a href="product.html" class="product-link">Discover →</a></div>
-        </article>
-
-        <article class="product-card reveal">
-          <div class="product-img"><img src="https://www.longguoyan.com/_20220830/1420562495.jpg" alt="龙国宴-纪念版1958 — Commemorative 1958" loading="lazy" /><div class="product-tag">Heritage</div></div>
-          <div class="product-info"><div class="product-series">COMMEMORATIVE · 1958</div><h3 class="product-name">Commemorative 1958</h3><p class="product-desc">Traditional porcelain artistry in rich amber — ancient in character, timeless in elegance</p><a href="product.html" class="product-link">Discover →</a></div>
-        </article>
-
-        <article class="product-card reveal rd1">
-          <div class="product-img"><img src="https://www.longguoyan.com/_20231226/1418031073.jpg" alt="龙国宴酒·E1597" loading="lazy" /><div class="product-tag">Select</div></div>
-          <div class="product-info"><div class="product-series">JIANGXIANG · PREMIUM</div><h3 class="product-name">E1597</h3><p class="product-desc">Rooted in history — masterful craftsmanship and artisanal excellence of Longguo Banquet</p><a href="product.html" class="product-link">Discover →</a></div>
-        </article>
-
-        <article class="product-card reveal rd2">
-          <div class="product-img"><img src="https://www.longguoyan.com/_20231226/1439209537.jpg" alt="龙国宴·轻奢15 — Light Luxury 15" loading="lazy" /><div class="product-tag">Lifestyle</div></div>
-          <div class="product-info"><div class="product-series">LIGHT LUXURY · 15 YEARS</div><h3 class="product-name">Light Luxury 15</h3><p class="product-desc">Leading the urban light-luxury lifestyle — finest taste from pure all-natural traditional brewing</p><a href="product.html" class="product-link">Discover →</a></div>
-        </article>
-
-        <article class="product-card reveal rd3">
-          <div class="product-img"><img src="https://www.longguoyan.com/_20220830/1421074935.jpg" alt="龙国宴-轻奢版 — Light Luxury Classic" loading="lazy" /><div class="product-tag">Classic</div></div>
-          <div class="product-info"><div class="product-series">LIGHT LUXURY · CLASSIC</div><h3 class="product-name">Light Luxury Classic</h3><p class="product-desc">The classic standard of the series — artisanal tradition distilled into every sip</p><a href="product.html" class="product-link">Discover →</a></div>
-        </article>
-
-        <article class="product-card reveal">
-          <div class="product-img"><img src="https://www.longguoyan.com/_20240517/1041079125.jpg" alt="龙国宴·礼宾酒 — Diplomatic Edition" loading="lazy" /><div class="product-tag">Gift</div></div>
-          <div class="product-info"><div class="product-series">DIPLOMATIC · GIFT</div><h3 class="product-name">Diplomatic Edition</h3><p class="product-desc">Crafted for premium gifting — conveying the deepest respect at every important occasion</p><a href="product.html" class="product-link">Discover →</a></div>
-        </article>
-
-        <article class="product-card reveal rd1">
-          <div class="product-img"><img src="https://www.longguoyan.com/_20240530/1741314955.jpg" alt="龙国宴·珍品酒 — Treasure Edition" loading="lazy" /><div class="product-tag">Treasure</div></div>
-          <div class="product-info"><div class="product-series">FINE COLLECTION</div><h3 class="product-name">Treasure Edition</h3><p class="product-desc">Premium sorghum aged through time — a treasured spirit for the most discerning connoisseur</p><a href="product.html" class="product-link">Discover →</a></div>
-        </article>
-
-        <article class="product-card reveal rd2">
-          <div class="product-img"><img src="https://www.longguoyan.com/_20240517/1049365288.jpg" alt="龙国宴酱酒·品藏级 — Collector's Reserve" loading="lazy" /><div class="product-tag">Reserve</div></div>
-          <div class="product-info"><div class="product-series">COLLECTOR'S RESERVE</div><h3 class="product-name">Collector's Reserve</h3><p class="product-desc">Patient ageing and masterful blending produce this singular, prized reserve expression</p><a href="product.html" class="product-link">Discover →</a></div>
+          <div class="product-img"><img src="https://www.longguoyan.com/_20260302/1635190095.jpg" alt="Dragon Vein 15" loading="lazy" /></div>
+          <div class="product-info"><div class="product-series">JIANGXIANG · 15 YEARS</div><h3 class="product-name">Dragon Vein 15</h3><a href="product.html" class="product-link">Discover →</a></div>
         </article>
 
       </div>
-      <div style="text-align:center;margin-top:56px" class="reveal"><a href="product.html" class="btn-primary">View Full Collection</a></div>
+      <div style="text-align:center;margin-top:56px" class="reveal"><a href="product.html" class="btn-primary">View All Collections</a></div>
     </div>
   </section>
 
-  <!-- ABOUT -->
-  <section class="about-section" aria-labelledby="about-heading">
-    <div class="container">
-      <div class="about-grid">
-        <div class="about-img-wrap reveal">
-          <img class="main-img" src="https://www.longguoyan.com/_20250408/1729505479.jpg" alt="Longguo Banquet Distillery — Maotai Town, Guizhou" />
-          <div class="about-badge"><div class="years">66</div><div class="label">Years of Craft</div></div>
-        </div>
-        <div class="about-content">
-          <div class="section-head reveal"><div class="section-en">About Us</div><h2 class="section-title" id="about-heading">Our Heritage</h2><div class="section-line"><span>◆</span></div></div>
-          <p class="about-text reveal">Guizhou Longguo Banquet Baijiu Co., Ltd. is located in Maotai Town, Renhuai City, Guizhou Province — the heartland of China's finest Jiangxiang sauce-aroma baijiu. Blessed with an exceptional natural environment and time-honored traditional brewing techniques, we craft a uniquely characteristic Jiangxiang spirit.</p>
-          <p class="about-text reveal rd1">Rebuilt upon the foundation of an ancient traditional distillery, the brand has been shaped through generations of master craftsmen and has grown into a celebrated Guizhou heritage brand.</p>
-          <div class="about-milestones reveal rd2">
-            <div class="milestone"><div class="milestone-year">Est. 1958</div><div class="milestone-text">Founded as a public-private enterprise on traditional distillery foundations in Maotai Town</div></div>
-            <div class="milestone"><div class="milestone-year">1998–2016</div><div class="milestone-text">Longguo Banquet Distillery, Maotai Town, Renhuai, Guizhou</div></div>
-            <div class="milestone"><div class="milestone-year">2016–Present</div><div class="milestone-text">Guizhou Longguo Banquet Baijiu Co., Ltd. — full brand upgrade, global expansion</div></div>
-          </div>
-          <a href="about.html" class="btn-primary reveal rd3">Discover Our Story</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ═══ ALL 8 NEWS ═══ -->
+  <!-- NEWS -->
   <section class="news-section" aria-labelledby="news-heading">
     <div class="container">
       <div class="section-head reveal">
@@ -267,264 +138,104 @@
         <div class="section-line"><span>◆</span></div>
       </div>
       <div class="news-4">
-
         <a href="news.html" class="nc reveal">
-          <img src="https://www.longguoyan.com/_20251210/1142485666.jpg" alt="Japan Food Expo 2025" loading="lazy" />
-          <div class="nc-body"><div class="nc-date"><time datetime="2025-12-10">2025-12-10</time></div><div class="nc-title">Longguo Banquet Debuts at Japan International Food Expo – Eastern Elegance Wows Tokyo</div></div>
+          <img src="https://www.longguoyan.com/_20251210/1142485666.jpg" alt="Japan Food Expo" loading="lazy" />
+          <div class="nc-body"><time class="nc-date" datetime="2025-12-10">2025-12-10</time><div class="nc-title">Longguo Banquet Debuts at Japan International Food Expo</div></div>
         </a>
-
         <a href="news.html" class="nc reveal rd1">
-          <img src="https://www.longguoyan.com/_20251210/1143396770.jpg" alt="Malaysia Food Expo 2025" loading="lazy" />
-          <div class="nc-body"><div class="nc-date"><time datetime="2025-12-10">2025-12-10</time></div><div class="nc-title">Longguo Banquet Goes Global | Malaysia International Food &amp; Beverage Expo: Riding Quality, Carrying Culture</div></div>
+          <img src="https://www.longguoyan.com/_20251210/1143396770.jpg" alt="Malaysia Food Expo" loading="lazy" />
+          <div class="nc-body"><time class="nc-date" datetime="2025-12-10">2025-12-10</time><div class="nc-title">Longguo Banquet Goes Global | Malaysia International Food Expo</div></div>
         </a>
-
         <a href="news.html" class="nc reveal rd2">
-          <img src="https://www.longguoyan.com/_20250704/1120478896.png" alt="Hengqin-Macau Digital Art Expo 2025" loading="lazy" />
-          <div class="nc-body"><div class="nc-date"><time datetime="2025-07-04">2025-07-04</time></div><div class="nc-title">Where Jiangxiang Meets Digital Art – Longguo Banquet Shines at the Hengqin–Macau International Digital Art Expo</div></div>
+          <img src="https://www.longguoyan.com/_20250704/1120478896.png" alt="Digital Art Expo" loading="lazy" />
+          <div class="nc-body"><time class="nc-date" datetime="2025-07-04">2025-07-04</time><div class="nc-title">Where Jiangxiang Meets Digital Art – Macau International Art Expo</div></div>
         </a>
-
         <a href="news.html" class="nc reveal rd3">
-          <img src="https://www.longguoyan.com/_20250408/1326481425.png" alt="Enterprise Globalization Summit 2025" loading="lazy" />
-          <div class="nc-body"><div class="nc-date"><time datetime="2025-04-08">2025-04-08</time></div><div class="nc-title">Blending Cultural Craft with Global Vision – 2025 Enterprise Globalization High-Quality Development Summit</div></div>
+          <img src="https://www.longguoyan.com/_20250408/1326481425.png" alt="Globalization Summit" loading="lazy" />
+          <div class="nc-body"><time class="nc-date" datetime="2025-04-08">2025-04-08</time><div class="nc-title">Blending Cultural Craft with Global Vision – 2025 Enterprise Summit</div></div>
         </a>
-
-        <a href="news.html" class="nc reveal">
-          <img src="https://www.longguoyan.com/_20250408/1322262927.jpg" alt="Jiangxiang Industry Forum 2025" loading="lazy" />
-          <div class="nc-body"><div class="nc-date"><time datetime="2025-04-08">2025-04-08</time></div><div class="nc-title">Jiangxiang Industry Forum Spotlights Culture &amp; Quality – Longguo Banquet Launches New Premium Series</div></div>
-        </a>
-
-        <a href="news.html" class="nc reveal rd1">
-          <img src="https://www.longguoyan.com/_20250408/1158184936.png" alt="Dragon-Raising-Head Spring Ceremony Beijing 2025" loading="lazy" />
-          <div class="nc-body"><div class="nc-date"><time datetime="2025-04-08">2025-04-08</time></div><div class="nc-title">2025 Longguo Banquet Dragon-Raising-Head Spring Ceremony Held Grandly in Beijing</div></div>
-        </a>
-
-        <a href="news.html" class="nc reveal rd2">
-          <img src="https://www.longguoyan.com/_20250408/1154036784.png" alt="19th China Brand Leaders Summit Guangzhou" loading="lazy" />
-          <div class="nc-body"><div class="nc-date"><time datetime="2025-04-08">2025-04-08</time></div><div class="nc-title">19th China Brand Leaders Summit – Longguo Banquet Named Exclusive Official Baijiu</div></div>
-        </a>
-
-        <a href="news.html" class="nc reveal rd3">
-          <img src="https://www.longguoyan.com/_20250408/1149459687.jpg" alt="ISGC Gold Award 2024" loading="lazy" />
-          <div class="nc-body"><div class="nc-date"><time datetime="2024-04-08">2024-04-08</time></div><div class="nc-title">Longguo Banquet Wins Gold | 2024 ISGC International Spirits (China) Awards Ceremony</div></div>
-        </a>
-
       </div>
       <div style="text-align:center;margin-top:56px" class="reveal"><a href="news.html" class="btn-primary">View All News</a></div>
     </div>
   </section>
 
-  <!-- VIDEO -->
-  <section class="video-section" aria-labelledby="video-heading">
-    <div class="container">
-      <div class="section-head reveal"><div class="section-en">Brand Story</div><h2 class="section-title" id="video-heading">The Art of Jiangxiang</h2><div class="section-line"><span>◆</span></div><p style="margin-top:16px;color:var(--text-light);font-size:15px;letter-spacing:2px;">Witness the mastery behind every bottle</p></div>
-      <div class="video-wrapper reveal">
-        <div class="video-poster" id="videoPoster">
-          <img src="https://www.longguoyan.com/_20250408/1729505479.jpg" alt="Brand documentary" loading="lazy" />
-          <div class="video-overlay-text"><span class="video-label">BRAND DOCUMENTARY</span><span class="video-title-txt">龙国宴 · 酱香传承</span></div>
-          <button class="play-btn" id="playBtn" aria-label="Play brand documentary"><span class="play-icon">▶</span></button>
-        </div>
-        <video id="brandVideo" class="brand-video" preload="none" controls poster="https://www.longguoyan.com/_20250408/1729505479.jpg" style="display:none;">
-          <source src="https://www.longguoyan.com/style/img/intro1.mp4" type="video/mp4" />
-        </video>
-      </div>
-      <div class="video-features reveal">
-        <div class="vf-item"><div class="vf-icon">🌾</div><div class="vf-title">Premium Sorghum</div><div class="vf-desc">Red-soil highland Guizhou sorghum for the purest grain aroma</div></div>
-        <div class="vf-item"><div class="vf-icon">🔥</div><div class="vf-title">Triple-High Process</div><div class="vf-desc">High-temp fermentation, stacking &amp; distillation — hallmark of authentic Jiangxiang</div></div>
-        <div class="vf-item"><div class="vf-icon">🏺</div><div class="vf-title">5-Year Cellar Aging</div><div class="vf-desc">Sealed in century-old clay cellars, grain transforms into liquid gold</div></div>
-        <div class="vf-item"><div class="vf-icon">🎖️</div><div class="vf-title">Master Blending</div><div class="vf-desc">Senior masters craft each batch to the signature Longguo Banquet profile</div></div>
-      </div>
-    </div>
-  </section>
-
-<!-- Add this CSS to the <style> section -->
-<style>
-/* SOCIAL SECTION */
-.social-section{padding:80px 0;background:linear-gradient(135deg,var(--red-deep) 0%,var(--ink) 100%);border-top:1px solid rgba(201,168,76,0.2);}
-.social-inner{display:grid;grid-template-columns:1fr 320px;gap:48px;align-items:center;}
-.social-content .section-en{font-family:'Cinzel',serif;font-size:11px;letter-spacing:4px;text-transform:uppercase;margin-bottom:8px;}
-.social-content .section-title{font-family:'Cormorant Garamond',serif;font-size:36px;font-weight:300;line-height:1.2;margin:0 0 16px;}
-.social-content .section-line{width:60px;height:1px;background:var(--gold);margin:0 0 24px;position:relative;}
-.social-content .section-line span{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);background:var(--ink);padding:0 8px;color:var(--gold);font-size:10px;}
-.social-desc{color:rgba(250,246,237,0.7);font-size:15px;line-height:1.6;margin:0 0 32px;max-width:480px;}
-.social-links{display:flex;flex-wrap:wrap;gap:12px;margin:0 0 28px;}
-.social-link{display:flex;align-items:center;gap:10px;padding:10px 18px;background:rgba(201,168,76,0.1);border:1px solid rgba(201,168,76,0.3);border-radius:4px;color:var(--cream);text-decoration:none;font-family:'Cinzel',serif;font-size:11px;letter-spacing:1px;transition:all 0.3s;}
-.social-link:hover{background:var(--gold);color:var(--ink);border-color:var(--gold);}
-.social-link-icon{display:flex;align-items:center;justify-content:center;width:18px;height:18px;}
-.social-phone-cta{display:flex;align-items:center;gap:12px;padding-top:20px;border-top:1px solid rgba(201,168,76,0.2);}
-.social-phone-cta span{color:rgba(250,246,237,0.5);font-size:12px;font-family:'Cinzel',serif;letter-spacing:1px;}
-.social-phone{color:var(--gold);font-family:'Cinzel',serif;font-size:14px;letter-spacing:2px;text-decoration:none;transition:color 0.3s;}
-.social-phone:hover{color:var(--gold-light);}
-.social-qr{display:flex;justify-content:flex-end;}
-.qr-card{position:relative;background:var(--cream);padding:24px;border-radius:8px;text-align:center;box-shadow:0 20px 60px rgba(0,0,0,0.4);}
-.qr-card img{width:160px;height:160px;display:block;margin:0 auto;border:3px solid var(--gold);border-radius:4px;}
-.qr-label{margin-top:16px;}
-.qr-label span{display:block;font-family:'Noto Serif SC',serif;font-size:12px;color:var(--ink);}
-.qr-label span:last-child{font-family:'Cinzel',serif;font-size:9px;letter-spacing:1px;color:var(--gold-dark);margin-top:4px;}
-.qr-decoration{position:absolute;inset:-2px;border:2px solid var(--gold);border-radius:10px;pointer-events:none;opacity:0.3;}
-
-/* CONTACT STRIP */
-.contact-strip{background:var(--gold);padding:24px 0;}
-.contact-inner{display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap;}
-.contact-info h2{font-family:'Cormorant Garamond',serif;font-size:20px;color:var(--ink);margin:0 0 4px;font-weight:400;}
-.contact-phone a{font-family:'Cinzel',serif;font-size:18px;color:var(--ink);font-weight:600;letter-spacing:1px;}
-.contact-details{display:flex;gap:24px;margin-top:8px;flex-wrap:wrap;}
-.contact-detail{display:flex;align-items:center;gap:8px;color:var(--ink);font-size:13px;}
-.contact-detail-icon{font-size:14px;}
-.btn-primary{background:var(--ink);color:var(--gold);font-family:'Cinzel',serif;font-size:11px;letter-spacing:2px;padding:12px 28px;border:none;border-radius:2px;cursor:pointer;transition:all 0.3s;text-decoration:none;display:inline-flex;align-items:center;}
-.btn-primary:hover{background:var(--red-deep);color:var(--cream);}
-
-@media(max-width:900px){
-  .social-inner{grid-template-columns:1fr;gap:32px;text-align:center;}
-  .social-content .section-title{font-size:28px;}
-  .social-desc{margin:0 auto 32px;}
-  .social-links{justify-content:center;}
-  .social-phone-cta{justify-content:center;}
-  .social-qr{justify-content:center;}
-  .contact-inner{flex-direction:column;text-align:center;}
-  .contact-details{justify-content:center;}
-}
-</style>
-
-<!-- SOCIAL -->
-<section class="social-section" aria-labelledby="social-heading">
-  <div class="container">
-    <div class="social-inner">
-      <div class="social-content reveal">
-        <div class="section-en" style="color:var(--gold-light)">Follow Us</div>
-        <h2 class="section-title" id="social-heading" style="color:var(--cream)">Stay Connected</h2>
-        <div class="section-line"><span>◆</span></div>
-        <p class="social-desc">Follow Longguo Banquet for the latest news, exclusive offers, and behind-the-scenes content from Maotai Town</p>
-        <div class="social-links">
-          <a href="https://www.facebook.com/longguoyan" class="social-link" target="_blank" rel="noopener">
-            <span class="social-link-icon">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.41c0-3.025 1.792-4.697 4.533-4.697 1.312 0 2.686.236 2.686.236v2.97h-1.513c-1.491 0-1.956.93-1.956 1.884v2.27h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/>
-              </svg>
-            </span>
-            <span>Facebook</span>
-          </a>
-          <a href="https://www.instagram.com/longguoyan" class="social-link" target="_blank" rel="noopener">
-            <span class="social-link-icon">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
-              </svg>
-            </span>
-            <span>Instagram</span>
-          </a>
-          <a href="https://x.com/longguoyan" class="social-link" target="_blank" rel="noopener">
-            <span class="social-link-icon">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
-              </svg>
-            </span>
-            <span>X / Twitter</span>
-          </a>
-          <a href="https://www.tiktok.com/@longguoyan" class="social-link" target="_blank" rel="noopener">
-            <span class="social-link-icon">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.18 8.18 0 004.79 1.52V6.76a4.85 4.85 0 01-1.02-.07z"/>
-              </svg>
-            </span>
-            <span>TikTok</span>
-          </a>
-          <a href="https://weixin.qq.com" class="social-link" target="_blank" rel="noopener">
-            <span class="social-link-icon">💬</span>
-            <span>WeChat Official</span>
-          </a>
-        </div>
-        <div class="social-phone-cta">
-          <span>Partnership Enquiries:</span>
-          <a href="tel:4001591958" class="social-phone">400-159-1958</a>
-        </div>
-      </div>
-      <div class="social-qr reveal rd1">
-        <div class="qr-card">
-          <img src="https://www.longguoyan.com/_20190924/1324283689.png" alt="WeChat QR Code" loading="lazy" />
-          <div class="qr-label">
-            <span>扫码关注</span>
-            <span>Scan to Follow WeChat</span>
-          </div>
-        </div>
-        <div class="qr-decoration" aria-hidden="true"></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- CONTACT STRIP -->
-<section class="contact-strip" aria-label="Contact">
-  <div class="container">
-    <div class="contact-inner">
-      <div class="contact-info">
-        <h2>Contact Us</h2>
-        <div class="contact-phone">
-          <a href="tel:4001591958" style="color:inherit;text-decoration:none;">400-159-1958</a>
-        </div>
-        <div class="contact-details">
-          <div class="contact-detail">
-            <span class="contact-detail-icon">📍</span>
-            <span>Chun Shu Village, Maotai Town, Renhuai City, Zunyi, Guizhou</span>
-          </div>
-          <div class="contact-detail">
-            <span class="contact-detail-icon">🕐</span>
-            <span>Monday – Saturday, 09:00 – 18:00</span>
-          </div>
-        </div>
-      </div>
-      <a href="contact.html" class="btn-primary">Send Us a Message</a>
-    </div>
-  </div>
-</section>
 
   <!-- FOOTER -->
   <footer role="contentinfo">
-    <div class="container">
-      <div class="footer-grid">
-        <div class="footer-brand">
-          <span class="logo-cn" lang="zh">龙国宴</span>
-          <span class="logo-en">Longguo Banquet Premium Baijiu</span>
-          <p class="footer-brand-text">Guizhou Longguo Banquet Baijiu Co., Ltd., based in Maotai Town, inheriting century-old traditional brewing techniques, crafting premium Jiangxiang sauce-aroma baijiu.</p>
-          <address class="footer-address" style="font-style:normal;">📍 Chun Shu Village, Maotai Town, Renhuai City, Zunyi, Guizhou<br />📞 <a href="tel:4001591958" style="color:inherit;">400-159-1958</a></address>
+    <div class="footer-top">
+      <div class="container">
+        <div class="footer-top-grid">
+          <div class="ft-content reveal">
+            <div class="section-en">Stay Connected</div>
+            <h2 class="section-title">Follow Longguo Banquet</h2>
+            <div class="section-line"><span>◆</span></div>
+            <p class="ft-desc">Follow us for the latest news, exclusive offers, and behind-the-scenes content from our Maotai Town distillery.</p>
+            <div class="ft-contact-social">
+              <div class="ft-social-links">
+                <a href="https://www.facebook.com/longguoyan" class="ft-social-link" target="_blank" rel="noopener"><span>FB</span> Facebook</a>
+                <a href="https://www.instagram.com/longguoyan" class="ft-social-link" target="_blank" rel="noopener"><span>IG</span> Instagram</a>
+                <a href="https://x.com/longguoyan" class="ft-social-link" target="_blank" rel="noopener"><span>X</span> Twitter</a>
+                <a href="https://www.tiktok.com/@longguoyan" class="ft-social-link" target="_blank" rel="noopener"><span>TK</span> TikTok</a>
+              </div>
+              <div class="ft-contact-cta">
+                <div class="ft-phone-label" style="font-size:12px; letter-spacing:1px; color:rgba(255,255,255,0.5);">Partnership:</div>
+                <a href="tel:4001591958" class="ft-phone">400-159-1958</a>
+              </div>
+            </div>
+          </div>
+          <div class="ft-qr-card reveal rd1">
+            <img src="https://www.longguoyan.com/_20190924/1324283689.png" alt="WeChat QR Code" loading="lazy" />
+            <div class="ft-qr-label">
+              <span>扫码关注官方微信</span>
+              <span>Official WeChat</span>
+            </div>
+          </div>
         </div>
-        <div class="footer-col"><h4>About</h4><ul><li><a href="about.html">Company Profile</a></li><li><a href="product.html">Product Showcase</a></li><li><a href="about.html">Brand Heritage</a></li></ul></div>
-        <div class="footer-col"><h4>Collections</h4><ul><li><a href="product.html">Jiangxiang Series</a></li><li><a href="product.html">Limited Editions</a></li><li><a href="product.html">Commemorative Series</a></li></ul></div>
-        <div class="footer-col"><h4>News</h4><ul><li><a href="news.html">Company News</a></li><li><a href="news.html">Industry Updates</a></li></ul></div>
-        <div class="footer-col"><h4>Connect</h4><ul><li><a href="cooperation.html">Partnerships</a></li><li><a href="human.html">Careers</a></li><li><a href="contact.html">Contact Us</a></li></ul></div>
       </div>
-      <div class="footer-bottom">
-        <div class="footer-copyright">Copyright © Longguo Banquet Baijiu Co. ALL Rights Reserved &nbsp;｜&nbsp; ICP No. 19010301-1</div>
-        <div class="footer-links"><a href="contact.html">Disclaimer</a><a href="contact.html">Privacy Policy</a><a href="cooperation.html">Partnerships</a></div>
+    </div>
+
+    <div class="footer-main">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <span class="logo-cn" lang="zh">龙国宴</span>
+            <p class="footer-brand-text">Guizhou Longguo Banquet Baijiu Co., Ltd. — inheriting century-old techniques, crafting premium Jiangxiang spirits in Maotai Town.</p>
+            <address class="footer-address">
+              📍 Chun Shu Village, Maotai Town, Renhuai, Guizhou<br />
+              📞 <a href="tel:4001591958" style="color:inherit;">400-159-1958</a>
+            </address>
+          </div>
+          <div class="footer-col"><h4>About</h4><ul><li><a href="about.html">Profile</a></li><li><a href="about.html">Heritage</a></li></ul></div>
+          <div class="footer-col"><h4>Collections</h4><ul><li><a href="product.html">Jiangxiang</a></li><li><a href="product.html">Limited</a></li></ul></div>
+          <div class="footer-col"><h4>News</h4><ul><li><a href="news.html">Updates</a></li></ul></div>
+          <div class="footer-col"><h4>Connect</h4><ul><li><a href="cooperation.html">Partners</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container">
+        <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:20px;">
+          <div class="footer-copyright">Copyright © Longguo Banquet Baijiu Co. ALL Rights Reserved | ICP No. 19010301-1</div>
+          <div class="footer-links">
+            <a href="contact.html">Disclaimer</a>
+            <a href="contact.html">Privacy Policy</a>
+          </div>
+        </div>
       </div>
     </div>
   </footer>
 
-  <div id="cookieBanner" class="cookie-banner" role="dialog" aria-live="polite">
+  <div id="cookieBanner" class="cookie-banner" role="dialog">
     <div class="cookie-inner">
-      <div class="cookie-text"><span class="cookie-icon">🍪</span><p>We use cookies to enhance your browsing experience. By clicking <strong>Accept</strong>, you consent to our use of cookies. <a href="contact.html" class="cookie-link">Privacy Policy</a></p></div>
-      <div class="cookie-actions"><button class="cookie-btn cookie-decline" id="cookieDecline">Decline</button><button class="cookie-btn cookie-accept" id="cookieAccept">Accept All</button></div>
+      <div class="cookie-text"><p>We use cookies to enhance your experience. By clicking Accept, you consent to our use of cookies.</p></div>
+      <div class="cookie-actions">
+        <button class="cookie-btn cookie-decline" id="cookieDecline">Decline</button>
+        <button class="cookie-btn cookie-accept" id="cookieAccept">Accept All</button>
+      </div>
     </div>
   </div>
 
   <script src="nav.js" defer></script>
-  <script>
-    /* Clean hero slider — overrides any nav.js hero logic */
-    (function(){
-      const slides = document.querySelectorAll('.hc-slide');
-      const dots   = document.querySelectorAll('.hc-dot');
-      if (!slides.length) return;
-      let cur = 0;
-      function go(n){
-        slides[cur].classList.remove('active');
-        dots[cur] && dots[cur].classList.remove('active');
-        cur = (n + slides.length) % slides.length;
-        slides[cur].classList.add('active');
-        dots[cur] && dots[cur].classList.add('active');
-      }
-      let t = setInterval(()=>go(cur+1), 5500);
-      dots.forEach((d,i)=>d.addEventListener('click',()=>{ clearInterval(t); go(i); t=setInterval(()=>go(cur+1),5500); }));
-      document.querySelector('.hero-clean').addEventListener('mouseenter',()=>clearInterval(t));
-      document.querySelector('.hero-clean').addEventListener('mouseleave',()=>{ t=setInterval(()=>go(cur+1),5500); });
-    })();
-  </script>
 </body>
 </html>
