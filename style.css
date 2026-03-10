@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@300;400;500;600;700&family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap');
+
 /* ============================================================
    LONGGUO BANQUET — UNIFIED STYLESHEET
    Premium Jiangxiang Baijiu · Maotai Town, Guizhou
@@ -71,8 +73,8 @@ html { scroll-behavior: smooth; }
 
 body {
   font-family: 'Noto Serif SC', 'Cormorant Garamond', Georgia, serif;
-  color: var(--text-main);
-  background: var(--ink);
+  color: #FDF8F0 !important;
+  background: #0D0A06 !important;
   line-height: 1.8;
   overflow-x: hidden;
 }
@@ -100,15 +102,15 @@ header {
   position: fixed;
   top: 0; left: 0; right: 0;
   z-index: 1000;
-  background: rgba(26,10,0,0.92);
+  background: rgba(13,10,6,0.95) !important;
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  border-bottom: 1px solid var(--border);
+  border-bottom: 1px solid rgba(212,175,55,0.3) !important;
   transition: var(--transition);
 }
 
 header.scrolled {
-  background: rgba(26,10,0,0.98);
+  background: rgba(13,10,6,0.98);
   box-shadow: 0 4px 30px rgba(0,0,0,0.5);
 }
 
@@ -135,7 +137,7 @@ header .container {
   border-radius: 50%;
   display: flex; align-items: center; justify-content: center;
   font-size: 26px;
-  box-shadow: 0 0 20px rgba(201,162,39,0.4);
+  box-shadow: 0 0 20px rgba(212,175,55,0.4);
   flex-shrink: 0;
 }
 
@@ -151,7 +153,7 @@ header .container {
 .logo-en {
   font-family: 'Cinzel', serif;
   font-size: 10px;
-  color: rgba(201,162,39,0.6);
+  color: rgba(212,175,55,0.6);
   letter-spacing: 3px;
   text-transform: uppercase;
 }
@@ -246,7 +248,7 @@ nav a.active::after { transform: translateX(-50%) scaleX(1); }
   letter-spacing: 3px;
   text-transform: uppercase;
   padding: 14px 0;
-  border-bottom: 1px solid rgba(201,162,39,0.1);
+  border-bottom: 1px solid rgba(212,175,55,0.1);
   transition: all 0.3s ease;
 }
 
@@ -276,7 +278,7 @@ nav a.active::after { transform: translateX(-50%) scaleX(1); }
   color: var(--gold);
   border-color: var(--gold);
   transform: translateY(-3px);
-  box-shadow: 0 10px 30px rgba(201,162,39,0.3);
+  box-shadow: 0 10px 30px rgba(212,175,55,0.3);
   clip-path: none;
 }
 
@@ -305,7 +307,7 @@ nav a.active::after { transform: translateX(-50%) scaleX(1); }
 /* ===== PAGE BANNER ===== */
 .page-banner {
   height: 280px;
-  background: linear-gradient(135deg, var(--dark) 0%, var(--primary) 100%);
+  background: linear-gradient(135deg, var(--dark) 0%, var(--gold) 100%);
   position: relative;
   display: flex;
   align-items: center;
@@ -352,8 +354,8 @@ nav a.active::after { transform: translateX(-50%) scaleX(1); }
   height: auto;
   object-fit: contain;
   transition: var(--transition);
-  /* Enhance visibility of the dark logo on dark background */
-  filter: brightness(0) invert(1) drop-shadow(0 0 2px var(--gold));
+  /* Imperial Gold Branding Filter: Turns black logo elements into #D4AF37 gold */
+  filter: brightness(0) invert(1) sepia(1) saturate(5) hue-rotate(10deg) drop-shadow(0 0 2px rgba(212, 175, 55, 0.8));
 }
 
 header.scrolled .logo-icon-img {
@@ -413,7 +415,7 @@ header.scrolled .logo-icon-img {
 .slider-dot {
   width: 10px; height: 10px;
   border-radius: 50%;
-  background: rgba(201,162,39,0.4);
+  background: rgba(212,175,55,0.4);
   border: 1px solid var(--gold);
   cursor: pointer;
   transition: all 0.3s ease;
@@ -580,7 +582,7 @@ header.scrolled .logo-icon-img {
 
 .product-card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 20px 60px rgba(139,0,0,0.15);
+  box-shadow: 0 20px 60px rgba(212,175,55,0.15);
 }
 
 .product-card:hover::before { border-color: var(--gold); }
@@ -609,7 +611,7 @@ header.scrolled .logo-icon-img {
 .product-img .img-placeholder .placeholder-text {
   font-family: 'Cinzel', serif;
   font-size: 11px; letter-spacing: 3px;
-  color: rgba(201,162,39,0.5);
+  color: rgba(212,175,55,0.5);
   text-transform: uppercase;
 }
 
@@ -628,7 +630,7 @@ header.scrolled .logo-icon-img {
 .product-tag {
   position: absolute;
   top: 16px; left: 16px;
-  background: var(--primary);
+  background: var(--gold);
   color: var(--white);
   font-family: 'Cinzel', serif;
   font-size: 10px; letter-spacing: 2px;
@@ -666,19 +668,19 @@ header.scrolled .logo-icon-img {
 
 .product-link {
   display: inline-flex; align-items: center;
-  gap: 8px; color: var(--primary);
+  gap: 8px; color: var(--gold);
   font-family: 'Cinzel', serif;
   font-size: 11px; letter-spacing: 2px;
   text-transform: uppercase;
   transition: gap 0.3s ease, color 0.3s ease;
 }
 
-.product-link:hover { gap: 14px; color: var(--gold); }
+.product-link:hover { gap: 14px; color: var(--gold-light); }
 
 /* ===== HERITAGE & STORY SECTION (Unified) ===== */
 .heritage-story {
   padding: 160px 0 120px;
-  background: var(--ink);
+  background: var(--ink) !important;
   color: var(--text-muted);
   position: relative; overflow: hidden;
   scroll-margin-top: 80px;
@@ -689,7 +691,7 @@ header.scrolled .logo-icon-img {
   position: absolute;
   top: -20%; right: -10%;
   width: 800px; height: 800px;
-  background: radial-gradient(circle, rgba(139,0,0,0.15) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(212,175,55,0.15) 0%, transparent 70%);
   pointer-events: none;
 }
 
@@ -723,7 +725,7 @@ header.scrolled .logo-icon-img {
 .about-img-placeholder .placeholder-text {
   font-family: 'Cinzel', serif;
   font-size: 12px; letter-spacing: 4px;
-  color: rgba(201,162,39,0.4);
+  color: rgba(212,175,55,0.4);
   text-transform: uppercase;
 }
 
@@ -735,7 +737,7 @@ header.scrolled .logo-icon-img {
   border-radius: 50%;
   display: flex; flex-direction: column;
   align-items: center; justify-content: center;
-  border: 3px solid rgba(201,162,39,0.3);
+  border: 3px solid rgba(212,175,55,0.3);
 }
 
 .about-badge .years {
@@ -850,7 +852,7 @@ header.scrolled .logo-icon-img {
   transition: color 0.3s ease;
 }
 
-.news-featured:hover .news-title { color: var(--primary); }
+.news-featured:hover .news-title { color: var(--gold); }
 
 .news-list {
   display: flex; flex-direction: column; gap: 0;
@@ -876,7 +878,7 @@ header.scrolled .logo-icon-img {
 .news-item-day {
   font-family: 'Cinzel', serif;
   font-size: 28px; font-weight: 700;
-  color: var(--primary); line-height: 1;
+  color: var(--gold); line-height: 1;
 }
 
 .news-item-month {
@@ -898,7 +900,7 @@ header.scrolled .logo-icon-img {
   transition: color 0.3s ease;
 }
 
-.news-item:hover .news-item-title { color: var(--primary); }
+.news-item:hover .news-item-title { color: var(--gold); }
 
 .news-item-arrow {
   color: var(--gold); font-size: 20px;
@@ -920,6 +922,7 @@ footer {
 /* Footer Top: Social & Contact Integration */
 .footer-top {
   padding: 100px 0 80px;
+  background-color: #0D0A06 !important;
   background: linear-gradient(135deg, #2a0000 0%, var(--ink) 100%);
   border-bottom: 1px solid rgba(212, 175, 55, 0.15);
 }
@@ -929,6 +932,27 @@ footer {
   grid-template-columns: 1fr 220px;
   gap: 60px;
   align-items: center;
+}
+
+.ft-content .section-en { color: var(--gold-light); }
+.ft-content .section-title { color: var(--white); margin-bottom: 24px; text-align: left; }
+.ft-content .section-line { justify-content: flex-start; margin: 0 0 32px; }
+.ft-content .section-line::before { display: none; }
+
+.ft-desc {
+  font-size: 16px;
+  line-height: 1.8;
+  color: rgba(255,255,255,0.7);
+  margin-bottom: 40px;
+  max-width: 550px;
+}
+
+.ft-contact-social {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
 }
 
 .ft-content .section-en { color: var(--gold-light); }
@@ -1182,7 +1206,7 @@ footer {
   transition: color 0.3s ease;
 }
 
-.news-page-item:hover .news-page-title { color: var(--primary); }
+.news-page-item:hover .news-page-title { color: var(--gold); }
 
 .news-page-excerpt {
   font-size: 14px; color: var(--text-muted);
@@ -1276,7 +1300,7 @@ footer {
   margin-bottom: 8px;
 }
 
-.form-group label .required-mark { color: var(--primary); margin-left: 2px; }
+.form-group label .required-mark { color: var(--gold); margin-left: 2px; }
 
 .form-group input,
 .form-group textarea,
@@ -1299,18 +1323,18 @@ footer {
 .form-group select:focus {
   border-color: var(--gold);
   background: rgba(255,255,255,0.06);
-  box-shadow: 0 0 0 3px rgba(201,162,39,0.1);
+  box-shadow: 0 0 0 3px rgba(212,175,55,0.1);
 }
 
 .form-group input.error,
 .form-group textarea.error,
 .form-group select.error {
-  border-color: var(--primary);
+  border-color: var(--gold);
 }
 
 .form-group .error-msg {
   display: none;
-  font-size: 11px; color: var(--primary);
+  font-size: 11px; color: var(--gold);
   letter-spacing: 1px; margin-top: 6px;
 }
 
@@ -1355,7 +1379,7 @@ footer {
 .benefit-card:hover {
   transform: translateY(-6px);
   border-color: var(--gold);
-  box-shadow: 0 12px 40px rgba(139,0,0,0.1);
+  box-shadow: 0 12px 40px rgba(212,175,55,0.1);
 }
 
 .benefit-icon { font-size: 48px; margin-bottom: 20px; }
@@ -1422,7 +1446,7 @@ footer {
 .value-item:hover {
   transform: translateY(-4px);
   border-color: var(--gold);
-  box-shadow: 0 8px 30px rgba(139,0,0,0.08);
+  box-shadow: 0 8px 30px rgba(212,175,55,0.08);
 }
 
 .value-icon { font-size: 44px; margin-bottom: 16px; }
@@ -1472,7 +1496,7 @@ footer {
   transition: color 0.3s ease;
 }
 
-.job-item:hover .job-title { color: var(--primary); }
+.job-item:hover .job-title { color: var(--gold); }
 
 .job-meta { display: flex; gap: 12px; flex-wrap: wrap; }
 
@@ -1504,7 +1528,7 @@ footer {
 
 .honor-card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 12px 40px rgba(139,0,0,0.1);
+  box-shadow: 0 12px 40px rgba(212,175,55,0.1);
   border-color: var(--gold);
 }
 
@@ -1676,20 +1700,20 @@ footer {
   z-index: 3;
   width: 80px; height: 80px;
   border-radius: 50%;
-  background: rgba(201,162,39,0.9);
+  background: rgba(212,175,55,0.9);
   border: 3px solid var(--white);
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
   transition: all 0.3s ease;
-  box-shadow: 0 0 0 10px rgba(201,162,39,0.25);
+  box-shadow: 0 0 0 10px rgba(212,175,55,0.25);
 }
 
 .play-btn:hover {
   background: var(--gold);
   transform: translate(-50%, -50%) scale(1.1);
-  box-shadow: 0 0 0 16px rgba(201,162,39,0.2);
+  box-shadow: 0 0 0 16px rgba(212,175,55,0.2);
 }
 
 .play-icon {
@@ -1726,7 +1750,7 @@ footer {
 .vf-item:hover {
   border-color: var(--gold);
   transform: translateY(-4px);
-  box-shadow: 0 12px 30px rgba(201,162,39,0.12);
+  box-shadow: 0 12px 30px rgba(212,175,55,0.12);
 }
 
 .vf-icon {
@@ -1738,7 +1762,7 @@ footer {
   font-family: 'Cinzel', serif;
   font-size: 13px;
   letter-spacing: 1.5px;
-  color: var(--primary);
+  color: var(--gold);
   margin-bottom: 10px;
   font-weight: 600;
 }
@@ -1771,7 +1795,7 @@ footer {
   left: 0;
   right: 0;
   z-index: 9999;
-  background: rgba(26,10,0,0.97);
+  background: rgba(13,10,6,0.97);
   border-top: 1px solid var(--border);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
@@ -1945,7 +1969,7 @@ footer {
 
 .pd-thumb:hover img { transform: scale(1.08); }
 .pd-thumb.active { border-color: var(--gold); }
-.pd-thumb:hover { border-color: rgba(201,162,39,0.6); }
+.pd-thumb:hover { border-color: rgba(212,175,55,0.6); }
 
 /* Product Info */
 .pd-series {
@@ -1968,7 +1992,7 @@ footer {
 .pd-name em {
   font-style: normal;
   font-size: 20px;
-  color: var(--primary);
+  color: var(--gold);
   display: block;
 }
 
@@ -2093,9 +2117,9 @@ footer {
   white-space: nowrap;
 }
 
-.pd-tab-btn:hover { color: var(--primary); }
+.pd-tab-btn:hover { color: var(--gold); }
 .pd-tab-btn.active {
-  color: var(--primary);
+  color: var(--gold);
   border-bottom-color: var(--gold);
   background: var(--card-bg);
 }
@@ -2111,7 +2135,7 @@ footer {
   font-family: 'Cinzel', serif;
   font-size: 16px;
   letter-spacing: 2px;
-  color: var(--primary);
+  color: var(--gold);
   margin-bottom: 24px;
   padding-bottom: 12px;
   border-bottom: 1px solid var(--border);
@@ -2199,7 +2223,7 @@ footer {
   font-family: 'Cinzel', serif;
   font-size: 28px;
   font-weight: 700;
-  color: rgba(201,162,39,0.3);
+  color: rgba(212,175,55,0.3);
   flex-shrink: 0;
   width: 50px;
   line-height: 1;
@@ -2241,7 +2265,7 @@ footer {
 .pairing-item:hover {
   border-color: var(--gold);
   transform: translateY(-3px);
-  box-shadow: 0 8px 24px rgba(201,162,39,0.1);
+  box-shadow: 0 8px 24px rgba(212,175,55,0.1);
 }
 
 .pairing-icon { font-size: 28px; margin-bottom: 12px; }
@@ -2251,7 +2275,7 @@ footer {
   font-family: 'Cinzel', serif;
   font-size: 12px;
   letter-spacing: 1.5px;
-  color: var(--primary);
+  color: var(--gold);
   margin-bottom: 10px;
 }
 
@@ -2295,4 +2319,3 @@ img[loading="lazy"] {
   transition: opacity 0.5s ease;
 }
 img[loading="lazy"].loaded { opacity: 1; }
-
