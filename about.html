@@ -10,7 +10,7 @@
   <meta property="og:title" content="About Us – LongGuoYan | LongGuoYan" />
   <meta property="og:url" content="https://www.longguoyan.com/about.html" />
   <meta property="og:image" content="https://www.longguoyan.com/_20260302/1635001211.jpg" />
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"Guizhou LongGuoYan Baijiu Co., Ltd.","alternateName":["龙国宴","LongGuoYan"],"url":"https://www.longguoyan.com","logo":"https://www.longguoyan.com/_20191224/1514189302.png","foundingDate":"1958","telephone":"400-159-1958","address":{"@type":"PostalAddress","streetAddress":"Chun Shu Village, Maotai Town","addressLocality":"Renhuai","addressRegion":"Guizhou","addressCountry":"CN"}}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"Guizhou LongGuoYan Baijiu Co., Ltd.","alternateName":["LongGuoYan","LongGuoYan"],"url":"https://www.longguoyan.com","logo":"https://www.longguoyan.com/_20191224/1514189302.png","foundingDate":"1958","telephone":"400-159-1958","address":{"@type":"PostalAddress","streetAddress":"Chun Shu Village, Maotai Town","addressLocality":"Renhuai","addressRegion":"Guizhou","addressCountry":"CN"}}</script>
   <link rel="stylesheet" href="style.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -52,46 +52,30 @@
     <a href="contact.html">Contact</a>
   </nav>
 
-  <div class="page-banner" style="background-image:linear-gradient(rgba(13,10,6,0.6), rgba(13,10,6,0.6)), url('https://www.longguoyan.com/_20250408/1729505479.jpg'); background-size: cover; background-position: center;">
-    <div class="container page-banner-content">
-      <div class="breadcrumb">
-        <a href="index.html">Home</a>
-        <span class="breadcrumb-sep">/</span>
-        <span>About Us</span>
-      </div>
-      <h1>ABOUT US</h1>
-      <div class="page-banner-line"></div>
-    </div>
-  </div>
+  <div class="page-banner" style="background-image:linear-gradient(rgba(13,10,6,0.6), rgba(13,10,6,0.6)), url('https://www.longguoyan.com/_20250408/1729505479.jpg'); background-size: cover; background-position: center;"></div>
 
   <main>
     <section class="about-page">
       <div class="container">
 
-        <!-- Company Profile with Video -->
         <div class="about-page-grid fade-in">
-          <div class="about-video-wrap">
-            <div class="video-poster" id="videoPoster">
-              <img src="https://www.longguoyan.com/_20250408/1729505479.jpg"
-                   alt="LongGuoYan Distillery Video" loading="lazy" />
-              <div class="video-overlay-text">
-                <span class="video-label">OUR STORY</span>
-                <span class="video-title-txt">66 Years of Craft Excellence</span>
+          <!-- CHANGE 3: Replaced image with video block matching index.html -->
+          <div class="about-img-wrap reveal">
+            <div class="video-wrapper">
+              <div class="video-poster" id="videoPoster">
+                <img src="https://www.longguoyan.com/_20250408/1729505479.jpg" alt="Brand documentary" loading="lazy" />
+                <button class="play-btn" id="playBtn" aria-label="Play documentary"><span class="play-icon">▶</span></button>
               </div>
-              <button class="play-btn" id="playBtn" aria-label="Play Video">
-                <span class="play-icon">▶</span>
-              </button>
+              <video id="brandVideo" class="brand-video" preload="none" controls poster="https://www.longguoyan.com/_20250408/1729505479.jpg" style="display:none;">
+                <source src="https://www.longguoyan.com/style/img/intro1.mp4" type="video/mp4" />
+              </video>
             </div>
-            <video class="brand-video" id="brandVideo" style="display: none;" controls 
-                   poster="https://www.longguoyan.com/_20250408/1729505479.jpg">
-              <source src="https://www.longguoyan.com/videos/about-us.mp4" type="video/mp4">
-              Your browser does not support the video tag.
-            </video>
+            <div class="about-badge"><div class="years">66</div><div class="label">Years of Craft</div></div>
           </div>
           <div class="about-page-content">
             <h2>Company Profile</h2>
             <p>Guizhou LongGuoYan Baijiu Co., Ltd. is located in Maotai Town, Guizhou Province —
-               the heartland of China's finest sauce-aroma Jiangxiang baijiu. Rebuilt upon the foundation
+               the heartland of China's finest sauce-aroma Jiangxiang baijiu. Rebuilt upon the foundation 
                of an ancient traditional distillery, it has grown into a celebrated Guizhou heritage brand.</p>
             <p><strong style="color:var(--gold)">1958:</strong> Founded as a traditional distillery in Maotai Town</p>
             <p><strong style="color:var(--gold)">2016–Present:</strong> Full brand upgrade, expanding into international markets.</p>
@@ -99,7 +83,6 @@
           </div>
         </div>
 
-        <!-- Brand Honours -->
         <div style="margin-top:120px">
           <div class="section-head reveal">
             <div class="section-en">Brand Honours</div>
@@ -150,7 +133,6 @@
           </div>
         </div>
 
-        <!-- Brewing Craft -->
         <div style="margin-top:120px">
           <div class="section-head fade-in">
             <div class="section-en">Brewing Craft</div>
@@ -207,6 +189,7 @@
           <div class="ft-qr-card reveal rd1">
             <img src="https://www.longguoyan.com/_20190924/1324283689.png" alt="WeChat QR Code" loading="lazy" />
             <div class="ft-qr-label">
+              <!-- CHANGE 2: Updated WeChat label to English -->
               <span>Scan the QR code to follow the official WeChat</span>
               <span>Official WeChat</span>
             </div>
@@ -219,7 +202,8 @@
       <div class="container">
         <div class="footer-grid">
           <div class="footer-brand">
-            <span class="logo-cn" lang="zh">龙国宴</span>
+            <!-- CHANGE 1: Updated brand name to English -->
+            <span class="logo-cn" lang="en">LongGuoYan</span>
             <p class="footer-brand-text">Guizhou LongGuoYan Baijiu Co., Ltd. — inheriting century-old techniques, crafting premium Jiangxiang spirits in Maotai Town.</p>
             <address class="footer-address">
               📍 Chun Shu Village, Maotai Town, Renhuai, Guizhou<br />
@@ -246,20 +230,6 @@
       </div>
     </div>
   </footer>
-
-  <!-- Cookie Banner -->
-  <div class="cookie-banner" id="cookieBanner">
-    <div class="container cookie-inner">
-      <div class="cookie-text">
-        <span class="cookie-icon">🍪</span>
-        <p>We use cookies to enhance your experience. By clicking <strong>Accept</strong>, you consent to our use of cookies.</p>
-      </div>
-      <div class="cookie-actions">
-        <button class="cookie-btn cookie-decline" id="cookieDecline">Decline</button>
-        <button class="cookie-btn cookie-accept" id="cookieAccept">Accept All</button>
-      </div>
-    </div>
-  </div>
 
   <script src="nav.js" defer></script>
 </body>
