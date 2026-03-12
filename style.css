@@ -391,13 +391,16 @@ nav a.active::after { transform: translateX(-50%) scaleX(1); }
 
 /* ===== PAGE BANNER ===== */
 .page-banner {
-  height: 480px;
-  background: var(--ink);
-  position: relative;
-  display: flex;
-  align-items: center;
-  padding-top: 80px;
+  width: 100%;
+  display: block;
   overflow: hidden;
+  margin-top: 80px; /* offset for fixed nav */
+}
+.page-banner-img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
 }
 
 .page-banner::after {
@@ -1778,7 +1781,6 @@ footer {
 
 @media (max-width: 480px) {
   .page-banner h1 { font-size: 32px; letter-spacing: 4px; }
-  .page-banner { height: 280px; }
   .footer-grid { grid-template-columns: 1fr; }
   .about-badge {
     width: 90px; height: 90px;
