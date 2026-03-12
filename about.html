@@ -16,6 +16,105 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@300;400;500;600;700&family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
   <noscript><link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@300;400;500;600;700&family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap" rel="stylesheet"></noscript>
+
+  <style>
+    /* ── Honor cards with images ── */
+    .honor-card-img {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      overflow: hidden;
+      transition: var(--transition);
+    }
+    .honor-card-img:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 12px 40px rgba(212,175,55,0.15);
+      border-color: var(--gold);
+    }
+    .honor-card-img img {
+      width: 100%;
+      aspect-ratio: 4/3;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.5s ease;
+    }
+    .honor-card-img:hover img { transform: scale(1.04); }
+    .honor-card-img .honor-caption {
+      padding: 16px 20px;
+      border-top: 1px solid var(--border);
+    }
+    .honor-card-img .honor-name {
+      font-size: 13px;
+      color: var(--text-main);
+      letter-spacing: 0.5px;
+      font-weight: 600;
+      line-height: 1.5;
+      margin-bottom: 6px;
+    }
+    .honor-card-img .honor-year {
+      font-family: 'Cinzel', serif;
+      font-size: 11px;
+      color: var(--gold);
+      letter-spacing: 2px;
+    }
+
+    /* ── Brewing process steps with images ── */
+    .brewing-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 32px;
+      margin-top: 40px;
+    }
+    @media(max-width: 900px) { .brewing-grid { grid-template-columns: 1fr 1fr; } }
+    @media(max-width: 560px) { .brewing-grid { grid-template-columns: 1fr; } }
+
+    .brewing-step {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      overflow: hidden;
+      transition: var(--transition);
+    }
+    .brewing-step:hover {
+      transform: translateY(-6px);
+      border-color: var(--gold);
+      box-shadow: 0 12px 40px rgba(212,175,55,0.12);
+    }
+    .brewing-step-img {
+      width: 100%;
+      aspect-ratio: 16/10;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.5s ease;
+    }
+    .brewing-step:hover .brewing-step-img { transform: scale(1.04); }
+    .brewing-step-body { padding: 24px; }
+    .brewing-step-num {
+      font-family: 'Cinzel', serif;
+      font-size: 11px;
+      letter-spacing: 3px;
+      color: var(--gold);
+      margin-bottom: 8px;
+    }
+    .brewing-step-title {
+      font-family: 'Cinzel', serif;
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--text-main);
+      letter-spacing: 1px;
+      margin-bottom: 10px;
+    }
+    .brewing-step-text {
+      font-size: 13px;
+      color: var(--text-muted);
+      line-height: 1.8;
+    }
+
+    .company-profile-img {
+      width: 100%;
+      border: 1px solid var(--border);
+      display: block;
+      object-fit: cover;
+    }
+  </style>
 </head>
 <body class="about-page-body">
 
@@ -52,14 +151,26 @@
     <a href="contact.html">Contact</a>
   </nav>
 
-  <div class="page-banner" style="background-image:linear-gradient(rgba(13,10,6,0.6), rgba(13,10,6,0.6)), url('https://www.longguoyan.com/_20250408/1729505479.jpg'); background-size: cover; background-position: center;"></div>
+  <div class="page-banner" style="background-image:linear-gradient(rgba(13,10,6,0.5), rgba(13,10,6,0.5)), url('https://www.longguoyan.com/_20220916/1014294927.jpg'); background-size: cover; background-position: center;">
+    <div class="container">
+      <div class="page-banner-content">
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <a href="index.html">Home</a>
+          <span class="breadcrumb-sep">›</span>
+          <span>About Us</span>
+        </nav>
+        <h1>About Us</h1>
+        <div class="page-banner-line"></div>
+      </div>
+    </div>
+  </div>
 
   <main>
     <section class="about-page">
       <div class="container">
 
+        <!-- COMPANY PROFILE -->
         <div class="about-page-grid fade-in">
-          <!-- CHANGE 3: Replaced image with video block matching index.html -->
           <div class="about-img-wrap reveal">
             <div class="video-wrapper">
               <div class="video-poster" id="videoPoster">
@@ -75,7 +186,7 @@
           <div class="about-page-content">
             <h2>Company Profile</h2>
             <p>Guizhou LongGuoYan Baijiu Co., Ltd. is located in Maotai Town, Guizhou Province —
-               the heartland of China's finest sauce-aroma Jiangxiang baijiu. Rebuilt upon the foundation 
+               the heartland of China's finest sauce-aroma Jiangxiang baijiu. Rebuilt upon the foundation
                of an ancient traditional distillery, it has grown into a celebrated Guizhou heritage brand.</p>
             <p><strong style="color:var(--gold)">1958:</strong> Founded as a traditional distillery in Maotai Town</p>
             <p><strong style="color:var(--gold)">2016–Present:</strong> Full brand upgrade, expanding into international markets.</p>
@@ -83,79 +194,157 @@
           </div>
         </div>
 
+        <!-- COMPANY BROCHURE IMAGE -->
+        <div style="margin-top:80px" class="reveal">
+          <img
+            src="https://www.longguoyan.com/upload/ueditor/image/20250701/1751345884927173.jpg"
+            alt="LongGuoYan Company Brochure"
+            class="company-profile-img"
+            loading="lazy"
+          />
+        </div>
+
+        <!-- AWARDS & RECOGNITION -->
         <div style="margin-top:120px">
           <div class="section-head reveal">
             <div class="section-en">Brand Honours</div>
             <h2 class="section-title">Awards & Recognition</h2>
             <div class="section-line"><span>◆</span></div>
           </div>
-          <div class="honor-grid">
-            <div class="honor-card fade-in">
-              <div class="honor-icon">🥇</div>
-              <div class="honor-name">ISGC International Spirits Gold Award</div>
-              <div class="honor-year">2024</div>
+
+          <div class="honor-grid" style="grid-template-columns: repeat(4, 1fr);">
+
+            <div class="honor-card-img fade-in">
+              <img src="https://www.longguoyan.com/_20241203/0939056461.jpg" alt="ISGC 2024 Gold Award" loading="lazy" />
+              <div class="honor-caption">
+                <div class="honor-name">ISGC International Spirits (China) Competition Gold Award — Dragon Vein 15</div>
+                <div class="honor-year">2024</div>
+              </div>
             </div>
-            <div class="honor-card fade-in">
-              <div class="honor-icon">🏆</div>
-              <div class="honor-name">Official Baijiu of the China Brand Leaders Summit</div>
-              <div class="honor-year">2024</div>
+
+            <div class="honor-card-img fade-in">
+              <img src="https://www.longguoyan.com/_20241104/1517061191.jpg" alt="Brussels International Gold Award" loading="lazy" />
+              <div class="honor-caption">
+                <div class="honor-name">Brussels International Gold Award — Dragon Vein 15</div>
+                <div class="honor-year">2024</div>
+              </div>
             </div>
-            <div class="honor-card fade-in">
-              <div class="honor-icon">🎖️</div>
-              <div class="honor-name">Guizhou Time-Honored Heritage Brand</div>
-              <div class="honor-year">Certified</div>
+
+            <div class="honor-card-img fade-in">
+              <img src="https://www.longguoyan.com/_20241104/1516091141.jpg" alt="China Liquor E-Commerce Association" loading="lazy" />
+              <div class="honor-caption">
+                <div class="honor-name">China Liquor Circulation Association E-Commerce Committee Member</div>
+                <div class="honor-year">Certified</div>
+              </div>
             </div>
-            <div class="honor-card fade-in">
-              <div class="honor-icon">⭐</div>
-              <div class="honor-name">Sauce-Aroma Industry Forum Outstanding Brand</div>
-              <div class="honor-year">2025</div>
+
+            <div class="honor-card-img fade-in">
+              <img src="https://www.longguoyan.com/_20240517/1057599585.jpg" alt="2024 Tea & Spirits Competition" loading="lazy" />
+              <div class="honor-caption">
+                <div class="honor-name">2024 International Tea Expo — Tea & Spirits Tasting Grand Prize</div>
+                <div class="honor-year">2024</div>
+              </div>
             </div>
-            <div class="honor-card fade-in">
-              <div class="honor-icon">🌏</div>
-              <div class="honor-name">Malaysia International Food Expo Premium Brand</div>
-              <div class="honor-year">2025</div>
+
+            <div class="honor-card-img fade-in">
+              <img src="https://www.longguoyan.com/_20240517/1541109594.jpg" alt="Hainan Film Festival Partner" loading="lazy" />
+              <div class="honor-caption">
+                <div class="honor-name">5th Hainan Island International Film Festival — Premier Cooperation Partner</div>
+                <div class="honor-year">2024</div>
+              </div>
             </div>
-            <div class="honor-card fade-in">
-              <div class="honor-icon">🍶</div>
-              <div class="honor-name">Japan International Food Expo Special Honor</div>
-              <div class="honor-year">2025</div>
+
+            <div class="honor-card-img fade-in">
+              <img src="https://www.longguoyan.com/_20230919/1634021337.png" alt="Renhuai Baijiu Association Member" loading="lazy" />
+              <div class="honor-caption">
+                <div class="honor-name">Guizhou Renhuai Baijiu Industry Association — Member Unit</div>
+                <div class="honor-year">Certified</div>
+              </div>
             </div>
-            <div class="honor-card fade-in">
-              <div class="honor-icon">🎗️</div>
-              <div class="honor-name">Hengqin–Macau International Arts Expo Honor</div>
-              <div class="honor-year">2025</div>
+
+            <div class="honor-card-img fade-in">
+              <img src="https://www.longguoyan.com/_20230919/1632298275.jpg" alt="Vice President Unit" loading="lazy" />
+              <div class="honor-caption">
+                <div class="honor-name">Guizhou Renhuai Baijiu Industry Association — Vice President Unit</div>
+                <div class="honor-year">Certified</div>
+              </div>
             </div>
-            <div class="honor-card fade-in">
-              <div class="honor-icon">💎</div>
-              <div class="honor-name">China High-Quality Development Recommended Brand</div>
-              <div class="honor-year">2025</div>
+
+            <div class="honor-card-img fade-in">
+              <img src="https://www.longguoyan.com/_20230919/1634419767.png" alt="Packaging Design Silver Award" loading="lazy" />
+              <div class="honor-caption">
+                <div class="honor-name">Jiangxiang Baijiu Packaging Design — Silver Award</div>
+                <div class="honor-year">2023</div>
+              </div>
             </div>
+
           </div>
         </div>
 
-        <div style="margin-top:120px">
-          <div class="section-head fade-in">
+        <!-- BREWING PROCESS -->
+        <div style="margin-top:120px; padding-bottom:80px;">
+          <div class="section-head reveal">
             <div class="section-en">Brewing Craft</div>
             <h2 class="section-title">Our Brewing Process</h2>
             <div class="section-line"><span>◆</span></div>
           </div>
 
-          <div class="coop-benefits" style="margin-top:40px;">
-            <div class="benefit-card fade-in">
-              <div class="benefit-icon">🌾</div>
-              <h3 class="benefit-title">Finest Ingredients</h3>
-              <p class="benefit-text">We strictly select premium locally-grown glutinous red sorghum from Guizhou.</p>
+          <div class="brewing-grid">
+
+            <div class="brewing-step fade-in">
+              <img class="brewing-step-img" src="https://www.longguoyan.com/_20260302/1632544364.jpg" alt="Premium Sorghum Selection" loading="lazy" />
+              <div class="brewing-step-body">
+                <div class="brewing-step-num">STEP 01</div>
+                <div class="brewing-step-title">Finest Ingredients</div>
+                <p class="brewing-step-text">We strictly select premium locally-grown glutinous red sorghum from Guizhou, the foundation of every exceptional bottle.</p>
+              </div>
             </div>
-            <div class="benefit-card fade-in">
-              <div class="benefit-icon">🔥</div>
-              <h3 class="benefit-title">Triple-High Process</h3>
-              <p class="benefit-text">Adhering to high-temperature starter preparation, fermentation, and distillation.</p>
+
+            <div class="brewing-step fade-in">
+              <img class="brewing-step-img" src="https://www.longguoyan.com/_20260302/1632406312.jpg" alt="Triple-High Fermentation" loading="lazy" />
+              <div class="brewing-step-body">
+                <div class="brewing-step-num">STEP 02</div>
+                <div class="brewing-step-title">Triple-High Process</div>
+                <p class="brewing-step-text">Adhering to high-temperature starter preparation, high-temperature fermentation, and high-temperature distillation — the soul of Jiangxiang.</p>
+              </div>
             </div>
-            <div class="benefit-card fade-in">
-              <div class="benefit-icon">🏺</div>
-              <h3 class="benefit-title">Five-Year Ageing</h3>
-              <p class="benefit-text">Minimum of 5 years of cellar ageing resulting in a richer, smoother taste.</p>
+
+            <div class="brewing-step fade-in">
+              <img class="brewing-step-img" src="https://www.longguoyan.com/_20260302/1632192771.jpg" alt="Cellar Ageing" loading="lazy" />
+              <div class="brewing-step-body">
+                <div class="brewing-step-num">STEP 03</div>
+                <div class="brewing-step-title">Five-Year Ageing</div>
+                <p class="brewing-step-text">A minimum of 5 years of cellar ageing in traditional earthen jars, resulting in a richer, smoother, deeply layered taste.</p>
+              </div>
             </div>
+
+            <div class="brewing-step fade-in">
+              <img class="brewing-step-img" src="https://www.longguoyan.com/_20220830/1421442130.jpg" alt="Master Blending" loading="lazy" />
+              <div class="brewing-step-body">
+                <div class="brewing-step-num">STEP 04</div>
+                <div class="brewing-step-title">Master Blending</div>
+                <p class="brewing-step-text">Our master blenders artfully combine aged spirits from different vintages, achieving a harmonious balance of aroma, taste, and finish.</p>
+              </div>
+            </div>
+
+            <div class="brewing-step fade-in">
+              <img class="brewing-step-img" src="https://www.longguoyan.com/_20260302/1635190095.jpg" alt="Quality Inspection" loading="lazy" />
+              <div class="brewing-step-body">
+                <div class="brewing-step-num">STEP 05</div>
+                <div class="brewing-step-title">Rigorous Quality Control</div>
+                <p class="brewing-step-text">Every batch undergoes strict multi-stage sensory and laboratory testing before bottling — ensuring only the finest reaches you.</p>
+              </div>
+            </div>
+
+            <div class="brewing-step fade-in">
+              <img class="brewing-step-img" src="https://www.longguoyan.com/_20260302/1635380732.jpg" alt="Artisan Bottling" loading="lazy" />
+              <div class="brewing-step-body">
+                <div class="brewing-step-num">STEP 06</div>
+                <div class="brewing-step-title">Artisan Bottling</div>
+                <p class="brewing-step-text">Hand-inspected and carefully packaged, each bottle of LongGuoYan is a tribute to 66 years of unbroken craft tradition.</p>
+              </div>
+            </div>
+
           </div>
         </div>
 
@@ -197,7 +386,6 @@
           <div class="ft-qr-card reveal rd1">
             <img src="https://www.longguoyan.com/_20190924/1324283689.png" alt="WeChat QR Code" loading="lazy" />
             <div class="ft-qr-label">
-              <!-- CHANGE 2: Updated WeChat label to English -->
               <span>Scan the QR code to follow the official WeChat</span>
               <span>Official WeChat</span>
             </div>
@@ -210,7 +398,6 @@
       <div class="container">
         <div class="footer-grid">
           <div class="footer-brand">
-            <!-- CHANGE 1: Updated brand name to English -->
             <span class="logo-cn" lang="en">LongGuoYan</span>
             <p class="footer-brand-text">Guizhou LongGuoYan Baijiu Co., Ltd. — inheriting century-old techniques, crafting premium Jiangxiang spirits in Maotai Town.</p>
             <address class="footer-address">
