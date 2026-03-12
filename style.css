@@ -391,7 +391,7 @@ nav a.active::after { transform: translateX(-50%) scaleX(1); }
 
 /* ===== PAGE BANNER ===== */
 .page-banner {
-  height: 280px;
+  height: 480px;
   background: var(--ink);
   position: relative;
   display: flex;
@@ -1778,7 +1778,7 @@ footer {
 
 @media (max-width: 480px) {
   .page-banner h1 { font-size: 32px; letter-spacing: 4px; }
-  .page-banner { height: 200px; }
+  .page-banner { height: 280px; }
   .footer-grid { grid-template-columns: 1fr; }
   .about-badge {
     width: 90px; height: 90px;
