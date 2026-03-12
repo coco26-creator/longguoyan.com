@@ -97,7 +97,7 @@ img {
   inset: 0;
   width: 100%;
   height: 100%;
-  background-size: cover !important;
+  background-size: 80% auto !important;
   background-position: center center !important;
   background-repeat: no-repeat !important;
   background-attachment: scroll;
