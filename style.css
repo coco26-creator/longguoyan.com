@@ -322,7 +322,8 @@ nav a.active::after { transform: translateX(-50%) scaleX(1); }
 
 /* ===== PAGE BANNER ===== */
 .page-banner {
-  height: 400px;
+  width: 100%;
+  aspect-ratio: 1907 / 568;
   background: var(--ink);
   position: relative;
   overflow: hidden;
@@ -330,11 +331,16 @@ nav a.active::after { transform: translateX(-50%) scaleX(1); }
   border-bottom: 1px solid var(--border);
 }
 
+@media (max-width: 480px) {
+  .page-banner { aspect-ratio: 3 / 2; }
+}
+
 .page-banner-img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   display: block;
+  object-position: center;
 }
 
 /* ===== LOGO IMAGE — Uncontained & Standalone ===== */
@@ -1676,7 +1682,6 @@ footer {
 }
 
 @media (max-width: 480px) {
-  .page-banner { height: 300px; }
   .footer-grid { grid-template-columns: 1fr; }
   .about-badge {
     width: 90px; height: 90px;
