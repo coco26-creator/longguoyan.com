@@ -322,7 +322,7 @@ nav a.active::after { transform: translateX(-50%) scaleX(1); }
 
 /* ===== PAGE BANNER ===== */
 .page-banner {
-  height: 280px;
+  height: 400px;
   background: var(--ink);
   position: relative;
   overflow: hidden;
@@ -1676,7 +1676,7 @@ footer {
 }
 
 @media (max-width: 480px) {
-  .page-banner { height: 200px; }
+  .page-banner { height: 300px; }
   .footer-grid { grid-template-columns: 1fr; }
   .about-badge {
     width: 90px; height: 90px;
