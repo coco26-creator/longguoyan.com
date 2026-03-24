@@ -67,9 +67,14 @@ function initChatbot() {
     scrollToBottom();
 
     try {
-      // NOTE: Replace this URL with your live Vercel backend URL once deployed!
-      // Example: const API_URL = 'https://your-vercel-app-name.vercel.app/api/chat';
-      const API_URL = 'http://localhost:3000/api/chat'; // <-- Change me on deployment!
+      // --- CONFIGURATION ---
+      // 1. If running locally, use localhost.
+      // 2. If running on GitHub Pages, we need the LIVE Vercel URL.
+      // REPLACE the URL below with your actual Vercel app URL!
+      const VERCEL_URL = 'https://your-app-name.vercel.app/api/chat'; 
+      
+      const isLocal = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
+      const API_URL = isLocal ? 'http://localhost:3000/api/chat' : VERCEL_URL;
       
       // Connect to the Backend Proxy
       const response = await fetch(API_URL, {
@@ -87,9 +92,20 @@ function initChatbot() {
       } else {
         addMessage('bot', data.error || "An error occurred.");
       }
-    } catch (e) {
+    } catch (error) {
+      console.error('Chatbot Error:', error);
       document.getElementById(typingId)?.remove();
-      addMessage('bot', "Connection error. Make sure the Node.js backend server (`server.js`) is currently running on port 3000!");
+      
+      const isLocal = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
+      let errorMsg = 'Sorry, I am having trouble connecting right now.';
+      
+      if (isLocal) {
+        errorMsg = '<strong>Connection Error:</strong> Make sure your local server is running! Run <code>node server.js</code> in your terminal.';
+      } else {
+        errorMsg = '<strong>Assistant Offline:</strong> The backend server is not connected. <br><br>Please follow the <strong>README.md</strong> instructions to deploy the backend to Vercel and update the <code>VERCEL_URL</code> in <code>chatbot.js</code>!';
+      }
+      
+      addMessage('bot', errorMsg);
     }
   }
 
