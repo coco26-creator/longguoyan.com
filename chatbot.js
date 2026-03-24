@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', () => {
+function initChatbot() {
   // Inject marked.js for Markdown parsing
   const markedScript = document.createElement('script');
   markedScript.src = 'https://cdn.jsdelivr.net/npm/marked/marked.min.js';
@@ -125,4 +125,10 @@ document.addEventListener('DOMContentLoaded', () => {
       chatMessages.scrollTop = chatMessages.scrollHeight;
     }
   }
-});
+}
+
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initChatbot);
+} else {
+  initChatbot();
+}
