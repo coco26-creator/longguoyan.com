@@ -2511,31 +2511,29 @@ img[loading="lazy"].loaded { opacity: 1; }
 /* ── 2. SUB-PAGE BANNER — consistent across all inner pages ── */
 .page-banner {
   width: 100%;
+  height: 400px;
   display: block;
   position: relative;
   overflow: hidden;
   margin-top: 80px;
   border-bottom: 1px solid var(--border);
+  background: #000;
 }
 
 .page-banner-img {
   width: 100%;
-  height: auto;
+  height: 100%;
+  object-fit: cover;
   display: block;
 }
 
 /* Mobile — constrain banner height */
 @media (max-width: 768px) {
-  .page-banner { height: 180px; }
-  .page-banner-img {
-    height: 100%;
-    object-fit: cover;
-    object-position: center 30%;
-  }
+  .page-banner { height: 300px; }
 }
 
 @media (max-width: 480px) {
-  .page-banner { height: 140px; }
+  .page-banner { height: 240px; }
 }
 
 /* ── 3. PRODUCT.HTML HEADER / NAV — ensure hamburger shows & nav.js works ── */
