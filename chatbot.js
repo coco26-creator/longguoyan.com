@@ -67,8 +67,12 @@ function initChatbot() {
     scrollToBottom();
 
     try {
+      // NOTE: Replace this URL with your live Vercel backend URL once deployed!
+      // Example: const API_URL = 'https://your-vercel-app-name.vercel.app/api/chat';
+      const API_URL = 'http://localhost:3000/api/chat'; // <-- Change me on deployment!
+      
       // Connect to the Backend Proxy
-      const response = await fetch('http://localhost:3000/api/chat', {
+      const response = await fetch(API_URL, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ message: text })
