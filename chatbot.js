@@ -71,7 +71,7 @@ function initChatbot() {
       // 1. If running locally, use localhost.
       // 2. If running on GitHub Pages, we need the LIVE Vercel URL.
       // REPLACE the URL below with your actual Vercel app URL!
-      const VERCEL_URL = 'https://vercel.com/hocha/longguoyan-com/api/chat'; 
+      const VERCEL_URL = 'https://longguoyan-com.vercel.app/api/chat'; 
       
       const isLocal = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
       const API_URL = isLocal ? 'http://localhost:3000/api/chat' : VERCEL_URL;
