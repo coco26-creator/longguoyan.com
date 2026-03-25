@@ -48,7 +48,52 @@ function initChatbot() {
     });
   }
 
-  async function sendMessage() {
+  const knowledgeBase = [
+    {
+      keywords: ['hello', 'hi', 'hey', 'greetings', 'morning', 'evening'],
+      response: "Hello! I am the **LongGuoYan Assistant**. How can I help you discover our premium baijiu today?"
+    },
+    {
+      keywords: ['product', 'collection', 'series', 'liquor', 'bottles', 'buy'],
+      response: "Our premium collection includes:<br><br>• **Cellar Supreme 30**<br>• **Dragon Vein Series**<br>• **Limited Editions**<br>• **Commemorative 1958**<br>• **Collector's Reserve**<br><br>Which one would you like to know more about?"
+    },
+    {
+      keywords: ['contact', 'phone', 'call', 'number', 'reach', 'support'],
+      response: "You can reach our customer service team at **400-159-1958**."
+    },
+    {
+      keywords: ['location', 'where', 'address', 'place', 'village', 'visit', 'guizhou'],
+      response: "Our distillery is located at **Chun Shu Village, Maotai Town, Renhuai, Guizhou, China**."
+    },
+    {
+      keywords: ['heritage', 'history', 'story', 'making', 'crafting', 'traditional'],
+      response: "LongGuoYan inherits millennia of crafting wisdom from Maotai Town. Our traditional methods ensure every drop captures the essence of Chinese baijiu heritage."
+    },
+    {
+      keywords: ['supreme', '30'],
+      response: "**Cellar Supreme 30** is our flagship product. It is aged for 30 years in traditional ceramic jars to achieve a deep, mellow aroma and unparalleled smoothness."
+    },
+    {
+      keywords: ['dragon', 'vein'],
+      response: "The **Dragon Vein Series** represents the spirit and strength of Maotai's natural landscape. It offers a bold, complex profile with a long-lasting, elegant finish."
+    },
+    {
+      keywords: ['1958', 'commemorative'],
+      response: "The **Commemorative 1958** edition celebrates our brand's historic milestones, featuring a classic flavor profile that pays homage to our roots."
+    }
+  ];
+
+  function getOfflineResponse(text) {
+    const input = text.toLowerCase();
+    for (const item of knowledgeBase) {
+      if (item.keywords.some(kw => input.includes(kw))) {
+        return item.response;
+      }
+    }
+    return "I am still learning about that! You can ask me about our **products** (like Cellar Supreme 30), our **history**, or how to **contact** us.";
+  }
+
+  function sendMessage() {
     if (!chatText || !chatMessages) return;
     const text = chatText.value.trim();
     if (!text) return;
@@ -57,56 +102,20 @@ function initChatbot() {
     addMessage('user', text);
     chatText.value = '';
     
-    // Add typing indicator
+    // Add slight delay for "Thinking" feel
     const typingId = 'typing-' + Date.now();
     const typingMsg = document.createElement('div');
     typingMsg.className = 'msg bot typing-indicator';
     typingMsg.id = typingId;
-    typingMsg.innerHTML = '<span style="font-size:18px; line-height:0;">💬 Thinking...</span>';
+    typingMsg.innerHTML = '<span>💬 Thinking...</span>';
     chatMessages.appendChild(typingMsg);
     scrollToBottom();
 
-    try {
-      // --- CONFIGURATION ---
-      // 1. If running locally, use localhost.
-      // 2. If running on GitHub Pages, we need the LIVE Vercel URL.
-      // REPLACE the URL below with your actual Vercel app URL!
-      const VERCEL_URL = 'https://longguoyan-com.vercel.app/api/chat'; 
-      
-      const isLocal = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
-      const API_URL = isLocal ? 'http://localhost:3000/api/chat' : VERCEL_URL;
-      
-      // Connect to the Backend Proxy
-      const response = await fetch(API_URL, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ message: text })
-      });
-      const data = await response.json();
-      
-      // Remove typing indicator
+    setTimeout(() => {
       document.getElementById(typingId)?.remove();
-
-      if (data.reply) {
-        addMessage('bot', data.reply);
-      } else {
-        addMessage('bot', data.error || "An error occurred.");
-      }
-    } catch (error) {
-      console.error('Chatbot Error:', error);
-      document.getElementById(typingId)?.remove();
-      
-      const isLocal = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
-      let errorMsg = 'Sorry, I am having trouble connecting right now.';
-      
-      if (isLocal) {
-        errorMsg = '<strong>Connection Error:</strong> Make sure your local server is running! Run <code>node server.js</code> in your terminal.';
-      } else {
-        errorMsg = '<strong>Assistant Offline:</strong> The backend server is not connected. <br><br>Please follow the <strong>README.md</strong> instructions to deploy the backend to Vercel and update the <code>VERCEL_URL</code> in <code>chatbot.js</code>!';
-      }
-      
-      addMessage('bot', errorMsg);
-    }
+      const reply = getOfflineResponse(text);
+      addMessage('bot', reply);
+    }, 600);
   }
 
   if (chatSend) {
