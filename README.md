@@ -1,31 +1,20 @@
-# LongGuoYan Chatbot Deployment Guide
+# LongGuoYan Chatbot (Offline Version)
 
-To make the chatbot work on your live site (**GitHub Pages**), you must deploy the backend code to **Vercel**. 
+The assistant for LongGuoYan is now 100% offline! This means it works instantly, costs nothing to run, and does not require a server or OpenAI API keys.
 
-## Step 1: Deploy the Backend to Vercel
-1. Log into [Vercel](https://vercel.com).
-2. Click **"Add New"** > **"Project"**.
-3. Import your GitHub repository (`longguoyan.com`).
-4. **Environment Variables**: In the Vercel project settings, add:
-   - `OPENAI_API_KEY`: Your real OpenAI secret key.
-5. Click **Deploy**.
+## Features
+- **Instant Responses**: Uses keyword matching for near-instant replies.
+- **Product Knowledge**: Built-in information about Cellar Supreme 30, Dragon Vein Series, and more.
+- **Company Info**: Includes contact details and heritage information.
+- **Premium Design**: Styled with the website's signature **Black & Gold** aesthetic.
 
-## Step 2: Get your live URL
-1. Once deployed, Vercel will give you a domain (e.g., `https://longguoyan-chat.vercel.app`).
-2. Copy this URL.
-
-## Step 3: Update Chatbot Settings
-1. Open `chatbot.js` in your code editor.
-2. Find line **74**:
-   ```javascript
-   const VERCEL_URL = 'https://your-app-name.vercel.app/api/chat';
-   ```
-3. Replace the placeholder with your NEW Vercel URL (keep the `/api/chat` at the end).
-4. Save, commit, and push to GitHub.
+## How to customize
+If you want to add more responses or change the information:
+1. Open `chatbot.js`.
+2. Find the `knowledgeBase` array.
+3. Add a new entry with `keywords` and a `response`.
+4. Save and push to GitHub!
 
 ---
 
-### Local Development
-If you want to test the chatbot on your computer:
-1. Run `node server.js` in your terminal.
-2. The chatbot will automatically detect `localhost` and connect to your computer instead of Vercel!
+**Note**: The `server.js` and `api/` folders are still in the repository if you ever decide to switch back to a full AI backend in the future.
