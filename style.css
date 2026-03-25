@@ -1052,14 +1052,13 @@ footer {
 .ft-social-link {
   display: flex;
   align-items: center;
-  gap: 10px;
-  padding: 12px 20px;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
   background: rgba(212, 175, 55, 0.08);
   border: 1px solid rgba(212, 175, 55, 0.2);
   color: #fff;
-  font-family: 'Cinzel', serif;
-  font-size: 12px;
-  letter-spacing: 1.5px;
+  border-radius: 4px;
   transition: var(--transition);
 }
 
@@ -2496,7 +2495,7 @@ img[loading="lazy"].loaded { opacity: 1; }
   .footer-main { padding: 50px 0; }
   .ft-phone { font-size: 18px; }
   .ft-social-links { gap: 10px; }
-  .ft-social-link { padding: 10px 14px; font-size: 11px; }
+  .ft-social-link { width: 38px; height: 38px; }
   /* News cards */
   .news-4 { grid-template-columns: 1fr 1fr; gap: 14px; }
   .nc-body { padding: 12px; }
