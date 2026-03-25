@@ -2729,6 +2729,33 @@ header .container {
   border: 1px solid #e5e5e5;
 }
 
+.ag-chat-options {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 8px;
+  margin-right: auto;
+  max-width: 85%;
+}
+
+.ag-chat-opt-btn {
+  background: #fff;
+  border: 1px solid var(--gold);
+  color: var(--ink);
+  padding: 8px 12px;
+  border-radius: 20px;
+  font-size: 13px;
+  cursor: pointer;
+  text-align: left;
+  transition: all 0.2s ease;
+}
+
+.ag-chat-opt-btn:hover {
+  background: var(--gold);
+  color: #000;
+  transform: translateX(5px);
+}
+
 .msg p { margin: 0 0 8px 0; }
 .msg p:last-child { margin: 0; }
 .msg a { color: #d4af37; text-decoration: underline; font-weight: 600; }

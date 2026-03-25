@@ -66,20 +66,20 @@ function initChatbot() {
       response: "Our distillery is located at **Chun Shu Village, Maotai Town, Renhuai, Guizhou, China**."
     },
     {
-      keywords: ['heritage', 'history', 'story', 'making', 'crafting', 'traditional'],
-      response: "LongGuoYan inherits millennia of crafting wisdom from Maotai Town. Our traditional methods ensure every drop captures the essence of Chinese baijiu heritage."
+      keywords: ['heritage', 'history', 'story', 'making', 'crafting', 'traditional', 'brew', 'distill', 'maotai', 'village'],
+      response: "LongGuoYan is born from the sacred lands of **Maotai Town, Guizhou**. We inherit century-old traditional techniques: using premium red-glutinous sorghum, organic wheat, and the pristine waters of the Chishui River. Our 'Solid-State Fermentation' process captures the authentic soul of Jiangxiang baijiu."
     },
     {
-      keywords: ['supreme', '30'],
-      response: "**Cellar Supreme 30** is our flagship product. It is aged for 30 years in traditional ceramic jars to achieve a deep, mellow aroma and unparalleled smoothness."
+      keywords: ['aged', 'years', 'vintages', 'cellar', 'supreme', '30'],
+      response: "**The Aged Collection** represents our highest mastery. \n\n• **Cellar Supreme 30**: Aged 30 years in ceramic jars for unparalleled mellowness.\n• **Dragon Vein 15**: A 15-year aged spirit with a bold, complex profile.\n• **Sealed Reserve**: Available in 10 and 15-year vintages."
     },
     {
-      keywords: ['dragon', 'vein'],
-      response: "The **Dragon Vein Series** represents the spirit and strength of Maotai's natural landscape. It offers a bold, complex profile with a long-lasting, elegant finish."
+      keywords: ['limited', 'edition', 'collector', 'rare', 'treasure'],
+      response: "**The Limited & Rare Series** is crafted for connoisseurs. \n\n• **Limited Edition**: Features dragon relief embossing and imperial gold finish.\n• **Collector's Reserve**: A prestigious blend for serious collectors.\n• **Treasure Edition**: Time-aged premium sorghum spirit."
     },
     {
-      keywords: ['1958', 'commemorative'],
-      response: "The **Commemorative 1958** edition celebrates our brand's historic milestones, featuring a classic flavor profile that pays homage to our roots."
+      keywords: ['gift', 'business', 'diplomatic', 'commemorative', 'blessing'],
+      response: "**The Gifting & Occasion Series** is designed for meaningful connections. \n\n• **Diplomatic Edition**: Premium gifting for business and international respect.\n• **Heaven's Blessing (1.5L/500ml)**: Perfect for auspicious celebrations.\n• **Commemorative 1958**: Honouring our founding year with classic elegance."
     }
   ];
 
@@ -115,11 +115,52 @@ function initChatbot() {
       document.getElementById(typingId)?.remove();
       const reply = getOfflineResponse(text);
       addMessage('bot', reply);
+      
+      // If the user seems to be looking for products, show the navigator
+      if (text.toLowerCase().includes('product') || text.toLowerCase().includes('collection') || text.toLowerCase().includes('buy')) {
+        renderOptions();
+      }
     }, 600);
   }
 
-  if (chatSend) {
-    chatSend.addEventListener('click', sendMessage);
+  function renderOptions() {
+    if (!chatMessages) return;
+    const optionsDiv = document.createElement('div');
+    optionsDiv.className = 'ag-chat-options';
+    const options = [
+      { label: '🍷 Aged Series', value: 'Tell me about the Aged Series' },
+      { label: '💎 Limited Editions', value: 'Tell me about Limited Editions' },
+      { label: '🎁 Gifting Collection', value: 'Tell me about Gifting' },
+      { label: '📜 Brand Heritage', value: 'Tell me about your heritage' }
+    ];
+    
+    options.forEach(opt => {
+      const btn = document.createElement('button');
+      btn.className = 'ag-chat-opt-btn';
+      btn.textContent = opt.label;
+      btn.onclick = () => {
+        chatText.value = opt.value;
+        sendMessage();
+      };
+      optionsDiv.appendChild(btn);
+    });
+    chatMessages.appendChild(optionsDiv);
+    scrollToBottom();
+  }
+
+  // Show welcome message and options on first open
+  let firstOpen = true;
+  if (chatOpen && chat) {
+    chatOpen.addEventListener('click', () => {
+      chat.classList.remove('hidden');
+      if (chatText) chatText.focus();
+      
+      if (firstOpen) {
+        addMessage('bot', "Welcome to **LongGuoYan**. I am your collection navigator. How can I assist your discovery today?");
+        renderOptions();
+        firstOpen = false;
+      }
+    });
   }
 
   if (chatText) {
