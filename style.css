@@ -1657,39 +1657,7 @@ footer {
 .job-arrow { color: var(--gold); font-size: 24px; flex-shrink: 0; transition: transform 0.3s ease; }
 .job-item:hover .job-arrow { transform: translateX(6px); }
 
-/* ===== HONOR / AWARD CARDS ===== */
-.honor-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 24px; margin-top: 60px;
-}
-
-.honor-card {
-  background: var(--card-bg);
-  border: 1px solid var(--border);
-  padding: 32px 24px; text-align: center;
-  transition: var(--transition);
-}
-
-.honor-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 12px 40px rgba(212,175,55,0.1);
-  border-color: var(--gold);
-}
-
-.honor-icon { font-size: 48px; margin-bottom: 16px; }
-
-.honor-name {
-  font-size: 14px; color: var(--text-main);
-  letter-spacing: 1px; font-weight: 600;
-  margin-bottom: 8px; line-height: 1.5;
-}
-
-.honor-year {
-  font-family: 'Cinzel', serif;
-  font-size: 12px; color: var(--gold);
-  letter-spacing: 2px;
-}
+/* Honor cards are now managed in the ABOUT PAGE ENHANCEMENTS section at the end of the file */
 
 /* ===== ANIMATIONS ===== */
 @keyframes fadeIn   { to { opacity: 1; } }
@@ -1729,7 +1697,6 @@ footer {
   .about-badge { bottom: -16px; right: 16px; }
   .coop-benefits { grid-template-columns: 1fr 1fr; }
   .values-grid { grid-template-columns: repeat(2, 1fr); }
-  .honor-grid { grid-template-columns: repeat(2, 1fr); }
   .steps { flex-direction: column; gap: 32px; }
   .steps::before { display: none; }
   .footer-top-grid { grid-template-columns: 1fr; gap: 40px; text-align: center; }
@@ -1753,7 +1720,6 @@ footer {
   .news-page-img-wrap { width: 100%; }
   .contact-strip .contact-inner { flex-direction: column; text-align: center; }
   .hero-title { letter-spacing: 6px; }
-  .honor-grid { grid-template-columns: 1fr; }
   .coop-benefits { grid-template-columns: 1fr; }
   .values-grid { grid-template-columns: 1fr; }
 }
@@ -2759,3 +2725,111 @@ header .container {
 .msg p { margin: 0 0 8px 0; }
 .msg p:last-child { margin: 0; }
 .msg a { color: #d4af37; text-decoration: underline; font-weight: 600; }
+
+/* ============================================================
+   ABOUT PAGE ENHANCEMENTS (Scoped to about.html)
+   ============================================================ */
+.company-profile-img {
+  display: block;
+  max-width: 700px;
+  width: 100%;
+  margin: 0 auto;
+  border-radius: 8px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+  border: 1px solid var(--border);
+}
+
+.honor-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  margin-top: 50px;
+}
+
+.honor-card-img {
+  background: #0a0a0a;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  overflow: hidden;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.honor-card-img:hover {
+  transform: translateY(-5px);
+  border-color: var(--gold);
+}
+
+.honor-card-img img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  border-bottom: 1px solid var(--border);
+  display: block;
+}
+
+.honor-caption {
+  padding: 18px;
+  text-align: center;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: #111;
+}
+
+.honor-name {
+  font-family: 'Cinzel', serif;
+  font-size: 13px;
+  color: var(--gold);
+  line-height: 1.5;
+  margin-bottom: 8px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.honor-year {
+  font-size: 12px;
+  color: #888;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+.brewing-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin-top: 50px;
+}
+
+.brewing-step-img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  border: 1px solid var(--border);
+  border-radius: 2px;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 1024px) {
+  .honor-grid { grid-template-columns: repeat(3, 1fr); gap: 20px; }
+  .brewing-grid { grid-template-columns: repeat(2, 1fr); }
+  .company-profile-img { max-width: 600px; }
+}
+
+@media (max-width: 768px) {
+  .honor-grid { grid-template-columns: repeat(2, 1fr); gap: 16px; }
+  .honor-card-img img { height: 200px; }
+  .honor-name { font-size: 11px; }
+  .brewing-grid { grid-template-columns: 1fr; }
+  .company-profile-img { max-width: 500px; }
+}
+
+@media (max-width: 600px) {
+  .honor-grid { grid-template-columns: 1fr !important; gap: 24px; }
+  .company-profile-img { max-width: 100%; }
+  .honor-card-img img { height: auto; aspect-ratio: 4/3; }
+  .honor-name { font-size: 12px; }
+}
