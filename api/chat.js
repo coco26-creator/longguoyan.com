@@ -13,13 +13,8 @@ Keep responses concise (1-2 short paragraphs), friendly, and formatted in Markdo
 
 module.exports = async function handler(req, res) {
   // Setup CORS Headers for Vercel
-  const allowedOrigins = ['https://coco26-creator.github.io', 'http://localhost:3000', 'http://127.0.0.1:5500', 'http://localhost:5500'];
-  const origin = req.headers.origin;
-  if (allowedOrigins.includes(origin)) {
-    res.setHeader('Access-Control-Allow-Origin', origin);
-  } else {
-    res.setHeader('Access-Control-Allow-Origin', '*'); // Fallback if preferred, or restrict
-  }
+  // Permissive CORS for debugging live issues
+  res.setHeader('Access-Control-Allow-Origin', '*'); 
   res.setHeader('Access-Control-Allow-Methods', 'POST, OPTIONS');
   res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
 
@@ -57,6 +52,7 @@ module.exports = async function handler(req, res) {
     res.status(200).json({ reply });
   } catch (error) {
     console.error("Error from AI API:", error);
-    res.status(500).json({ error: "Sorry, I am having trouble connecting to my brain right now. Please test my API key configuration!" });
+    // Return 200 so the chatbot can show the error instead of hitting a CORS/network block
+    res.status(200).json({ error: "Backend Connected! But AI Brain failed: " + (error.message || "Check your OpenAI API Key in Vercel settings.") });
   }
 };
