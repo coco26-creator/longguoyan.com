@@ -2828,8 +2828,9 @@ header .container {
 }
 
 @media (max-width: 600px) {
-  .honor-grid { grid-template-columns: 1fr !important; gap: 24px; }
+  .honor-grid { grid-template-columns: 1fr 1fr !important; gap: 14px; }
   .company-profile-img { max-width: 100%; }
-  .honor-card-img img { height: auto; aspect-ratio: 4/3; }
-  .honor-name { font-size: 12px; }
+  .honor-card-img img { height: 180px; }
+  .honor-name { font-size: 11px; }
+  .honor-caption { padding: 12px; }
 }
