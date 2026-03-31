@@ -5,10 +5,10 @@ function initChatbot() {
   document.head.appendChild(markedScript);
 
   const chatbotHTML = `
-    <button id="chat-open" class="ag-chat-open">Help</button>
+    <button id="chat-open" class="ag-chat-open">💬</button>
     <div id="chat" class="ag-chat-window hidden">
       <div class="ag-chat-header">
-        <span class="ag-chat-title">LongGuoYan Support</span>
+        <span class="ag-chat-title">LongGuoYan Assistant</span>
         <button id="chat-close" class="ag-chat-close">✕</button>
       </div>
       <div id="chat-messages" class="ag-chat-messages"></div>
@@ -34,7 +34,7 @@ function initChatbot() {
   const knowledgeBase = [
     {
       keywords: ['hello', 'hi', 'hey', 'greetings', 'morning', 'evening'],
-      response: "Hello! Welcome to LongGuoYan. How can I help you discover our premium Jiangxiang baijiu today?"
+      response: "Hello! I am the **LongGuoYan Assistant**. How can I help you discover our premium Jiangxiang baijiu today?"
     },
     {
       keywords: ['product', 'collection', 'series', 'liquor', 'bottles', 'buy'],
@@ -75,7 +75,7 @@ function initChatbot() {
     for (const item of knowledgeBase) {
       if (item.keywords.some(kw => input.includes(kw))) return item.response;
     }
-    return "I don't have that information on hand right now. You can ask me about our **products** (like Cellar Supreme 30 or Mastercraft Supreme), our **heritage**, our **awards**, or how to **contact** us.";
+    return "I am still learning about that! You can ask me about our **products** (like Cellar Supreme 30 or Mastercraft Supreme), our **heritage**, our **awards**, or how to **contact** us.";
   }
 
   function sendMessage() {
@@ -89,7 +89,7 @@ function initChatbot() {
     const typingMsg = document.createElement('div');
     typingMsg.className = 'msg bot typing-indicator';
     typingMsg.id = typingId;
-    typingMsg.innerHTML = '<span>Typing...</span>';
+    typingMsg.innerHTML = '<span>💬 Thinking...</span>';
     chatMessages.appendChild(typingMsg);
     scrollToBottom();
 
@@ -106,10 +106,10 @@ function initChatbot() {
     const optionsDiv = document.createElement('div');
     optionsDiv.className = 'ag-chat-options';
     const options = [
-      { label: 'Aged Collection', value: 'Tell me about the aged collection' },
-      { label: 'Limited Edition', value: 'Tell me about Limited Edition' },
-      { label: 'Mastercraft Supreme', value: 'Tell me about Mastercraft Supreme' },
-      { label: 'Brand Heritage', value: 'Tell me about your heritage' }
+      { label: '🍷 Aged Collection', value: 'Tell me about the aged collection' },
+      { label: '💎 Limited Edition', value: 'Tell me about Limited Edition' },
+      { label: '🎁 Mastercraft Supreme', value: 'Tell me about Mastercraft Supreme' },
+      { label: '📜 Brand Heritage', value: 'Tell me about your heritage' }
     ];
     options.forEach(opt => {
       const btn = document.createElement('button');
