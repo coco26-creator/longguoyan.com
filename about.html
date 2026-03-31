@@ -80,46 +80,40 @@
       <div class="container">
 
         <!-- COMPANY PROFILE -->
-        <div class="about-grid fade-in about-grid-card">
-          <div class="about-shimmer"></div>
-          
-          <div class="about-img-wrap reveal about-z-index-1">
-            <div class="video-wrapper about-video-wrapper">
+        <div class="about-page-grid fade-in">
+          <div class="about-img-wrap reveal">
+            <div class="video-wrapper">
               <div class="video-poster" id="videoPoster">
                 <img src="https://www.longguoyan.com/_20250408/1729505479.jpg" alt="Brand documentary" loading="lazy" />
                 <button class="play-btn" id="playBtn" aria-label="Play documentary"><span class="play-icon">▶</span></button>
               </div>
-              <video id="brandVideo" class="brand-video" preload="none" controls poster="https://www.longguoyan.com/_20250408/1729505479.jpg" hidden>
+              <video id="brandVideo" class="brand-video" preload="none" controls poster="https://www.longguoyan.com/_20250408/1729505479.jpg" style="display:none;">
                 <source src="https://www.longguoyan.com/style/img/intro1.mp4" type="video/mp4" />
               </video>
             </div>
             <div class="about-badge"><div class="years">66</div><div class="label">Years of Craft</div></div>
           </div>
 
-          <div class="about-content reveal about-content-padded">
-            <div class="section-head about-text-left">
-              <div class="section-en about-margin-b-12">Company Profile</div>
-              <h2 class="section-title about-margin-b-16">About LongGuoYan</h2>
-              <div class="section-line about-margin-0"><span>◆</span></div>
-            </div>
-            <p class="about-text-muted-15">Guizhou LongGuoYan Distillery Co., Ltd. is located in Maotai Town, Guizhou Province — the world-renowned core production area for sauce-aroma Jiangxiang baijiu. A long-established distillery recognised as a <strong class="about-text-gold-bold">Guizhou Time-Honored Brand</strong> by the Department of Commerce of Guizhou Province.</p>
-            <p class="about-text-muted-15">Every product is elaborately brewed by national-level distilling masters using locally-grown Hongyingzi glutinous sorghum, wheat, and natural Guizhou water — following traditional pure-grain, solid-state fermentation craftsmanship.</p>
-            <p class="about-text-muted-14"><strong class="about-text-gold-bold">1958:</strong> Founded as a traditional distillery in Maotai Town</p>
-            <p class="about-text-muted-14"><strong class="about-text-gold-bold">2016–Present:</strong> Full brand upgrade, expanding into international markets</p>
-            <p class="about-text-muted-14"><strong class="about-text-gold-bold">2019:</strong> Global cultural brand strategy launched — CCTV advertising, national high-speed rail, highway billboards, and high-end tasting events across China</p>
-            <p class="about-text-muted-14"><strong class="about-text-gold-bold">2020 &amp; 2024:</strong> Featured at the Chinese Spring Festival Gala; presented at the 2nd through 5th Hainan Island International Film Festivals. Former heads of state from Germany, France, Greece, and Norway have visited and praised LongGuoYan's craftsmanship.</p>
-            <p class="about-text-muted-14-lg">Experience centres now operate in Beijing, Shanghai, Guangzhou, Chengdu, Xi'an, Jiangsu, Fujian, Shijiazhuang, and Nanchang — bringing the LongGuoYan story to consumers worldwide.</p>
-            <p class="about-text-cinzel">"Brewed by Time, Honoring the Classics — Savor China, Share the Sauce-Aroma with the World."</p>
+          <div class="about-page-content">
+            <h2>Company Profile</h2>
+            <p>Guizhou LongGuoYan Distillery Co., Ltd. is located in Maotai Town, Guizhou Province — the world-renowned core production area for sauce-aroma Jiangxiang baijiu. A long-established distillery recognised as a <strong style="color:var(--gold)">Guizhou Time-Honored Brand</strong> by the Department of Commerce of Guizhou Province.</p>
+            <p>Every product is elaborately brewed by national-level distilling masters using locally-grown Hongyingzi glutinous sorghum, wheat, and natural Guizhou water — following traditional pure-grain, solid-state fermentation craftsmanship.</p>
+            <p><strong style="color:var(--gold)">1958:</strong> Founded as a traditional distillery in Maotai Town</p>
+            <p><strong style="color:var(--gold)">2016–Present:</strong> Full brand upgrade, expanding into international markets</p>
+            <p><strong style="color:var(--gold)">2019:</strong> Global cultural brand strategy launched — CCTV advertising, national high-speed rail, highway billboards, and high-end tasting events across China</p>
+            <p><strong style="color:var(--gold)">2020 &amp; 2024:</strong> Featured at the Chinese Spring Festival Gala; presented at the 2nd through 5th Hainan Island International Film Festivals. Former heads of state from Germany, France, Greece, and Norway have visited and praised LongGuoYan's craftsmanship.</p>
+            <p>Experience centres now operate in Beijing, Shanghai, Guangzhou, Chengdu, Xi'an, Jiangsu, Fujian, Shijiazhuang, and Nanchang — bringing the LongGuoYan story to consumers worldwide.</p>
+            <p><em>"Brewed by Time, Honoring the Classics — Savor China, Share the Sauce-Aroma with the World."</em></p>
           </div>
         </div>
 
         <!-- COMPANY BROCHURE IMAGE -->
-        <div class="mt-50 reveal">
+        <div style="margin-top:50px" class="reveal">
           <img src="https://www.longguoyan.com/upload/ueditor/image/20250701/1751345884927173.jpg" alt="LongGuoYan Company Brochure" class="company-profile-img" loading="lazy" />
         </div>
 
         <!-- AWARDS & RECOGNITION -->
-        <div class="mt-120">
+        <div style="margin-top:120px">
           <div class="section-head reveal">
             <div class="section-en">Brand Honours</div>
             <h2 class="section-title">Awards &amp; Recognition</h2>
@@ -162,7 +156,7 @@
         </div>
 
         <!-- BREWING PROCESS -->
-        <div class="mt-120 pb-80">
+        <div style="margin-top:120px; padding-bottom:80px;">
           <div class="section-head reveal">
             <div class="section-en">Brewing Craft</div>
             <h2 class="section-title">Our Brewing Process</h2>
@@ -220,7 +214,7 @@
                 <a href="https://www.youtube.com/@LongGuoYan" class="ft-social-link" target="_blank" rel="noopener" aria-label="Follow us on YouTube"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a>
               </div>
               <div class="ft-contact-cta">
-                <div class="ft-phone-label">Partnership:</div>
+                <div class="ft-phone-label" style="font-size:12px;letter-spacing:1px;color:rgba(255,255,255,0.5);">Partnership:</div>
                 <a href="tel:4001591958" class="ft-phone">400-159-1958</a>
               </div>
             </div>
@@ -241,7 +235,7 @@
           <div class="footer-brand">
             <span class="logo-cn" lang="en">LongGuoYan</span>
             <p class="footer-brand-text">Guizhou LongGuoYan Distillery Co., Ltd. — inheriting century-old techniques, crafting premium Jiangxiang spirits in Maotai Town.</p>
-            <address class="footer-address">Chun Shu Village, Maotai Town, Renhuai, Guizhou<br /><a href="tel:4001591958" class="footer-phone-link">400-159-1958</a></address>
+            <address class="footer-address">Chun Shu Village, Maotai Town, Renhuai, Guizhou<br /><a href="tel:4001591958" style="color:inherit;">400-159-1958</a></address>
           </div>
           <div class="footer-col"><h4>About</h4><ul><li><a href="about.html">Profile</a></li><li><a href="about.html">Heritage</a></li></ul></div>
           <div class="footer-col"><h4>Collections</h4><ul><li><a href="product.html">Jiangxiang</a></li><li><a href="product.html">Limited</a></li></ul></div>
@@ -252,7 +246,7 @@
     </div>
     <div class="footer-bottom">
       <div class="container">
-        <div class="footer-bottom-flex">
+        <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:20px;">
           <div class="footer-copyright">Copyright © LongGuoYan Baijiu Co. ALL Rights Reserved | ICP No. 19010301-1</div>
           <div class="footer-links"><a href="contact.html">Disclaimer</a><a href="contact.html">Privacy Policy</a></div>
         </div>
