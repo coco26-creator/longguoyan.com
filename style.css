@@ -13,22 +13,20 @@
 }
 
 :root {
-  --gold:           #D4AF37; /* Imperial Gold */
+  --gold:           #D4AF37;
   --gold-light:     #F1D592;
   --gold-dark:      #996515;
-  --ink:            #0D0A06; /* Deep Ink - Main Background */
-  --card-bg:        #16120D; /* Card Background */
-  --text-main:      #FDF8F0; /* Warm White */
+  --ink:            #0D0A06;
+  --card-bg:        #16120D;
+  --text-main:      #FDF8F0;
   --text-muted:     #A69580;
   --border:         rgba(212, 175, 55, 0.25);
   --shadow:         0 20px 50px rgba(0,0,0,0.5);
   --transition:     all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
   --shimmer:        linear-gradient(135deg, rgba(212, 175, 55, 0.15) 0%, transparent 70%);
-
-  /* Mapping for legacy/component compatibility */
   --white:          #FDF8F0;
   --dark:           #0D0A06;
-  --text-inv:       #0D0A06; /* Dark text for gold buttons */
+  --text-inv:       #0D0A06;
   --primary:        #D4AF37;
 }
 
@@ -75,7 +73,7 @@ img {
   padding: 0 40px;
 }
 
-/* ── CLEAN HERO — image only, zero text ── */
+/* ── CLEAN HERO ── */
 .hero-clean {
   position: relative;
   height: 100vh;
@@ -91,7 +89,6 @@ img {
   height: 100%;
 }
 
-/* ── HERO SLIDE FIX: cover + center with !important to prevent overrides ── */
 .hero-clean .hc-slide {
   position: absolute;
   inset: 0;
@@ -107,7 +104,6 @@ img {
 
 .hero-clean .hc-slide.active { opacity: 1; }
 
-/* edge vignette only — very subtle */
 .hero-clean::after {
   content: '';
   position: absolute;
@@ -117,7 +113,6 @@ img {
   pointer-events: none;
 }
 
-/* dots — vertical stack right */
 .hc-dots {
   position: absolute;
   right: 40px; top: 50%;
@@ -140,7 +135,6 @@ img {
 
 .hc-dot.active { background: var(--gold); transform: scale(1.5); }
 
-/* scroll cue */
 .hc-scroll {
   position: absolute;
   bottom: 36px; left: 50%;
@@ -205,7 +199,6 @@ header .container {
   height: 80px;
 }
 
-/* Logo */
 .logo {
   display: flex;
   align-items: center;
@@ -242,7 +235,6 @@ header .container {
   text-transform: uppercase;
 }
 
-/* Nav links */
 nav {
   display: flex;
   align-items: center;
@@ -288,7 +280,6 @@ nav a.active::after { transform: translateX(-50%) scaleX(1); }
   margin-left: 10px;
 }
 
-/* Hamburger */
 .hamburger {
   display: none;
   flex-direction: column;
@@ -310,7 +301,6 @@ nav a.active::after { transform: translateX(-50%) scaleX(1); }
 .hamburger.open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
 .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 
-/* Mobile nav overlay */
 .mobile-nav {
   display: none;
   position: fixed;
@@ -391,7 +381,6 @@ nav a.active::after { transform: translateX(-50%) scaleX(1); }
 }
 
 /* ===== PAGE BANNER ===== */
-
 .page-banner-content { position: relative; z-index: 2; }
 
 .breadcrumb {
@@ -425,7 +414,7 @@ nav a.active::after { transform: translateX(-50%) scaleX(1); }
   margin-top: 20px;
 }
 
-/* ===== LOGO IMAGE — Uncontained & Standalone ===== */
+/* ===== LOGO IMAGE ===== */
 .logo-icon-img {
   height: 64px;
   min-width: 120px;
@@ -1007,7 +996,7 @@ header.scrolled .logo-icon-img {
 
 .news-item:hover .news-item-arrow { transform: translateX(4px); }
 
-/* ===== UNIFIED LUXURY FOOTER ===== */
+/* ===== FOOTER ===== */
 footer {
   background: var(--ink);
   color: rgba(255,255,255,0.6);
@@ -1662,8 +1651,6 @@ footer {
 
 .job-arrow { color: var(--gold); font-size: 24px; flex-shrink: 0; transition: transform 0.3s ease; }
 .job-item:hover .job-arrow { transform: translateX(6px); }
-
-/* Honor cards are now managed in the ABOUT PAGE ENHANCEMENTS section at the end of the file */
 
 /* ===== ANIMATIONS ===== */
 @keyframes fadeIn   { to { opacity: 1; } }
@@ -2429,12 +2416,9 @@ img[loading="lazy"] {
 }
 img[loading="lazy"].loaded { opacity: 1; }
 
-
 /* ============================================================
-   MOBILE FIXES — append to end of style.css
+   MOBILE FIXES
    ============================================================ */
-
-/* ── 1. HOMEPAGE HERO — proper mobile height ── */
 @media (max-width: 768px) {
   .hero-clean {
     height: 70vh;
@@ -2447,14 +2431,12 @@ img[loading="lazy"].loaded { opacity: 1; }
     height: 60vh;
     min-height: 360px;
   }
-  /* Tighten section padding on mobile */
   .heritage-story { padding: 80px 0 60px; }
   .products-section { padding: 70px 0; }
   .news-section { padding: 70px 0; }
   .section-head { margin-bottom: 40px; }
   .section-title { font-size: clamp(22px, 6vw, 36px); letter-spacing: 3px; }
   .section-en { letter-spacing: 4px; }
-  /* About grid on mobile */
   .about-grid { gap: 24px; }
   .about-badge {
     width: 80px; height: 80px;
@@ -2462,24 +2444,20 @@ img[loading="lazy"].loaded { opacity: 1; }
   }
   .about-badge .years { font-size: 26px; }
   .about-badge .label { font-size: 8px; letter-spacing: 1px; }
-  /* Footer top */
   .footer-top { padding: 60px 0 50px; }
   .footer-main { padding: 50px 0; }
   .ft-phone { font-size: 18px; }
   .ft-social-links { gap: 10px; }
   .ft-social-link { width: 38px; height: 38px; }
-  /* News cards */
   .news-4 { grid-template-columns: 1fr 1fr; gap: 14px; }
   .nc-body { padding: 12px; }
   .nc-title { font-size: 12px; -webkit-line-clamp: 2; line-clamp: 2; }
-  /* Product cards */
   .prod-4 { grid-template-columns: 1fr 1fr; gap: 14px; }
   .product-info { padding: 14px; }
   .product-name { font-size: 13px; letter-spacing: 1px; }
   .product-series { font-size: 9px; letter-spacing: 2px; }
 }
 
-/* ── 2. SUB-PAGE BANNER — consistent across all inner pages ── */
 .page-banner {
   width: 100%;
   height: 400px;
@@ -2498,7 +2476,6 @@ img[loading="lazy"].loaded { opacity: 1; }
   display: block;
 }
 
-/* Mobile — constrain banner height */
 @media (max-width: 768px) {
   .page-banner { height: 300px; }
 }
@@ -2507,8 +2484,6 @@ img[loading="lazy"].loaded { opacity: 1; }
   .page-banner { height: 240px; }
 }
 
-/* ── 3. PRODUCT.HTML HEADER / NAV — ensure hamburger shows & nav.js works ── */
-/* product.html uses no logo-text div — fix logo alignment */
 .logo img.logo-icon-img {
   height: 54px;
   min-width: auto;
@@ -2516,7 +2491,6 @@ img[loading="lazy"].loaded { opacity: 1; }
   object-fit: contain;
 }
 
-/* Fix header-phone missing on product/detail pages that didn't include it */
 header .container {
   display: flex;
   align-items: center;
@@ -2525,19 +2499,16 @@ header .container {
   gap: 16px;
 }
 
-/* Ensure hamburger always renders correctly */
 @media (max-width: 768px) {
   .hamburger { display: flex !important; }
   #desktop-nav { display: none !important; }
   .header-phone { display: none; }
 }
 
-/* Mobile nav z-index — must be above everything */
 .mobile-nav {
   z-index: 9998;
 }
 
-/* ── 4. PRODUCTS PAGE GRID — mobile fixes ── */
 @media (max-width: 768px) {
   .products-page-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -2551,7 +2522,6 @@ header .container {
   }
 }
 
-/* ── 5. GENERAL MOBILE CONTAINER SAFETY ── */
 @media (max-width: 480px) {
   .container { padding: 0 16px; }
   .btn-primary, .btn-secondary {
@@ -2561,7 +2531,9 @@ header .container {
   }
 }
 
-/* ── 6. CHATBOT WIDGET ── */
+/* ============================================================
+   CHATBOT WIDGET
+   ============================================================ */
 .ag-chat-open {
   position: fixed;
   bottom: 24px;
@@ -2733,7 +2705,7 @@ header .container {
 .msg a { color: #d4af37; text-decoration: underline; font-weight: 600; }
 
 /* ============================================================
-   ABOUT PAGE ENHANCEMENTS (Scoped to about.html)
+   ABOUT PAGE ENHANCEMENTS
    ============================================================ */
 .company-profile-img {
   display: block;
@@ -2841,7 +2813,6 @@ header .container {
   .honor-caption { padding: 12px; }
 }
 
-/* About Page Custom Layout */
 .about-grid-card {
   background: var(--card-bg);
   border: 1px solid var(--border);
@@ -2863,30 +2834,13 @@ header .container {
   pointer-events: none;
   border-radius: 50%;
 }
-.about-z-index-1 {
-  z-index: 1;
-}
-.about-video-wrapper {
-  margin: 0;
-  max-width: 100%;
-}
-.about-content-padded {
-  z-index: 1;
-  padding: 20px 0;
-}
-.about-text-left {
-  text-align: left;
-  margin-bottom: 30px;
-}
-.about-margin-b-12 {
-  margin-bottom: 12px;
-}
-.about-margin-b-16 {
-  margin-bottom: 16px;
-}
-.about-margin-0 {
-  margin: 0;
-}
+.about-z-index-1 { z-index: 1; }
+.about-video-wrapper { margin: 0; max-width: 100%; }
+.about-content-padded { z-index: 1; padding: 20px 0; }
+.about-text-left { text-align: left; margin-bottom: 30px; }
+.about-margin-b-12 { margin-bottom: 12px; }
+.about-margin-b-16 { margin-bottom: 16px; }
+.about-margin-0 { margin: 0; }
 .about-text-muted-15 {
   font-size: 15px;
   color: var(--text-muted);
@@ -2903,10 +2857,7 @@ header .container {
   color: var(--text-muted);
   margin-bottom: 20px;
 }
-.about-text-gold-bold {
-  color: var(--gold);
-  font-weight: bold;
-}
+.about-text-gold-bold { color: var(--gold); font-weight: bold; }
 .about-text-cinzel {
   font-style: italic;
   color: var(--gold);
@@ -2915,25 +2866,76 @@ header .container {
   letter-spacing: 1px;
 }
 
-/* general remaining inline styling */
-.contact-mid-text {
-  font-size: 14px;
-  color: var(--text-mid);
-  line-height: 1.8;
+.contact-mid-text { font-size: 14px; color: var(--text-mid); line-height: 1.8; }
+.btn-send-again { margin-top: 28px; border: none; }
+.text-gold { color: var(--gold); }
+.slide-1-bg { background-image: url('https://www.longguoyan.com/_20260302/1632544364.jpg'); }
+.slide-2-bg { background-image: url('https://www.longguoyan.com/_20260302/1632406312.jpg'); }
+.slide-3-bg { background-image: url('https://www.longguoyan.com/_20260302/1632192771.jpg'); }
+
+/* ============================================================
+   ★ NEW: 5-PRODUCT GRID TEXT ALIGNMENT FIX ★
+   ============================================================ */
+.prod-5 .product-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
-.btn-send-again {
-  margin-top: 28px;
-  border: none;
+
+.prod-5 .product-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 24px;
+  border-top: 1px solid var(--border);
+  flex: 1;
 }
-.text-gold {
-  color: var(--gold);
+
+.prod-5 .product-series,
+.prod-5 .product-name,
+.prod-5 .product-link {
+  width: 100%;
 }
-.slide-1-bg {
-  background-image: url('https://www.longguoyan.com/_20260302/1632544364.jpg');
+
+.prod-5 .product-name {
+  min-height: 52px;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  margin-bottom: 12px;
+  line-height: 1.4;
 }
-.slide-2-bg {
-  background-image: url('https://www.longguoyan.com/_20260302/1632406312.jpg');
+
+.prod-5 .product-link {
+  margin-top: auto;
+  justify-content: center;
+  padding-top: 8px;
 }
-.slide-3-bg {
-  background-image: url('https://www.longguoyan.com/_20260302/1632192771.jpg');
+
+.prod-5 .product-link:hover {
+  gap: 14px;
+  color: var(--gold-light);
+}
+
+@media (max-width: 1024px) {
+  .prod-5 .product-name {
+    min-height: 48px;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  .prod-5 .product-info {
+    padding: 20px 16px;
+  }
+  .prod-5 .product-name {
+    min-height: 44px;
+    font-size: 15px;
+  }
+  .prod-5 .product-series {
+    font-size: 9px;
+    letter-spacing: 3px;
+  }
 }
