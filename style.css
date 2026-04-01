@@ -639,6 +639,35 @@ header.scrolled .logo-icon-img {
   grid-template-columns: repeat(3, 1fr);
   gap: 32px;
 }
+/* Fix product card alignment */
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 32px;
+  align-items: stretch; /* Ensures all cards have equal height */
+}
+
+.product-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%; /* Full height */
+}
+
+.product-info {
+  display: flex;
+  flex-direction: column;
+  flex: 1; /* Takes remaining space */
+}
+
+.product-name {
+  margin-bottom: 10px;
+  min-height: 48px; /* Ensures consistent height for 2-line titles */
+}
+
+.product-link {
+  margin-top: auto; /* Pushes link to bottom */
+  padding-top: 8px;
+}
 
 .product-card {
   background: var(--card-bg);
