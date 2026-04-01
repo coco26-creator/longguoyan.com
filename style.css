@@ -76,7 +76,7 @@ img {
 /* ── CLEAN HERO ── */
 .hero-clean {
   position: relative;
-  aspect-ratio: 1907 / 568;
+  aspect-ratio: 1920 / 880;
   margin-top: 80px;
   overflow: hidden;
 }
@@ -375,7 +375,7 @@ nav a.active::after { transform: translateX(-50%) scaleX(1); }
 
 /* ===== PAGE BANNER ===== */
 .page-banner {
-  aspect-ratio: 1907 / 568;
+  aspect-ratio: 1920 / 600;
   background: var(--ink);
   position: relative;
   display: flex;
