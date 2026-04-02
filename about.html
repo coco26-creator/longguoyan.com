@@ -26,15 +26,18 @@
     .honor-card-img .honor-year { font-family: 'Cinzel', serif; font-size: 11px; color: var(--gold); letter-spacing: 2px; }
     .brewing-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; margin-top: 40px; }
     @media(max-width: 900px) { .brewing-grid { grid-template-columns: 1fr 1fr; } }
-    @media(max-width: 560px) { .brewing-grid { grid-template-columns: 1fr; } }
+    @media(max-width: 560px) { .brewing-grid { grid-template-columns: 1fr 1fr; gap: 12px; } }
     .brewing-step { background: var(--card-bg); border: 1px solid var(--border); overflow: hidden; transition: var(--transition); }
     .brewing-step:hover { transform: translateY(-6px); border-color: var(--gold); box-shadow: 0 12px 40px rgba(212,175,55,0.12); }
     .brewing-step-img { width: 100%; aspect-ratio: 16/10; object-fit: cover; display: block; transition: transform 0.5s ease; }
     .brewing-step:hover .brewing-step-img { transform: scale(1.04); }
     .brewing-step-body { padding: 24px; }
+    @media(max-width: 560px) { .brewing-step-body { padding: 12px; } }
     .brewing-step-num { font-family: 'Cinzel', serif; font-size: 11px; letter-spacing: 3px; color: var(--gold); margin-bottom: 8px; }
     .brewing-step-title { font-family: 'Cinzel', serif; font-size: 15px; font-weight: 700; color: var(--text-main); letter-spacing: 1px; margin-bottom: 10px; }
+    @media(max-width: 560px) { .brewing-step-title { font-size: 12px; margin-bottom: 5px; } }
     .brewing-step-text { font-size: 13px; color: var(--text-muted); line-height: 1.8; }
+    @media(max-width: 560px) { .brewing-step-text { font-size: 11px; line-height: 1.5; } }
     .company-profile-img { width: 100%; border: 1px solid var(--border); display: block; object-fit: cover; }
   </style>
 </head>

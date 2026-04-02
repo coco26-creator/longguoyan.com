@@ -1694,6 +1694,12 @@ footer {
   transition: var(--transition);
 }
 
+@media (max-width: 560px) {
+  .benefit-card { padding: 20px 12px; }
+  .benefit-title { font-size: 13px; margin-bottom: 8px; }
+  .benefit-text { font-size: 11px; line-height: 1.5; }
+}
+
 .benefit-card:hover {
   transform: translateY(-6px);
   border-color: var(--gold);
@@ -1985,7 +1991,7 @@ footer {
   .contact-strip .contact-inner { flex-direction: column; text-align: center; }
   .hero-title { letter-spacing: 6px; }
   .honor-grid { grid-template-columns: repeat(2, 1fr); gap: 15px; }
-  .coop-benefits { grid-template-columns: 1fr; }
+  .coop-benefits { grid-template-columns: repeat(2, 1fr); gap: 15px; }
   .values-grid { grid-template-columns: repeat(2, 1fr); }
 }
 
