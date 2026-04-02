@@ -2,17 +2,17 @@ const productsData = {
   'cellar-supreme-30': {
     id: 'cellar-supreme-30',
     badge: 'PINNACLE',
-    series: 'JIANGXIANG · SAUCE AROMA · 30 YEARS AGED',
-    nameHTML: 'LongGuoYan<br/><em>Cellar Supreme 30</em>',
-    nameEn: 'LongGuoYan · Cellar Aged Jiu Wu Zhi Zun 30',
-    tagline: '"Imperial grandeur, 30 years in the making — the ultimate expression of Jiangxiang mastery"',
+    series: 'SAUCE AROMA · 30 YEARS AGED',
+    nameHTML: 'LongGuoYan<br/><em>Cellar Reserved Emperor\'s Supreme 30</em>',
+    nameEn: 'LongGuoYan · Cellar Reserved Emperor\'s Supreme 30',
+    tagline: '"Imperial grandeur, 30 years in the making — the ultimate expression of Sauce Aroma mastery"',
     images: [
       'images/Cellar Supreme 30 1.jpg',
       'images/Cellar Supreme 30 2.jpg',
       'images/Cellar Supreme 30 3.jpg'
     ],
     specs: {
-      aroma: 'Jiangxiang (Sauce Aroma)',
+      aroma: 'Sauce Aroma',
       ageing: '30 Years Cellar-Aged',
       alcohol: '53% Vol.',
       origin: 'Maotai Town, Renhuai, Guizhou',
@@ -22,7 +22,7 @@ const productsData = {
     descHTML: `
       <h4>About This Expression</h4>
       <p>The Cellar Supreme 30 selects premium Hongyingzi glutinous sorghum from Maotai Town. Following the traditional Daqu Kunsha craftsmanship, it undergoes nine rounds of steaming, eight rounds of fermentation, and seven rounds of wine extraction to produce the base liquor. After being sealed in ceramic vats and aged for years, it matures naturally with time.</p>
-      <p>The bottle is adorned with dragon-scale relief carvings, while the outer gift box features leather and gold-stamping craftsmanship, reflecting exquisite details and a dignified, noble style. Jiu Wu Zhi Zun symbolises supremacy and perfection — not only a masterpiece of sauce-aroma liquor craftsmanship, but a precious vintage refined by time, ideal for collection and connoisseurship.</p>
+      <p>The bottle is adorned with dragon-scale relief carvings, while the outer gift box features leather and gold-stamping craftsmanship, reflecting exquisite details and a dignified, noble style. Jiu Wu Zhi Zun symbolises supremacy and perfection — not only a masterpiece of Sauce Aroma liquor craftsmanship, but a precious vintage refined by time, ideal for collection and connoisseurship.</p>
     `,
     highlights: [
       { num: '30', label: 'Years Aged' },
@@ -34,22 +34,22 @@ const productsData = {
       { label: 'Appearance', value: 'Full-bodied with a rich, intense sauce aroma. Pale yellow and clear.' },
       { label: 'Nose', value: 'Rich and intense sauce aroma with elegant aged character — decades of cellar ageing reveal a bouquet of extraordinary complexity' },
       { label: 'Palate', value: 'Smooth and delicate on the palate. The middle section is full and smooth with a harmonious, balanced combination of layered flavours. No harsh edges.' },
-      { label: 'Finish', value: 'Clean and long with lingering residual fragrance on the lips and teeth. Persistent fragrance in an empty cup — the hallmark of high-end sauce-aroma liquor.' },
+      { label: 'Finish', value: 'Clean and long with lingering residual fragrance on the lips and teeth. Persistent fragrance in an empty cup — the hallmark of high-end Sauce Aroma liquor.' },
       { label: 'Serve', value: 'Best served neat at room temperature in a tulip-shaped glass. Allow 5–10 minutes to breathe before serving.' }
     ],
     craftSteps: [
       { num: '01', title: 'Selection of Raw Materials', desc: 'Only premium Hongyingzi glutinous red sorghum grown in the highlands of Guizhou, combined with natural Guizhou water and wheat, forms the foundation of every batch.' },
-      { num: '02', title: 'Traditional Daqu Kunsha Process', desc: 'Following the traditional Daqu Kunsha craftsmanship — high-temperature starter preparation, high-temperature stacking fermentation, and high-temperature distillation. The defining process of authentic Jiangxiang baijiu.' },
+      { num: '02', title: 'Traditional Daqu Kunsha Process', desc: 'Following the traditional Daqu Kunsha craftsmanship — high-temperature starter preparation, high-temperature stacking fermentation, and high-temperature distillation. The defining process of authentic Sauce Aroma Distillery.' },
       { num: '03', title: 'Nine Rounds of Steaming', desc: 'The mash undergoes nine separate rounds of steaming, eight rounds of fermentation, and seven rounds of wine extraction across a full annual production cycle.' },
       { num: '04', title: '30-Year Ceramic Vat Ageing', desc: 'The finest base spirits are sealed in ceramic vats and aged for 30 years, maturing naturally with time. The unique microclimate of Maotai Town transforms raw spirit into a transcendent expression.' },
       { num: '05', title: 'Master Blending', desc: 'National-level distilling masters carefully select and blend aged spirits to achieve the precise Cellar Supreme 30 profile — rich, balanced, and unforgettable.' }
     ],
     pairingHTML: `
-      <p>The Cellar Supreme 30's deep sauce-aroma and full body pair beautifully with rich, umami-forward dishes. Its bold character holds up to strong flavours while its silky texture complements more delicate fare.</p>
+      <p>The Cellar Supreme 30's deep Sauce Aroma and full body pair beautifully with rich, umami-forward dishes. Its bold character holds up to strong flavours while its silky texture complements more delicate fare.</p>
       <div class="pairing-grid">
         <div class="pairing-item"><div class="pairing-icon">🥩</div><strong>Braised &amp; Roasted Meats</strong><p>Red-braised pork belly, Peking duck, and roasted lamb — the spirit's depth mirrors the richness of slow-cooked meats</p></div>
         <div class="pairing-item"><div class="pairing-icon">🦞</div><strong>Premium Seafood</strong><p>Steamed lobster, abalone, and whole fish — the spirit cleanses the palate between each bite</p></div>
-        <div class="pairing-item"><div class="pairing-icon">🍄</div><strong>Earthy Dishes</strong><p>Truffles, mushroom hotpot, and aged tofu pair well with the earthy, umami notes of a long-aged Jiangxiang</p></div>
+        <div class="pairing-item"><div class="pairing-icon">🍄</div><strong>Earthy Dishes</strong><p>Truffles, mushroom hotpot, and aged tofu pair well with the earthy, umami notes of a long-aged Sauce Aroma</p></div>
         <div class="pairing-item"><div class="pairing-icon">🍫</div><strong>Dark Chocolate</strong><p>High-cocoa dark chocolate (70%+) bridges the toasted grain notes beautifully — an unexpected but elegant pairing</p></div>
       </div>
     `
@@ -58,17 +58,17 @@ const productsData = {
   'dragon-vein-30': {
     id: 'dragon-vein-30',
     badge: 'COLLECTOR\'S',
-    series: 'JIANGXIANG · SAUCE AROMA · 30 YEARS AGED',
-    nameHTML: 'LongGuoYan<br/><em>Dragon Vein 30</em>',
+    series: 'SAUCE AROMA · 30 YEARS AGED',
+    nameHTML: 'LongGuoYan<br/><em>Long Mai 30</em>',
     nameEn: 'LongGuoYan · Long Mai 30',
-    tagline: '"A collector\'s expression of pure Jiangxiang mastery — shaped by the elements, refined by time"',
+    tagline: '"A collector\'s expression of pure Sauce Aroma mastery — shaped by the elements, refined by time"',
     images: [
       'images/Dragon Vein 30 1.jpg',
       'images/Dragon Vein 30 2.jpg',
       'images/Dragon Vein 30 3.jpg'
     ],
     specs: {
-      aroma: 'Jiangxiang (Sauce Aroma)',
+      aroma: 'Sauce Aroma',
       ageing: '30 Years Cellar-Aged',
       alcohol: '53% Vol.',
       origin: 'Maotai Town, Renhuai, Guizhou',
@@ -94,7 +94,7 @@ const productsData = {
       { label: 'Serve', value: 'Best enjoyed neat at room temperature. A wider glass is recommended to appreciate its aromatic depth.' }
     ],
     craftSteps: [
-      { num: '01', title: 'Premium Maotai Sorghum', desc: 'Sourced strictly from the core production zone to guarantee the authentic Jiangxiang framework.' },
+      { num: '01', title: 'Premium Maotai Sorghum', desc: 'Sourced strictly from the core production zone to guarantee the authentic Sauce Aroma framework.' },
       { num: '02', title: 'Daqu Kunsha', desc: 'Our strictly enforced one-year production cycle ensures maximum flavour extraction from raw materials.' },
       { num: '03', title: 'Kiln Transformation Glaze', desc: 'The ceramic vessels undergo natural kiln transformation, granting every bottle a completely unique, unrepeatable visual texture.' },
       { num: '04', title: '30 Years of Patience', desc: 'Storing in custom ceramic vats allows micro-oxygenation, aging the spirit steadily over three decades.' },
@@ -106,7 +106,7 @@ const productsData = {
         <div class="pairing-item"><div class="pairing-icon">🦆</div><strong>Peking Duck</strong><p>The spirit perfectly cuts through the rich oils of the roasted duck skin</p></div>
         <div class="pairing-item"><div class="pairing-icon">🥩</div><strong>Dry-Aged Steak</strong><p>Enhances the nutty, concentrated flavours of high-quality aged beef</p></div>
         <div class="pairing-item"><div class="pairing-icon">🌶️</div><strong>Sichuan Cuisine</strong><p>Its high proof and deep sweetness hold up magnificently against spicy and numbing profiles</p></div>
-        <div class="pairing-item"><div class="pairing-icon">🥜</div><strong>Roasted Nuts</strong><p>Roasted walnuts or pecans bring out the toasted grain aroma of the baijiu</p></div>
+        <div class="pairing-item"><div class="pairing-icon">🥜</div><strong>Roasted Nuts</strong><p>Roasted walnuts or pecans bring out the toasted grain aroma of the Distillery</p></div>
       </div>
     `
   },
@@ -124,7 +124,7 @@ const productsData = {
       'images/Limited Edition 3.jpg'
     ],
     specs: {
-      aroma: 'Jiangxiang (Sauce Aroma)',
+      aroma: 'Sauce Aroma',
       ageing: 'Rare Cellar Vintages',
       alcohol: '53% Vol.',
       origin: 'Maotai Town, Renhuai, Guizhou',
@@ -161,7 +161,7 @@ const productsData = {
       <div class="pairing-grid">
         <div class="pairing-item"><div class="pairing-icon">🦪</div><strong>Abalone & Sea Cucumber</strong><p>The mellow body gracefully coats the palate alongside delicate seafood textures</p></div>
         <div class="pairing-item"><div class="pairing-icon">🍣</div><strong>Fatty Sashimi</strong><p>Otoro or premium salmon belly melt harmoniously with the spirit\'s high alcohol content</p></div>
-        <div class="pairing-item"><div class="pairing-icon">🍄</div><strong>Matsutake Mushroom</strong><p>A gentle, earthy soup pairing that completely embraces the baijiu\'s umami</p></div>
+        <div class="pairing-item"><div class="pairing-icon">🍄</div><strong>Matsutake Mushroom</strong><p>A gentle, earthy soup pairing that completely embraces the Distillery\'s umami</p></div>
         <div class="pairing-item"><div class="pairing-icon">🍮</div><strong>Egg Custard</strong><p>Silky steamed egg highlights the incredibly smooth, round nature of the spirit</p></div>
       </div>
     `
@@ -170,8 +170,8 @@ const productsData = {
   'dragon-vein-15': {
     id: 'dragon-vein-15',
     badge: 'PREMIUM',
-    series: 'JIANGXIANG · SAUCE AROMA · 15 YEARS AGED',
-    nameHTML: 'LongGuoYan<br/><em>Dragon Vein 15</em>',
+    series: 'SAUCE AROMA · 15 YEARS AGED',
+    nameHTML: 'LongGuoYan<br/><em>Long Mai 15</em>',
     nameEn: 'LongGuoYan · Long Mai 15',
     tagline: '"A triumph of modern Guizhou distillation, crowned with international gold"',
     images: [
@@ -180,7 +180,7 @@ const productsData = {
       'images/Dragon Vein 15 3.jpg'
     ],
     specs: {
-      aroma: 'Jiangxiang (Sauce Aroma)',
+      aroma: 'Sauce Aroma',
       ageing: '15 Years Cellar-Aged',
       alcohol: '53% Vol.',
       origin: 'Maotai Town, Renhuai, Guizhou',
@@ -190,7 +190,7 @@ const productsData = {
     descHTML: `
       <h4>About This Expression</h4>
       <p>Winner of the prestigious Brussels International Spirits Grand Gold Award in 2024, Dragon Vein 15 is a magnificent showcase of balance. Encased within a special ceramic bottle tailored for micro-oxygen circulation, it continues to evolve gently over its 15 years of rest.</p>
-      <p>The design utilizes a lotus-shoulder profile and a dragon-bone cap, adorned with stunning gold-foil dragon reliefs. The profile is undeniably Jiangxiang—mellow, extremely delicate, and concluding with a long, fragrant finish that captivates both seasoned connoisseurs and new explorers of premium baijiu.</p>
+      <p>The design utilizes a lotus-shoulder profile and a dragon-bone cap, adorned with stunning gold-foil dragon reliefs. The profile is undeniably Sauce Aroma—mellow, extremely delicate, and concluding with a long, fragrant finish that captivates both seasoned connoisseurs and new explorers of premium Distillery.</p>
     `,
     highlights: [
       { num: '15', label: 'Years Aged' },
@@ -218,7 +218,7 @@ const productsData = {
         <div class="pairing-item"><div class="pairing-icon">🥟</div><strong>Dim Sum</strong><p>Har Gow and Siu Mai pair beautifully with the spirit\'s delicate sweet cereal notes</p></div>
         <div class="pairing-item"><div class="pairing-icon">🥢</div><strong>Roast Goose</strong><p>Crispy skin and rich meat act as a splendid canvas for its bright sauce aroma</p></div>
         <div class="pairing-item"><div class="pairing-icon">🦀</div><strong>Hairy Crab</strong><p>Cuts entirely through the rich roe while enhancing the sweetness of crab meat</p></div>
-        <div class="pairing-item"><div class="pairing-icon">🧀</div><strong>Aged Cheese</strong><p>Hard cheeses like Parmesan act as a magnificent umami mirror to the baijiu</p></div>
+        <div class="pairing-item"><div class="pairing-icon">🧀</div><strong>Aged Cheese</strong><p>Hard cheeses like Parmesan act as a magnificent umami mirror to the Distillery</p></div>
       </div>
     `
   },
@@ -226,9 +226,9 @@ const productsData = {
   'mastercraft-supreme': {
     id: 'mastercraft-supreme',
     badge: 'MASTERCRAFT',
-    series: 'JIANGXIANG · MASTERCRAFT',
+    series: 'SAUCE AROMA · MASTERCRAFT',
     nameHTML: 'LongGuoYan<br/><em>Mastercraft Supreme</em>',
-    nameEn: 'LongGuoYan · Jiang Xin Zhi Zun',
+    nameEn: 'LongGuoYan · Mastercraft Supreme',
     tagline: '"Carrying Oriental etiquette and the absolute finest distillation craftsmanship"',
     images: [
       'images/Premium Edition 1.jpg',
@@ -236,7 +236,7 @@ const productsData = {
       'images/Premium Edition 3.jpg'
     ],
     specs: {
-      aroma: 'Jiangxiang (Sauce Aroma)',
+      aroma: 'Sauce Aroma',
       ageing: 'Master\'s Reserve',
       alcohol: '53% Vol.',
       origin: 'Maotai Town, Renhuai, Guizhou',
