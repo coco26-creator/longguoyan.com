@@ -2001,6 +2001,13 @@ footer {
     height: auto;
     min-height: unset;
   }
+  .pd-main-img {
+    aspect-ratio: 1 / 1;
+    max-height: 400px;
+  }
+  .pd-thumb {
+    aspect-ratio: 1 / 1;
+  }
   .page-banner h1 { font-size: 24px; letter-spacing: 2px; }
   .page-banner { aspect-ratio: 3 / 2; height: auto; }
   .products-grid, .products-page-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
