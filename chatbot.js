@@ -129,12 +129,14 @@ function initChatbot() {
   let firstOpen = true;
   if (chatOpen && chat) {
     chatOpen.addEventListener('click', () => {
-      chat.classList.remove('hidden');
-      if (chatText) chatText.focus();
-      if (firstOpen) {
-        addMessage('bot', "Welcome to **LongGuoYan** — Brewed by Time, Honoring the Classics. How can I assist your discovery today?");
-        renderOptions();
-        firstOpen = false;
+      chat.classList.toggle('hidden');
+      if (!chat.classList.contains('hidden')) {
+        if (chatText) chatText.focus();
+        if (firstOpen) {
+          addMessage('bot', "Welcome to **LongGuoYan** — Brewed by Time, Honoring the Classics. How can I assist your discovery today?");
+          renderOptions();
+          firstOpen = false;
+        }
       }
     });
   }
