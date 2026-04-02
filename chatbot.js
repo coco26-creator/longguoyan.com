@@ -38,11 +38,11 @@ function initChatbot() {
   const knowledgeBase = [
     {
       keywords: ['hello', 'hi', 'hey', 'greetings', 'morning', 'evening'],
-      response: "Hello! Welcome to LongGuoYan. How can I help you discover our premium Jiangxiang baijiu today?"
+      response: "Hello! Welcome to LongGuoYan. How can I help you discover our premium Sauce Aroma Distillery today?"
     },
     {
       keywords: ['product', 'collection', 'series', 'liquor', 'bottles', 'buy'],
-      response: "Our premium collection includes:<br><br>• **Cellar Supreme 30** — Pinnacle 30-year aged Jiangxiang<br>• **Dragon Vein 30** — Collector's 30-year vintage<br>• **Dragon Vein 15** — Brussels International Gold Award 2024<br>• **Limited Edition** — Collectible gold-plated dragon bottle<br>• **Mastercraft Supreme** — Imperial yellow glaze, ideal for gifting<br><br>Which one would you like to know more about?"
+      response: "Our premium collection includes:<br><br>• **Cellar Supreme 30** — Pinnacle 30-year aged Sauce Aroma<br>• **Dragon Vein 30** — Collector's 30-year vintage<br>• **Dragon Vein 15** — Brussels International Gold Award 2024<br>• **Limited Edition** — Collectible gold-plated dragon bottle<br>• **Mastercraft Supreme** — Imperial yellow glaze, ideal for gifting<br><br>Which one would you like to know more about?"
     },
     {
       keywords: ['contact', 'phone', 'call', 'number', 'reach', 'support'],
@@ -50,7 +50,7 @@ function initChatbot() {
     },
     {
       keywords: ['location', 'where', 'address', 'place', 'village', 'visit', 'guizhou'],
-      response: "Our distillery is located at **Chun Shu Village, Maotai Town, Renhuai, Guizhou, China** — the world-renowned core production area for sauce-aroma Jiangxiang baijiu."
+      response: "Our distillery is located at **Chun Shu Village, Maotai Town, Renhuai, Guizhou, China** — the world-renowned core production area for Sauce Aroma Distillery."
     },
     {
       keywords: ['heritage', 'history', 'story', 'traditional', 'brew', 'distill', 'maotai', 'founded', '1958', 'time-honored'],
@@ -62,7 +62,7 @@ function initChatbot() {
     },
     {
       keywords: ['limited', 'edition', 'mastercraft', 'supreme', 'gift', 'collector', 'rare'],
-      response: "**The Limited &amp; Rare Series:**\n\n• **Limited Edition** — Gold-plated bottle with five-clawed dragon relief and sapphire-accented metal base. Collectible vintage Jiangxiang, limited release.\n• **Mastercraft Supreme** — Imperial yellow glaze, embossed dragon patterns, rose gold badge, and silk hand strap. Large-capacity gift specification — the finest choice for gifting distinguished guests."
+      response: "**The Limited &amp; Rare Series:**\n\n• **Limited Edition** — Gold-plated bottle with five-clawed dragon relief and sapphire-accented metal base. Collectible vintage Sauce Aroma, limited release.\n• **Mastercraft Supreme** — Imperial yellow glaze, embossed dragon patterns, rose gold badge, and silk hand strap. Large-capacity gift specification — the finest choice for gifting distinguished guests."
     },
     {
       keywords: ['award', 'brussels', 'gold', 'prize', 'recognition', 'honour'],

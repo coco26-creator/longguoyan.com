@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const product = productsData[productId];
 
   // 2. Update Page Meta
-  document.title = `${product.nameEn} | LongGuoYan Baijiu`;
+  document.title = `${product.nameEn} | LongGuoYan Distillery`;
 
   // 3. Update Hero Section
   document.querySelector('.pd-series').textContent = product.series;
