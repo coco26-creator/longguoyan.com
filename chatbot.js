@@ -42,7 +42,7 @@ function initChatbot() {
     },
     {
       keywords: ['product', 'collection', 'series', 'liquor', 'bottles', 'buy'],
-      response: "Our premium collection includes:<br><br>• **Cellar Supreme 30** — Pinnacle 30-year aged Sauce Aroma<br>• **Dragon Vein 30** — Collector's 30-year vintage<br>• **Dragon Vein 15** — Brussels International Gold Award 2024<br>• **Limited Edition** — Collectible gold-plated dragon bottle<br>• **Mastercraft Supreme** — Imperial yellow glaze, ideal for gifting<br><br>Which one would you like to know more about?"
+      response: "Our premium collection includes:<br><br>• **Cellar Supreme 30** — Pinnacle 30-year aged Sauce Aroma<br>• **Dragon Vein 30** — Collector's 30-year vintage<br>• **Dragon Vein 15** — 2024 ISGC International Spirits Gold Award<br>• **Limited Edition** — Collectible gold-plated dragon bottle<br>• **Mastercraft Supreme** — Imperial yellow glaze, ideal for gifting<br><br>Which one would you like to know more about?"
     },
     {
       keywords: ['contact', 'phone', 'call', 'number', 'reach', 'support'],
@@ -58,7 +58,7 @@ function initChatbot() {
     },
     {
       keywords: ['cellar', 'supreme', 'aged', 'years', 'dragon vein', '30', '15'],
-      response: "**Our Aged Collection:**\n\n• **Cellar Supreme 30** — Nine rounds of steaming, eight of fermentation, seven of extraction. Sealed in ceramic vats and aged naturally. Dragon-scale relief bottle with leather and gold-stamped gift box.\n• **Dragon Vein 30** — Kiln-transformation glazed bottle. Daqu Kunsha technique, vintage base spirit. Elegant, layered, full-bodied.\n• **Dragon Vein 15** — Brussels International Gold Award 2024. Special ceramic micro-oxygen bottle. Mellow and delicate with a long fragrant finish."
+      response: "**Our Aged Collection:**\n\n• **Cellar Supreme 30** — Nine rounds of steaming, eight of fermentation, seven of extraction. Sealed in ceramic vats and aged naturally. Dragon-scale relief bottle with leather and gold-stamped gift box.\n• **Dragon Vein 30** — Kiln-transformation glazed bottle. Daqu Kunsha technique, vintage base spirit. Elegant, layered, full-bodied.\n• **Dragon Vein 15** — 2024 ISGC Gold Award winner. Special ceramic micro-oxygen bottle. Mellow and delicate with a long fragrant finish."
     },
     {
       keywords: ['limited', 'edition', 'mastercraft', 'supreme', 'gift', 'collector', 'rare'],
@@ -66,7 +66,7 @@ function initChatbot() {
     },
     {
       keywords: ['award', 'brussels', 'gold', 'prize', 'recognition', 'honour'],
-      response: "LongGuoYan's international recognition includes:\n\n• **Brussels International Gold Award** — Dragon Vein 15 (2024)\n• **ISGC International Spirits Gold Award** — Dragon Vein 15 (2024)\n• **2024 International Tea Expo** — Tea &amp; Spirits Tasting Grand Prize\n• **5th Hainan Island International Film Festival** — Premier Cooperation Partner"
+      response: "LongGuoYan's international recognition includes:\n\n• **Brussels International Grand Gold Award** (2021)\n• **ISGC International Spirits Gold Award** (2024)\n• **Hong Kong International Wine & Spirit Competition** — Double Gold (2023)\n• **China Spirits Industry Association \"QingZhuo\" Award** (2024)\n• **Guizhou Time-Honored Brand** — Certified by Dept. of Commerce"
     },
     {
       keywords: ['partner', 'distribute', 'wholesale', 'cooperate', 'agent', 'business'],
