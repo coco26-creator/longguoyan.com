@@ -46,7 +46,7 @@ function initChatbot() {
     },
     {
       keywords: ['contact', 'phone', 'call', 'number', 'reach', 'support'],
-      response: "You can reach our team at **400159 1958** or email us at **admin@longguoyan1958.com**. We are available Monday to Friday, 9:00 AM – 5:30 PM (GMT+8)."
+      response: "You can reach our team at **400-159-1958**. We are available Monday to Friday, 9:00 AM – 5:30 PM (GMT+8)."
     },
     {
       keywords: ['location', 'where', 'address', 'place', 'village', 'visit', 'guizhou'],
@@ -70,7 +70,7 @@ function initChatbot() {
     },
     {
       keywords: ['partner', 'distribute', 'wholesale', 'cooperate', 'agent', 'business'],
-      response: "We sincerely invite distribution partners to share in our brand's growth. LongGuoYan offers **territorial protection**, generous margins, and full-scale brand support. Call **400159 1958**, email **admin@longguoyan1958.com**, or visit our Partnerships page to apply."
+      response: "We sincerely invite distribution partners to share in our brand's growth. LongGuoYan offers **territorial protection**, generous margins, and full-scale brand support. Call **400-159-1958** or visit our Partnerships page to apply."
     }
   ];
 
