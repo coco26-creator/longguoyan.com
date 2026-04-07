@@ -46,7 +46,7 @@ function initChatbot() {
     },
     {
       keywords: ['contact', 'phone', 'call', 'number', 'reach', 'support'],
-      response: "You can reach our team at **400-159-1958**. We are available Monday to Friday, 9:00 AM – 6:00 PM (GMT+8)."
+      response: "You can reach our team at **400-159-1958**. We are available Monday to Friday, 9:00 AM – 5:30 PM (GMT+8)."
     },
     {
       keywords: ['location', 'where', 'address', 'place', 'village', 'visit', 'guizhou'],
