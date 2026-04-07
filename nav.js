@@ -1,5 +1,5 @@
 /**
- * nav.js — Longguo Banquet shared navigation & utilities
+ * nav.js — Longguoyan shared navigation & utilities
  * Handles: mobile menu, scroll effects, reveal animations,
  *          hero slider, video section, cookie banner,
  *          product detail tabs & gallery, lazy image loading
