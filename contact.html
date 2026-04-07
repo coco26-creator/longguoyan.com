@@ -89,7 +89,7 @@
           <div class="contact-form fade-in">
             <h3>Send a Message</h3>
 
-            <div id="form-success" class="form-success">
+            <div id="form-success" class="form-success" data-fs-success>
               <div class="success-icon">✓</div>
               <h4>Message Sent</h4>
               <p>Thank you for contacting LongGuoYan. We will get back to you within 1–2 business days.</p>
@@ -100,46 +100,48 @@
               <div class="form-row">
                 <div class="form-group">
                   <label for="name">Your Name <span class="required-mark" aria-hidden="true">*</span></label>
-                  <input type="text" id="name" name="name" placeholder="Enter your name" required aria-required="true" />
-                  <span class="error-msg" id="name-error" role="alert">Please enter your name.</span>
+                  <input type="text" id="name" name="name" placeholder="Enter your name" required aria-required="true" data-fs-field />
+                  <span class="error-msg" id="name-error" role="alert" data-fs-error="name">Please enter your name.</span>
                 </div>
                 <div class="form-group">
                   <label for="phone">Phone Number <span class="required-mark" aria-hidden="true">*</span></label>
-                  <input type="tel" id="phone" name="phone" placeholder="e.g. 138 0000 0000" required aria-required="true" />
-                  <span class="error-msg" id="phone-error" role="alert">Please enter a valid phone number.</span>
+                  <input type="tel" id="phone" name="phone" placeholder="e.g. 138 0000 0000" required aria-required="true" data-fs-field />
+                  <span class="error-msg" id="phone-error" role="alert" data-fs-error="phone">Please enter a valid phone number.</span>
                 </div>
               </div>
 
               <div class="form-row">
                 <div class="form-group">
                   <label for="email">Email Address</label>
-                  <input type="email" id="email" name="email" placeholder="your@email.com" />
-                  <span class="error-msg" id="email-error" role="alert">Please enter a valid email address.</span>
+                  <input type="email" id="email" name="email" placeholder="your@email.com" data-fs-field />
+                  <span class="error-msg" id="email-error" role="alert" data-fs-error="email">Please enter a valid email address.</span>
                 </div>
                 <div class="form-group">
                   <label for="type">Enquiry Type</label>
-                  <select id="type" name="type">
+                  <select id="type" name="type" data-fs-field>
                     <option value="">Select enquiry type</option>
                     <option value="product">Product Enquiry</option>
                     <option value="cooperation">Distribution Partnership</option>
                     <option value="purchase">Purchasing & Pricing</option>
                     <option value="other">Other</option>
                   </select>
+                  <span data-fs-error="type"></span>
                 </div>
               </div>
 
               <div class="form-group">
                 <label for="company">Company / Organisation</label>
-                <input type="text" id="company" name="company" placeholder="Enter your company (optional)" />
+                <input type="text" id="company" name="company" placeholder="Enter your company (optional)" data-fs-field />
+                <span data-fs-error="company"></span>
               </div>
 
               <div class="form-group">
                 <label for="message">Message <span class="required-mark" aria-hidden="true">*</span></label>
-                <textarea id="message" name="message" placeholder="How can we help you?" required aria-required="true"></textarea>
-                <span class="error-msg" id="message-error" role="alert">Please enter your message.</span>
+                <textarea id="message" name="message" placeholder="How can we help you?" required aria-required="true" data-fs-field></textarea>
+                <span class="error-msg" id="message-error" role="alert" data-fs-error="message">Please enter your message.</span>
               </div>
 
-              <button type="submit" id="submit-btn" class="btn-primary form-submit-btn">
+              <button type="submit" id="submit-btn" class="btn-primary form-submit-btn" data-fs-submit-btn>
                 Submit Message
               </button>
             </form>
@@ -224,15 +226,10 @@
   </footer>
 
   <script>
-    const form = document.getElementById('contact-form');
-    const successBox = document.getElementById('form-success');
-
-    form.addEventListener('submit', function(e) {
-      e.preventDefault();
-      form.style.display = 'none';
-      successBox.classList.add('show');
-    });
+    window.formspree = window.formspree || function () { (formspree.q = formspree.q || []).push(arguments); };
+    formspree('initForm', { formElement: '#contact-form', formId: 'xaqlvjaw' });
   </script>
+  <script src="https://unpkg.com/@formspree/ajax@1" defer></script>
   <script src="nav.js" defer></script>
   <script src="chatbot.js" defer></script>
 </body>
