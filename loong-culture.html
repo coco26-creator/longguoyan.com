@@ -1,0 +1,1074 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Evolution of Chinese Loong Culture | LongGuoYan</title>
+  <meta name="description" content="Explore the four phases of Chinese Loong (Dragon) culture — from Neolithic totem to national identity symbol. LongGuoYan Premium Sauce Aroma Distillery, Maotai Town." />
+  <link rel="canonical" href="https://www.longguoyan.com/loong-culture.html" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@300;400;500;600;700&family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@300;400;500;600;700&family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap" rel="stylesheet"></noscript>
+
+  <style>
+    /* ── PAGE-SPECIFIC LOONG CULTURE STYLES ── */
+
+    /* Hero Banner */
+    .loong-hero {
+      position: relative;
+      min-height: 480px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      overflow: hidden;
+      margin-top: 80px;
+      background: var(--ink);
+    }
+
+    .loong-hero-bg {
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(135deg, rgba(212,175,55,0.08) 0%, transparent 60%),
+        radial-gradient(ellipse at 20% 50%, rgba(212,175,55,0.12) 0%, transparent 60%),
+        radial-gradient(ellipse at 80% 50%, rgba(212,175,55,0.06) 0%, transparent 60%);
+    }
+
+    .loong-hero-bg::before {
+      content: '龙';
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 600px;
+      font-family: 'Noto Serif SC', serif;
+      font-weight: 700;
+      color: rgba(212,175,55,0.04);
+      line-height: 1;
+      pointer-events: none;
+      user-select: none;
+    }
+
+    .loong-hero-content {
+      position: relative;
+      z-index: 2;
+      padding: 80px 40px;
+      max-width: 900px;
+    }
+
+    .loong-hero-en {
+      font-family: 'Cinzel', serif;
+      font-size: 11px;
+      letter-spacing: 8px;
+      color: var(--gold);
+      text-transform: uppercase;
+      margin-bottom: 20px;
+      opacity: 0;
+      animation: fadeInUp 0.8s ease forwards 0.2s;
+    }
+
+    .loong-hero-title {
+      font-family: 'Cinzel', serif;
+      font-size: clamp(32px, 5vw, 60px);
+      font-weight: 700;
+      letter-spacing: 6px;
+      color: var(--text-main);
+      line-height: 1.2;
+      margin-bottom: 24px;
+      opacity: 0;
+      animation: fadeInUp 0.8s ease forwards 0.4s;
+    }
+
+    .loong-hero-title span {
+      color: var(--gold);
+    }
+
+    .loong-hero-divider {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+      margin: 28px auto;
+      opacity: 0;
+      animation: fadeIn 0.8s ease forwards 0.6s;
+    }
+
+    .loong-hero-divider::before,
+    .loong-hero-divider::after {
+      content: '';
+      flex: 1;
+      max-width: 120px;
+      height: 1px;
+      background: linear-gradient(to right, transparent, var(--gold));
+    }
+
+    .loong-hero-divider::after {
+      background: linear-gradient(to left, transparent, var(--gold));
+    }
+
+    .loong-hero-divider span {
+      color: var(--gold);
+      font-size: 18px;
+    }
+
+    .loong-hero-sub {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 18px;
+      font-style: italic;
+      color: rgba(253,248,240,0.6);
+      line-height: 1.8;
+      letter-spacing: 1px;
+      opacity: 0;
+      animation: fadeInUp 0.8s ease forwards 0.8s;
+    }
+
+    /* Phase Navigation */
+    .loong-nav {
+      background: var(--card-bg);
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 80px;
+      z-index: 100;
+    }
+
+    .loong-nav-inner {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 40px;
+      display: flex;
+      align-items: stretch;
+    }
+
+    .loong-nav-item {
+      flex: 1;
+      padding: 20px 16px;
+      text-align: center;
+      border-right: 1px solid var(--border);
+      cursor: pointer;
+      transition: all 0.3s ease;
+      text-decoration: none;
+    }
+
+    .loong-nav-item:last-child { border-right: none; }
+
+    .loong-nav-item:hover {
+      background: rgba(212,175,55,0.05);
+    }
+
+    .loong-nav-num {
+      font-family: 'Cinzel', serif;
+      font-size: 10px;
+      letter-spacing: 3px;
+      color: var(--gold);
+      display: block;
+      margin-bottom: 4px;
+    }
+
+    .loong-nav-label {
+      font-family: 'Cinzel', serif;
+      font-size: 11px;
+      letter-spacing: 1.5px;
+      color: var(--text-muted);
+      display: block;
+      text-transform: uppercase;
+    }
+
+    .loong-nav-item:hover .loong-nav-label { color: var(--gold); }
+
+    /* Phase Sections */
+    .loong-phase {
+      padding: 100px 0 80px;
+      border-bottom: 1px solid rgba(212,175,55,0.1);
+    }
+
+    .loong-phase:last-of-type { border-bottom: none; }
+
+    .loong-phase-header {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 40px;
+      align-items: start;
+      margin-bottom: 60px;
+    }
+
+    .loong-phase-number {
+      font-family: 'Cinzel', serif;
+      font-size: 120px;
+      font-weight: 700;
+      color: rgba(212,175,55,0.08);
+      line-height: 1;
+      user-select: none;
+    }
+
+    .loong-phase-info {}
+
+    .loong-phase-tag {
+      display: inline-block;
+      font-family: 'Cinzel', serif;
+      font-size: 10px;
+      letter-spacing: 3px;
+      color: var(--gold);
+      border: 1px solid rgba(212,175,55,0.4);
+      padding: 5px 16px;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+
+    .loong-phase-title {
+      font-family: 'Cinzel', serif;
+      font-size: clamp(22px, 3vw, 36px);
+      font-weight: 700;
+      color: var(--text-main);
+      letter-spacing: 3px;
+      line-height: 1.3;
+      margin-bottom: 10px;
+    }
+
+    .loong-phase-period {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 16px;
+      font-style: italic;
+      color: var(--gold);
+      letter-spacing: 2px;
+    }
+
+    /* Image Grid */
+    .loong-grid-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      margin-bottom: 40px;
+    }
+
+    .loong-grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      margin-bottom: 40px;
+    }
+
+    .loong-grid-4 {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+      margin-bottom: 40px;
+    }
+
+    .loong-grid-5 {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 14px;
+      margin-bottom: 40px;
+    }
+
+    .loong-grid-2-3 {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+      margin-bottom: 40px;
+    }
+
+    .loong-img-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      overflow: hidden;
+      transition: var(--transition);
+    }
+
+    .loong-img-card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(212,175,55,0.5);
+      box-shadow: 0 10px 30px rgba(212,175,55,0.1);
+    }
+
+    .loong-img-card img {
+      width: 100%;
+      aspect-ratio: 4/3;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.5s ease;
+      background: #1a1408;
+    }
+
+    .loong-img-card:hover img { transform: scale(1.04); }
+
+    .loong-img-caption {
+      padding: 12px 16px;
+      border-top: 1px solid var(--border);
+    }
+
+    .loong-img-caption p {
+      font-size: 11px;
+      color: var(--text-muted);
+      line-height: 1.6;
+      letter-spacing: 0.5px;
+    }
+
+    /* Body Text */
+    .loong-body-text {
+      font-size: 15px;
+      color: rgba(253,248,240,0.75);
+      line-height: 2;
+      letter-spacing: 1px;
+      max-width: 900px;
+      border-left: 3px solid rgba(212,175,55,0.3);
+      padding-left: 28px;
+      position: relative;
+    }
+
+    .loong-body-text::before {
+      content: '◆';
+      position: absolute;
+      left: -8px;
+      top: 0;
+      color: var(--gold);
+      font-size: 12px;
+    }
+
+    /* Phase sub-row: two image rows */
+    .loong-row-label {
+      font-family: 'Cinzel', serif;
+      font-size: 10px;
+      letter-spacing: 4px;
+      color: rgba(212,175,55,0.5);
+      text-transform: uppercase;
+      margin-bottom: 14px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid rgba(212,175,55,0.1);
+    }
+
+    /* Gold bar accent */
+    .loong-accent-bar {
+      width: 60px;
+      height: 2px;
+      background: var(--gold);
+      margin: 32px 0;
+    }
+
+    /* Connection line between phases */
+    .loong-connector {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0;
+      gap: 16px;
+      color: rgba(212,175,55,0.3);
+      font-family: 'Cinzel', serif;
+      font-size: 11px;
+      letter-spacing: 3px;
+    }
+
+    .loong-connector::before,
+    .loong-connector::after {
+      content: '';
+      flex: 1;
+      max-width: 200px;
+      height: 1px;
+      background: linear-gradient(to right, transparent, rgba(212,175,55,0.2));
+    }
+
+    .loong-connector::after {
+      background: linear-gradient(to left, transparent, rgba(212,175,55,0.2));
+    }
+
+    /* Page intro summary */
+    .loong-intro {
+      padding: 80px 0 40px;
+    }
+
+    .loong-intro-grid {
+      display: grid;
+      grid-template-columns: 1fr 3fr;
+      gap: 60px;
+      align-items: start;
+    }
+
+    .loong-intro-aside {
+      border: 1px solid var(--border);
+      padding: 32px 28px;
+      background: var(--card-bg);
+    }
+
+    .loong-aside-label {
+      font-family: 'Cinzel', serif;
+      font-size: 10px;
+      letter-spacing: 3px;
+      color: var(--gold);
+      margin-bottom: 20px;
+      display: block;
+    }
+
+    .loong-phase-list {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .loong-phase-list-item {
+      display: flex;
+      gap: 14px;
+      align-items: flex-start;
+      padding-bottom: 16px;
+      border-bottom: 1px solid rgba(212,175,55,0.1);
+      text-decoration: none;
+      transition: all 0.2s ease;
+    }
+
+    .loong-phase-list-item:last-child { border-bottom: none; padding-bottom: 0; }
+
+    .loong-phase-list-item:hover { padding-left: 6px; }
+
+    .loong-phase-list-num {
+      font-family: 'Cinzel', serif;
+      font-size: 20px;
+      color: rgba(212,175,55,0.3);
+      font-weight: 700;
+      flex-shrink: 0;
+      width: 32px;
+      line-height: 1;
+    }
+
+    .loong-phase-list-text {}
+
+    .loong-phase-list-title {
+      font-family: 'Cinzel', serif;
+      font-size: 12px;
+      color: var(--text-main);
+      letter-spacing: 1px;
+      margin-bottom: 3px;
+      transition: color 0.2s;
+    }
+
+    .loong-phase-list-item:hover .loong-phase-list-title { color: var(--gold); }
+
+    .loong-phase-list-period {
+      font-size: 11px;
+      color: var(--text-muted);
+      letter-spacing: 0.5px;
+    }
+
+    .loong-intro-text p {
+      font-size: 16px;
+      color: rgba(253,248,240,0.75);
+      line-height: 2;
+      letter-spacing: 1px;
+      margin-bottom: 20px;
+    }
+
+    .loong-intro-text p:last-child { margin-bottom: 0; }
+
+    /* Brand footer CTA */
+    .loong-brand-cta {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      padding: 60px 80px;
+      text-align: center;
+      margin: 80px 0 0;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .loong-brand-cta::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(212,175,55,0.06) 0%, transparent 60%);
+    }
+
+    .loong-brand-cta-content { position: relative; z-index: 1; }
+
+    .loong-brand-cta-en {
+      font-family: 'Cinzel', serif;
+      font-size: 10px;
+      letter-spacing: 6px;
+      color: var(--gold);
+      margin-bottom: 16px;
+    }
+
+    .loong-brand-cta-title {
+      font-family: 'Cinzel', serif;
+      font-size: 26px;
+      color: var(--text-main);
+      letter-spacing: 4px;
+      margin-bottom: 16px;
+    }
+
+    .loong-brand-cta-sub {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 16px;
+      font-style: italic;
+      color: rgba(253,248,240,0.5);
+      margin-bottom: 36px;
+      letter-spacing: 1px;
+    }
+
+    .loong-brand-cta-btns {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+      .loong-phase-header { grid-template-columns: 1fr; gap: 16px; }
+      .loong-phase-number { font-size: 60px; }
+      .loong-grid-4 { grid-template-columns: repeat(2, 1fr); }
+      .loong-grid-5 { grid-template-columns: repeat(3, 1fr); }
+      .loong-grid-3 { grid-template-columns: repeat(2, 1fr); }
+      .loong-intro-grid { grid-template-columns: 1fr; gap: 40px; }
+      .loong-brand-cta { padding: 40px 30px; }
+    }
+
+    @media (max-width: 600px) {
+      .loong-nav-inner { overflow-x: auto; }
+      .loong-nav-item { min-width: 120px; }
+      .loong-grid-2 { grid-template-columns: 1fr 1fr; gap: 10px; }
+      .loong-grid-3 { grid-template-columns: 1fr 1fr; gap: 10px; }
+      .loong-grid-4 { grid-template-columns: 1fr 1fr; gap: 10px; }
+      .loong-grid-5 { grid-template-columns: 1fr 1fr; gap: 10px; }
+      .loong-grid-2-3 { grid-template-columns: 1fr 1fr; gap: 10px; }
+      .loong-hero-content { padding: 60px 24px; }
+      .loong-phase { padding: 60px 0 50px; }
+      .loong-body-text { font-size: 14px; padding-left: 18px; }
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(24px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to   { opacity: 1; }
+    }
+  </style>
+</head>
+<body class="about-page-body">
+
+  <!-- HEADER -->
+  <header id="header" role="banner">
+    <div class="container">
+      <a href="index.html" class="logo" aria-label="LongGuoYan — Home">
+        <img src="images/logo.png" class="logo-icon-img" alt="LongGuoYan Logo" />
+      </a>
+      <nav id="desktop-nav" role="navigation" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="about.html" class="active" aria-current="page">About Us</a>
+        <a href="product.html">Products</a>
+        <a href="news.html">News</a>
+        <a href="cooperation.html">Partnerships</a>
+        <a href="human.html">Careers</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <div class="header-phone" aria-label="Call us: 400-159-1958">400-159-1958</div>
+      <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobile-nav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <nav id="mobile-nav" class="mobile-nav" aria-label="Mobile navigation">
+    <a href="index.html">Home</a>
+    <a href="about.html" class="active" aria-current="page">About Us</a>
+    <a href="product.html">Products</a>
+    <a href="news.html">News</a>
+    <a href="cooperation.html">Partnerships</a>
+    <a href="human.html">Careers</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <!-- HERO -->
+  <div class="loong-hero">
+    <div class="loong-hero-bg" aria-hidden="true"></div>
+    <div class="loong-hero-content">
+      <div class="loong-hero-en">Chinese Heritage · LongGuoYan</div>
+      <h1 class="loong-hero-title">
+        Evolution of Chinese<br/><span>Loong Culture</span>
+      </h1>
+      <div class="loong-hero-divider"><span>◆</span></div>
+      <p class="loong-hero-sub">
+        From Neolithic Totem to National Spirit — Four Millennia of the Dragon's Journey
+      </p>
+    </div>
+  </div>
+
+  <!-- PHASE NAVIGATION -->
+  <nav class="loong-nav" aria-label="Phase navigation">
+    <div class="loong-nav-inner">
+      <a href="#phase-1" class="loong-nav-item">
+        <span class="loong-nav-num">Phase 01</span>
+        <span class="loong-nav-label">Genesis</span>
+      </a>
+      <a href="#phase-2" class="loong-nav-item">
+        <span class="loong-nav-num">Phase 02</span>
+        <span class="loong-nav-label">Formalization</span>
+      </a>
+      <a href="#phase-3" class="loong-nav-item">
+        <span class="loong-nav-num">Phase 03</span>
+        <span class="loong-nav-label">Popularization</span>
+      </a>
+      <a href="#phase-4" class="loong-nav-item">
+        <span class="loong-nav-num">Phase 04</span>
+        <span class="loong-nav-label">Sublimation</span>
+      </a>
+    </div>
+  </nav>
+
+  <main>
+    <div class="container">
+
+      <!-- INTRO OVERVIEW -->
+      <section class="loong-intro fade-in">
+        <div class="loong-intro-grid">
+          <div class="loong-intro-aside reveal">
+            <span class="loong-aside-label">Four Phases of Evolution</span>
+            <div class="loong-phase-list">
+              <a href="#phase-1" class="loong-phase-list-item">
+                <div class="loong-phase-list-num">01</div>
+                <div class="loong-phase-list-text">
+                  <div class="loong-phase-list-title">Genesis &amp; Embryonic Phase</div>
+                  <div class="loong-phase-list-period">Totem Worship · c. 5000–4000 BCE</div>
+                </div>
+              </a>
+              <a href="#phase-2" class="loong-phase-list-item">
+                <div class="loong-phase-list-num">02</div>
+                <div class="loong-phase-list-text">
+                  <div class="loong-phase-list-title">Development &amp; Formalization Phase</div>
+                  <div class="loong-phase-list-period">Divinity &amp; Imperial Power · 2070 BCE – 220 CE</div>
+                </div>
+              </a>
+              <a href="#phase-3" class="loong-phase-list-item">
+                <div class="loong-phase-list-num">03</div>
+                <div class="loong-phase-list-text">
+                  <div class="loong-phase-list-title">Popularization &amp; Integration Phase</div>
+                  <div class="loong-phase-list-period">Folk Culture · 220 CE – 1912 CE</div>
+                </div>
+              </a>
+              <a href="#phase-4" class="loong-phase-list-item">
+                <div class="loong-phase-list-num">04</div>
+                <div class="loong-phase-list-text">
+                  <div class="loong-phase-list-title">Sublimation &amp; Identity Phase</div>
+                  <div class="loong-phase-list-period">National Spirit · Late 19th Century – Present</div>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="loong-intro-text reveal rd1">
+            <p>The Loong — rendered in the West as "dragon" yet fundamentally distinct — is the paramount spiritual symbol of Chinese civilisation. Its evolution spans over seven thousand years, from a primitive totem of the Neolithic age to the living embodiment of the Chinese national spirit.</p>
+            <p>Unlike the fire-breathing western dragon, the Chinese Loong is a benevolent composite deity: a creature of rivers and rain, of imperial authority and cosmic harmony. It was born from the imagination of our ancestors as they sought to understand thunder, floods, and the forces of nature — and it grew, over millennia, into the soul of a nation.</p>
+            <p>At LongGuoYan, the Loong is not merely a motif on our bottles. It is the living heritage that inspires our craft — the same spirit of mastery, longevity, and excellence that has driven Chinese civilisation for seven thousand years, distilled into every bottle we produce.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ═══ PHASE 1 ═══ -->
+      <section class="loong-phase fade-in" id="phase-1">
+        <div class="loong-phase-header">
+          <div class="loong-phase-number" aria-hidden="true">01</div>
+          <div class="loong-phase-info">
+            <div class="loong-phase-tag">Genesis &amp; Embryonic Phase</div>
+            <h2 class="loong-phase-title">Totem Worship in the Neolithic Age</h2>
+            <div class="loong-phase-period">c. 5000 – 4000 BCE</div>
+          </div>
+        </div>
+
+        <div class="loong-grid-2 reveal">
+          <div class="loong-img-card">
+            <img src="https://www.longguoyan.com/_20260302/1632544364.jpg"
+                 alt="'Pig dragon' mound unearthed at the Zhihai Site in Fuxin"
+                 loading="lazy" />
+            <div class="loong-img-caption">
+              <p>A "pig dragon" mound unearthed at the Zhihai Site in Fuxin — one of the earliest and largest Loong images discovered in China, dating back approximately 8,000 years.</p>
+            </div>
+          </div>
+          <div class="loong-img-card">
+            <img src="https://www.longguoyan.com/_20260302/1632406312.jpg"
+                 alt="The clam shell Loong unearthed at the Yangshao Culture Site in Puyang"
+                 loading="lazy" />
+            <div class="loong-img-caption">
+              <p>The clam shell Loong unearthed at the Yangshao Culture Site in Puyang, Henan Province — measures 1.78 metres in length and dates back approximately 6,500 years.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="loong-grid-2 reveal rd1">
+          <div class="loong-img-card">
+            <img src="https://www.longguoyan.com/_20260302/1632192771.jpg"
+                 alt="Fine jade pig dragon from the Hongshan Culture Site"
+                 loading="lazy" />
+            <div class="loong-img-caption">
+              <p>Fine jade pig dragon from the Hongshan Culture Site, dating back approximately 5,500 years.</p>
+            </div>
+          </div>
+          <div class="loong-img-card">
+            <img src="https://www.longguoyan.com/_20220830/1421442130.jpg"
+                 alt="The coiled-serpent Loong shape — the most identifiable early Loong form"
+                 loading="lazy" />
+            <div class="loong-img-caption">
+              <p>The coiled-serpent Loong shape found across Neolithic sites — the most identifiable early Loong form, which was the prototype of the concept of the Loong.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="loong-accent-bar"></div>
+
+        <div class="loong-body-text reveal">
+          <p>The origin of Loong culture can be traced back to the Neolithic Age, and its earliest form was a totem product of the "vague synthesis" of natural forces by primitive ancestors. Faced with inexplicable natural phenomena such as thunder and lightning, heavy rain, floods, and powerful animals (such as snakes, crocodiles), our ancestors imagined a dominant "divine creature" — which was the germination of the concept of the Loong.</p>
+        </div>
+      </section>
+
+      <div class="loong-connector">◆ · · · ◆</div>
+
+      <!-- ═══ PHASE 2 ═══ -->
+      <section class="loong-phase fade-in" id="phase-2">
+        <div class="loong-phase-header">
+          <div class="loong-phase-number" aria-hidden="true">02</div>
+          <div class="loong-phase-info">
+            <div class="loong-phase-tag">Development &amp; Formalization Phase</div>
+            <h2 class="loong-phase-title">Divinity &amp; Imperial Power Symbols</h2>
+            <div class="loong-phase-period">2070 BCE – 220 CE</div>
+          </div>
+        </div>
+
+        <div class="loong-grid-3 reveal">
+          <div class="loong-img-card">
+            <img src="https://www.longguoyan.com/_20240517/1041079125.jpg"
+                 alt="The turquoise Loong-shaped ornament from the Xia Dynasty"
+                 loading="lazy" />
+            <div class="loong-img-caption">
+              <p>The turquoise Loong-shaped ornament from the Xia Dynasty — one of the earliest composite Loong forms.</p>
+            </div>
+          </div>
+          <div class="loong-img-card">
+            <img src="https://www.longguoyan.com/_20240517/1541109594.jpg"
+                 alt="Jade Loong from the Shang and Zhou Dynasties"
+                 loading="lazy" />
+            <div class="loong-img-caption">
+              <p>Jade Loong from the Shang and Zhou Dynasties, featuring snake body, claws, and antlers — the composite creature taking shape.</p>
+            </div>
+          </div>
+          <div class="loong-img-card">
+            <img src="https://www.longguoyan.com/_20231226/1418031073.jpg"
+                 alt="Liuhe Loong pattern lacquer from the Zhou Dynasty"
+                 loading="lazy" />
+            <div class="loong-img-caption">
+              <p>Liuhe Loong pattern lacquer from the Zhou Dynasty — the increasing association with ritual and ceremony.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="loong-grid-4 reveal rd1">
+          <div class="loong-img-card">
+            <img src="https://www.longguoyan.com/_20231226/1439209537.jpg"
+                 alt="Bronze Loong with horns and claw"
+                 loading="lazy" />
+            <div class="loong-img-caption">
+              <p>Bronze Loong with horns, claws, and scale — the Shang period solidifying the iconography.</p>
+            </div>
+          </div>
+          <div class="loong-img-card">
+            <img src="https://www.longguoyan.com/_20220830/1420562495.jpg"
+                 alt="Loong cave jade ornament during the Qin Dynasty"
+                 loading="lazy" />
+            <div class="loong-img-caption">
+              <p>Loong cave jade ornament during the Qin Dynasty.</p>
+            </div>
+          </div>
+          <div class="loong-img-card">
+            <img src="https://www.longguoyan.com/_20231226/1418031073.jpg"
+                 alt="Solemn Loong relief from the Han Dynasty"
+                 loading="lazy" />
+            <div class="loong-img-caption">
+              <p>Solemn Loong relief from the Han period — linked exclusively to the imperial court and Heaven.</p>
+            </div>
+          </div>
+          <div class="loong-img-card">
+            <img src="https://www.longguoyan.com/_20241203/0939056461.jpg"
+                 alt="Twisted Loong stele fine line from the Han Dynasty"
+                 loading="lazy" />
+            <div class="loong-img-caption">
+              <p>Twisted Loong stele fine line from the Han Dynasty — the imperial symbol reaching its apex.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="loong-accent-bar"></div>
+
+        <div class="loong-body-text reveal">
+          <p>As society entered the age of civilisation, the image and cultural connotations of the Loong gradually became enriched and established. The Loong's form takes the snake body as its core, integrating various animal features such as deer antlers, ox ears, eagle talons, and fish scales into a single composite creature. From the Xia, Shang, and Zhou dynasties onward, the Loong became increasingly closely associated with legendary heroic ancestors such as the Yellow Emperor and Yu the Great. During the unified era of the Qin and Han dynasties, Loong worship was formally merged with imperial worship. Emperors called themselves "True Loongs, Sons of Heaven" and the Loong became an exclusive symbol of imperial power, growing ever more majestic and complex in its imagery.</p>
+        </div>
+      </section>
+
+      <div class="loong-connector">◆ · · · ◆</div>
+
+      <!-- ═══ PHASE 3 ═══ -->
+      <section class="loong-phase fade-in" id="phase-3">
+        <div class="loong-phase-header">
+          <div class="loong-phase-number" aria-hidden="true">03</div>
+          <div class="loong-phase-info">
+            <div class="loong-phase-tag">Popularization &amp; Integration Phase</div>
+            <h2 class="loong-phase-title">Folklorization and Systematization</h2>
+            <div class="loong-phase-period">from the Wei-Jin to the Ming-Qing Dynasties · 220 CE – 1912 CE</div>
+          </div>
+        </div>
+
+        <div class="loong-grid-3 reveal">
+          <div class="loong-img-card">
+            <img src="https://www.longguoyan.com/_20241104/1517061191.jpg"
+                 alt="Silver artwork from the Wei Jin era with vivid Loong motifs"
+                 loading="lazy" />
+            <div class="loong-img-caption">
+              <p>Silver artwork from the Wei Jin era with vivid Loong motifs — reflecting the fusion of court and folk traditions.</p>
+            </div>
+          </div>
+          <div class="loong-img-card">
+            <img src="https://www.longguoyan.com/_20241104/1516091141.jpg"
+                 alt="Silk tapestry weaving with Loong motif during the Tang Dynasty"
+                 loading="lazy" />
+            <div class="loong-img-caption">
+              <p>Silk tapestry weaving with Loong motif during the Tang Dynasty — Loong imagery spreading into daily life.</p>
+            </div>
+          </div>
+          <div class="loong-img-card">
+            <img src="https://www.longguoyan.com/_20230919/1634021337.png"
+                 alt="Auspicious coin with Loong image during the Tang Dynasty"
+                 loading="lazy" />
+            <div class="loong-img-caption">
+              <p>Auspicious bronze coin with Loong image during the Tang Dynasty — fortune and blessings intertwined.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="loong-grid-4 reveal rd1">
+          <div class="loong-img-card">
+            <img src="https://www.longguoyan.com/_20230919/1632298275.jpg"
+                 alt="Noble good-fortune with realistic cloud Loong motif during the Song Dynasty"
+                 loading="lazy" />
+            <div class="loong-img-caption">
+              <p>Noble fortune with realistic cloud Loong motif — Song Dynasty refinement.</p>
+            </div>
+          </div>
+          <div class="loong-img-card">
+            <img src="https://www.longguoyan.com/_20230919/1634419767.png"
+                 alt="Jade carved on jade with Loong motifs in Ming Dynasty"
+                 loading="lazy" />
+            <div class="loong-img-caption">
+              <p>Jade carved on jade with Loong motifs — Ming Dynasty artisanal mastery.</p>
+            </div>
+          </div>
+          <div class="loong-img-card">
+            <img src="https://www.longguoyan.com/_20241203/0939056461.jpg"
+                 alt="Red lacquerware vase with vivid Loong in the Qing Dynasty"
+                 loading="lazy" />
+            <div class="loong-img-caption">
+              <p>Red lacquerware vase with vivid Loong — the Qing Dynasty's most elaborate expression.</p>
+            </div>
+          </div>
+          <div class="loong-img-card">
+            <img src="https://www.longguoyan.com/_20241104/1517061191.jpg"
+                 alt="Front Loong Hall in the Palace Museum, Beijing"
+                 loading="lazy" />
+            <div class="loong-img-caption">
+              <p>Front Loong Hall in the Palace Museum, Beijing — Qing Dynasty grandeur at its peak.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="loong-grid-2 reveal rd2">
+          <div class="loong-img-card">
+            <img src="https://www.longguoyan.com/_20230919/1634021337.png"
+                 alt="Traditional Loong Boat Festival" loading="lazy" />
+            <div class="loong-img-caption">
+              <p>Traditional Loong Boat Festival during the Qing Dynasty — the Loong entering the daily life of the common people.</p>
+            </div>
+          </div>
+          <div class="loong-img-card">
+            <img src="https://www.longguoyan.com/_20230919/1634419767.png"
+                 alt="Textile Loong Robe with Golden Dragon Embroidery"
+                 loading="lazy" />
+            <div class="loong-img-caption">
+              <p>Textile Loong robe with golden dragon embroidery from the Qing Imperial Collection — a core decorative theme across clothing and art.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="loong-accent-bar"></div>
+
+        <div class="loong-body-text reveal">
+          <p>While imperial power monopolised the lofty status of the Loong, Loong culture also deeply permeated folk society across various fields. Loong imagery further became a core decorative theme in architecture, clothing, painting, literature, and other areas. The Loong Boat Festival, regional Loong dances, and ceremonial dragon processions embedded the Loong into the rhythms of everyday Chinese life — creating an unbroken cultural thread that connected the emperor's throne to the farmer's harvest.</p>
+        </div>
+      </section>
+
+      <div class="loong-connector">◆ · · · ◆</div>
+
+      <!-- ═══ PHASE 4 ═══ -->
+      <section class="loong-phase fade-in" id="phase-4">
+        <div class="loong-phase-header">
+          <div class="loong-phase-number" aria-hidden="true">04</div>
+          <div class="loong-phase-info">
+            <div class="loong-phase-tag">Sublimation &amp; Identity Phase</div>
+            <h2 class="loong-phase-title">National Spirit Symbol in Modern &amp; Contemporary Times</h2>
+            <div class="loong-phase-period">Late 19th Century – Present</div>
+          </div>
+        </div>
+
+        <div class="loong-grid-3 reveal">
+          <div class="loong-img-card">
+            <img src="https://www.longguoyan.com/_20251210/1142485666.jpg"
+                 alt="Loong lantern commemorating performances" loading="lazy" />
+            <div class="loong-img-caption">
+              <p>Loong lantern ceremony and commemorating performances — the Loong as celebration and cultural pride.</p>
+            </div>
+          </div>
+          <div class="loong-img-card">
+            <img src="https://www.longguoyan.com/_20251210/1143396770.jpg"
+                 alt="Loong cultural sculpture" loading="lazy" />
+            <div class="loong-img-caption">
+              <p>Loong cultural sculpture — contemporary artistic reinterpretation of the ancient symbol.</p>
+            </div>
+          </div>
+          <div class="loong-img-card">
+            <img src="https://www.longguoyan.com/_20250704/1120478896.png"
+                 alt="Loong boat held during the Loong boat racing" loading="lazy" />
+            <div class="loong-img-caption">
+              <p>Loong boat racing held nationally — the living, participatory expression of Loong culture in modern China.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="loong-grid-4 reveal rd1">
+          <div class="loong-img-card">
+            <img src="https://www.longguoyan.com/_20250408/1326481425.png"
+                 alt="Red Loong cultural and creative image" loading="lazy" />
+            <div class="loong-img-caption">
+              <p>Red Loong cultural and creative imagery — the national symbol reborn in contemporary design.</p>
+            </div>
+          </div>
+          <div class="loong-img-card">
+            <img src="https://www.longguoyan.com/_20250704/1120478896.png"
+                 alt="Loong dance festival" loading="lazy" />
+            <div class="loong-img-caption">
+              <p>Traditional Loong dance festival — preserving and transmitting 7,000 years of living heritage.</p>
+            </div>
+          </div>
+          <div class="loong-img-card">
+            <img src="https://www.longguoyan.com/_20251210/1142485666.jpg"
+                 alt="Theatrical Loong representations" loading="lazy" />
+            <div class="loong-img-caption">
+              <p>Theatrical Loong representations — the symbol alive in performance, art, and popular culture.</p>
+            </div>
+          </div>
+          <div class="loong-img-card">
+            <img src="https://www.longguoyan.com/_20250408/1326481425.png"
+                 alt="Loong embroidered art in paper cuts" loading="lazy" />
+            <div class="loong-img-caption">
+              <p>Loong embroidered art and paper-cuts — folk craftsmanship carrying the spirit forward.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="loong-accent-bar"></div>
+
+        <div class="loong-body-text reveal">
+          <p>Since modern times, the Loong has completely transcended its role as a symbol of imperial power and evolved into the identity and spiritual emblem of the entire Chinese nation. Today's Loong culture embodies the national spirit of courage, progress, boundless vitality, good fortune, harmony, and unity. It inspires the Chinese nation to strive constantly for self-improvement and serves as a core symbol of cultural confidence and national cohesion.</p>
+        </div>
+      </section>
+
+      <!-- BRAND CTA -->
+      <div class="loong-brand-cta fade-in">
+        <div class="loong-brand-cta-content">
+          <div class="loong-brand-cta-en">LongGuoYan · Heritage in Every Drop</div>
+          <h2 class="loong-brand-cta-title">The Loong Lives in Our Craft</h2>
+          <p class="loong-brand-cta-sub">
+            Seven thousand years of Loong culture — distilled into every bottle of LongGuoYan.<br/>
+            Brewed by Time, Honoring the Classics. Savor China, Share the Sauce Aroma with the World.
+          </p>
+          <div class="loong-brand-cta-btns">
+            <a href="product.html" class="btn-primary">Explore Our Collections</a>
+            <a href="about.html" class="btn-secondary">Our Heritage Story</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer role="contentinfo">
+    <div class="footer-top">
+      <div class="container">
+        <div class="footer-top-grid">
+          <div class="ft-content reveal">
+            <div class="section-en">Stay Connected</div>
+            <h2 class="section-title">Follow LongGuoYan</h2>
+            <div class="section-line"><span>◆</span></div>
+            <p class="ft-desc">Follow us for the latest news, exclusive offers, and behind-the-scenes content from our Maotai Town distillery.</p>
+            <div class="ft-contact-social">
+              <div class="ft-social-links">
+                <a href="https://www.facebook.com/LongguoyanOfficial" class="ft-social-link" target="_blank" rel="noopener" aria-label="Follow us on Facebook">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.41c0-3.025 1.792-4.697 4.533-4.697 1.312 0 2.686.236 2.686.236v2.97h-1.513c-1.491 0-1.956.93-1.956 1.884v2.27h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/></svg>
+                </a>
+                <a href="https://www.instagram.com/longguoyanofficial/" class="ft-social-link" target="_blank" rel="noopener" aria-label="Follow us on Instagram">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+                </a>
+                <a href="https://x.com/LongGuoYan" class="ft-social-link" target="_blank" rel="noopener" aria-label="Follow us on X (Twitter)">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                </a>
+                <a href="https://www.tiktok.com/@longguoyanofficial" class="ft-social-link" target="_blank" rel="noopener" aria-label="Follow us on TikTok">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.18 8.18 0 004.79 1.52V6.76a4.85 4.85 0 01-1.02-.07z"/></svg>
+                </a>
+                <a href="https://wa.me/4001591958" class="ft-social-link" target="_blank" rel="noopener" aria-label="Contact us on WhatsApp">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.411 0 .01 5.403.007 12.04c0 2.12.552 4.188 1.597 6.06L0 24l6.105-1.595a11.81 11.81 0 005.936 1.598h.005c6.637 0 12.038-5.404 12.041-12.042a11.761 11.761 0 00-3.489-8.452z"/></svg>
+                </a>
+                <a href="https://www.youtube.com/@LongGuoYan" class="ft-social-link" target="_blank" rel="noopener" aria-label="Follow us on YouTube">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+                </a>
+              </div>
+              <div class="ft-contact-cta">
+                <div class="ft-phone-label" style="font-size:12px;letter-spacing:1px;color:rgba(255,255,255,0.5);">Partnership:</div>
+                <a href="tel:4001591958" class="ft-phone">400-159-1958</a>
+              </div>
+            </div>
+          </div>
+          <div class="ft-qr-card reveal rd1">
+            <img src="https://www.longguoyan.com/_20190924/1324283689.png" alt="WeChat QR Code" loading="lazy" />
+            <div class="ft-qr-label">
+              <span>Scan the QR code to follow the official WeChat</span>
+              <span>Official WeChat</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-main">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <span class="logo-cn" lang="en">LongGuoYan</span>
+            <p class="footer-brand-text">Guizhou LongGuoYan Distillery Co., Ltd. — inheriting century-old techniques, crafting premium Sauce Aroma spirits in Maotai Town.</p>
+            <address class="footer-address">Chun Shu Village, Maotai Town, Renhuai, Guizhou<br /><a href="tel:4001591958" style="color:inherit;">400-159-1958</a></address>
+          </div>
+          <div class="footer-col"><h4>About</h4><ul><li><a href="about.html">Profile</a></li><li><a href="about.html">Heritage</a></li></ul></div>
+          <div class="footer-col"><h4>Collections</h4><ul><li><a href="product.html">Sauce Aroma</a></li><li><a href="product.html">Limited</a></li></ul></div>
+          <div class="footer-col"><h4>News</h4><ul><li><a href="news.html">Updates</a></li></ul></div>
+          <div class="footer-col"><h4>Connect</h4><ul><li><a href="cooperation.html">Partners</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:20px;">
+          <div class="footer-copyright">Copyright © LongGuoYan Distillery Co. ALL Rights Reserved | ICP No. 19010301-1</div>
+          <div class="footer-links"><a href="contact.html">Disclaimer</a><a href="contact.html">Privacy Policy</a></div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="nav.js" defer></script>
+  <script src="chatbot.js" defer></script>
+</body>
+</html>
