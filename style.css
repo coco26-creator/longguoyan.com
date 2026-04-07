@@ -2826,3 +2826,18 @@ img[loading="lazy"].loaded { opacity: 1; }
 @media (max-width: 480px) {
   .ag-chat-window { width: calc(100% - 40px); right: 20px; bottom: 90px; }
 }
+
+/* About page logo display section */
+.about-logo-section {
+  margin-top: 50px;
+  text-align: center;
+  padding: 40px 0;
+}
+.about-logo-img {
+  max-width: 320px;
+  width: 100%;
+  display: block;
+  margin: 0 auto;
+  filter: brightness(0) invert(1);
+  opacity: 0.85;
+}
