@@ -2841,3 +2841,125 @@ img[loading="lazy"].loaded { opacity: 1; }
   filter: brightness(0) invert(1);
   opacity: 0.85;
 }
+
+/* ── CULTURE FEATURES (HOME PAGE) ── */
+.culture-features {
+  padding: 100px 0;
+  background: var(--ink);
+  position: relative;
+  overflow: hidden;
+}
+
+.culture-features::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 70% 30%, rgba(212,175,55,0.05) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  margin-top: 60px;
+}
+
+.feature-item {
+  padding: 40px 30px;
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  text-align: center;
+  transition: var(--transition);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+}
+
+.feature-item:hover {
+  border-color: var(--gold);
+  transform: translateY(-8px);
+  box-shadow: 0 15px 40px rgba(212,175,55,0.1);
+}
+
+.feature-num {
+  font-family: 'Cinzel', serif;
+  font-size: 40px;
+  font-weight: 700;
+  color: rgba(212,175,55,0.2);
+  margin-bottom: 20px;
+  line-height: 1;
+}
+
+.feature-item:hover .feature-num {
+  color: var(--gold);
+  opacity: 0.8;
+}
+
+.feature-title {
+  font-family: 'Cinzel', serif;
+  font-size: 14px;
+  letter-spacing: 2px;
+  color: var(--text-main);
+  margin-bottom: 16px;
+  text-transform: uppercase;
+}
+
+.feature-desc {
+  font-size: 13px;
+  color: var(--text-muted);
+  line-height: 1.8;
+  margin: 0;
+}
+
+.feature-action {
+  text-align: center;
+  margin-top: 60px;
+}
+
+@media (max-width: 1024px) {
+  .feature-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 600px) {
+  .feature-grid { grid-template-columns: 1fr; }
+  .feature-item { padding: 30px 20px; }
+}
+
+/* ── FORMSPREE STATES ── */
+[data-fs-success], [data-fs-error] {
+  display: none;
+  padding: 20px;
+  border-radius: 4px;
+  margin-bottom: 30px;
+  font-size: 14px;
+  line-height: 1.6;
+  text-align: center;
+}
+
+[data-fs-success]:not(:empty) {
+  display: block;
+  background: rgba(46, 204, 113, 0.1);
+  color: #2ecc71;
+  border: 1px solid rgba(46, 204, 113, 0.3);
+}
+
+[data-fs-error]:not(:empty) {
+  display: block;
+  background: rgba(231, 76, 60, 0.1);
+  color: #e74c3c;
+  border: 1px solid rgba(231, 76, 60, 0.3);
+}
+
+.form-field-error {
+  color: #e74c3c;
+  font-size: 11px;
+  margin-top: 4px;
+  display: block;
+}
+
+[aria-invalid="true"] {
+  border-color: #e74c3c !important;
+}

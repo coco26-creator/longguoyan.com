@@ -103,7 +103,10 @@
               <button class="btn-primary btn-send-again" onclick="location.reload()">Send Another Message</button>
             </div>
 
-            <form id="contact-form" novalidate aria-label="Contact form">
+            <div data-fs-success></div>
+            <div data-fs-error></div>
+
+            <form id="contact-form" action="https://formspree.io/f/xaqlvjaw" method="POST" novalidate aria-label="Contact form">
               <div class="form-row">
                 <div class="form-group">
                   <label for="name">Your Name <span class="required-mark" aria-hidden="true">*</span></label>
