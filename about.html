@@ -1,87 +1,130 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>About Us</title>
-  <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us | Longguoyan</title>
+  <link rel="stylesheet" href="about.css" />
 </head>
 <body>
+  <div class="board-overlay">
+    <main class="board-container">
+      <header class="board-header">
+        <img src="images/logo.png" alt="Longguoyan logo" />
+      </header>
 
-<div class="overlay">
+      <section class="top-grid" aria-label="Top presentation board">
+        <article class="board-card company-profile">
+          <h2>COMPANY PROFILE</h2>
+          <div class="profile-text">
+            <p>Guizhou Longguoyan Distillery Co., Ltd. is rooted in Maotai Town, the world-renowned core region for premium sauce-aroma liquor production.</p>
+            <p>From raw material selection to multi-cycle fermentation and cellar aging, every step follows disciplined craftsmanship and strict quality standards.</p>
+            <p>Longguoyan combines traditional brewing wisdom with modern brand strategy to deliver premium spirits across domestic and international markets.</p>
+          </div>
+          <img class="profile-map" src="images/Profile.jpg" alt="Global distribution map and company profile" />
+        </article>
 
-  <!-- HEADER -->
-  <header class="header">
-    <img src="images/logo.png" alt="logo">
-  </header>
+        <article class="board-card quality-liquor">
+          <h2>QUALITY AGED LIQUOR</h2>
+          <div class="image-stack-3">
+            <img src="images/Cellar Supreme 30 1.jpg" alt="Aged liquor cellar row" />
+            <img src="images/Cellar Supreme 30 2.jpg" alt="Cellar aging barrels" />
+            <img src="images/Cellar Supreme 30 3.jpg" alt="Distillery aging workshop" />
+          </div>
+        </article>
 
-  <!-- TOP SECTION (4 COLUMNS) -->
-  <section class="grid grid-4">
+        <article class="board-card brewing-process">
+          <h2>ANCIENT SAUCE-AROMA LIQUOR BREWING PROCESS</h2>
+          <div class="process-list">
+            <figure><img src="images/step 1-One-year production cycle（Raw material addition at Double Ninth Festival）.jpg" alt="One-year production cycle" /><figcaption>One-year production cycle</figcaption></figure>
+            <figure><img src="images/step 3-Two feedings of raw materials .jpg" alt="Two feedings of raw materials" /><figcaption>Two feedings of raw materials</figcaption></figure>
+            <figure><img src="images/step 4-Nine times of steaming.jpg" alt="Nine times of steaming" /><figcaption>Nine times of steaming</figcaption></figure>
+            <figure><img src="images/step 5-Eight times of fermentation.jpg" alt="Eight times of fermentation" /><figcaption>Eight times of fermentation</figcaption></figure>
+            <figure><img src="images/step 6-Seven times of liquor extraction.jpg" alt="Seven times of liquor extraction" /><figcaption>Seven times of liquor extraction</figcaption></figure>
+          </div>
+        </article>
 
-    <div class="card">
-      <h3>COMPANY PROFILE</h3>
-      <div class="content text-block"></div>
-      <div class="content image-block"></div>
-    </div>
+        <article class="board-card core-region">
+          <h2>CORE PRODUCTION REGION</h2>
+          <p class="card-note">Maotai Town, Guizhou Province</p>
+          <div class="image-stack-3">
+            <img src="images/hero1.jpg" alt="Aerial view of Maotai production region" />
+            <img src="images/hero2.jpg" alt="Sorghum in production region" />
+            <img src="images/hero3.jpg" alt="Landscape and river around core region" />
+          </div>
+        </article>
+      </section>
 
-    <div class="card">
-      <h3>QUALITY AGED LIQUOR</h3>
-      <div class="stack">
-        <div class="image-block"></div>
-        <div class="image-block"></div>
-        <div class="image-block"></div>
-      </div>
-    </div>
+      <section class="bottom-grid" aria-label="Bottom presentation board">
+        <article class="board-card">
+          <h2>TIME-HONORED</h2>
+          <div class="image-stack-5">
+            <img src="images/Guizhou-Time-Honored-Brand.jpeg" alt="Guizhou time-honored brand certificate" />
+            <img src="images/International-Spirits-Awards.jpeg" alt="International spirits awards" />
+            <img src="images/Hong-Kong-International-Spirits.jpg" alt="Hong Kong spirits recognition" />
+            <img src="images/ISGC2024.jpg" alt="ISGC recognition" />
+            <img src="images/Silver-Award.jpeg" alt="Silver award honor" />
+          </div>
+        </article>
 
-    <div class="card">
-      <h3>BREWING PROCESS</h3>
-      <div class="process-item"></div>
-      <div class="process-item"></div>
-      <div class="process-item"></div>
-      <div class="process-item"></div>
-    </div>
+        <article class="board-card">
+          <h2>BRAND HONORS</h2>
+          <div class="honors-top">
+            <img src="images/QingZhuo-Award.png" alt="Qingzhuo award" />
+            <img src="images/Brussels-International-Spirits.jpg" alt="Brussels spirits honor" />
+          </div>
+          <div class="honors-grid-6">
+            <img src="images/Premium Edition 1.jpg" alt="Honor certificate 1" />
+            <img src="images/Premium Edition 2.jpg" alt="Honor certificate 2" />
+            <img src="images/Premium Edition 3.jpg" alt="Honor certificate 3" />
+            <img src="images/Premium Edition 4.jpg" alt="Honor certificate 4" />
+            <img src="images/Premium Edition 4.jpg" alt="Honor certificate 5" />
+            <img src="images/Premium Edition 6.jpg" alt="Honor certificate 6" />
+          </div>
+        </article>
 
-    <div class="card">
-      <h3>CORE PRODUCTION REGION</h3>
-      <div class="stack">
-        <div class="image-block"></div>
-        <div class="image-block"></div>
-        <div class="image-block"></div>
-      </div>
-    </div>
+        <article class="board-card">
+          <h2>DISTRIBUTION NETWORK</h2>
+          <div class="distribution-top">
+            <img src="images/Products.jpg" alt="National brand culture venue" />
+            <img src="images/Alcohol-Premium-Selection.jpeg" alt="Premium tobacco and liquor store" />
+          </div>
+          <div class="distribution-bottom">
+            <img src="images/Dragon Vein 30 1.jpg" alt="KA outlet display" />
+            <img src="images/Dragon Vein 30 2.jpg" alt="Retail counter display" />
+            <img src="images/Dragon Vein 30 3.jpg" alt="Online promotion display" />
+            <img src="images/Dragon Vein 30 4.jpg" alt="Distributor event display" />
+          </div>
+        </article>
 
-  </section>
+        <article class="board-card">
+          <h2>BRAND PROMOTIONS</h2>
+          <div class="promo-strips">
+            <img src="images/Limited Edition 1.jpg" alt="CCTV and satellite TV advertising" />
+            <img src="images/Limited Edition 2.jpg" alt="High-speed railway station advertising" />
+            <img src="images/Limited Edition 3.jpg" alt="Bus stop and body advertising" />
+            <img src="images/Limited Edition 4.jpg" alt="Outdoor billboard promotion" />
+            <img src="images/Limited Edition 5.jpg" alt="Integrated campaign showcase" />
+          </div>
+        </article>
 
-  <!-- BOTTOM SECTION (5 COLUMNS) -->
-  <section class="grid grid-5">
-
-    <div class="card">
-      <h3>TIME-HONORED</h3>
-      <div class="stack"></div>
-    </div>
-
-    <div class="card">
-      <h3>BRAND HONORS</h3>
-      <div class="stack"></div>
-    </div>
-
-    <div class="card">
-      <h3>DISTRIBUTION NETWORK</h3>
-      <div class="stack"></div>
-    </div>
-
-    <div class="card">
-      <h3>BRAND PROMOTIONS</h3>
-      <div class="stack"></div>
-    </div>
-
-    <div class="card">
-      <h3>CULTURAL MARKETING</h3>
-      <div class="stack"></div>
-    </div>
-
-  </section>
-
-</div>
-
+        <article class="board-card cultural-marketing">
+          <h2>CULTURAL MARKETING</h2>
+          <div class="culture-item">
+            <p>For consecutive editions, Longguoyan partnered with major festivals and cultural exchange programs.</p>
+            <img src="images/Cellar Supreme 30 4.jpg" alt="Festival design collaboration" />
+          </div>
+          <div class="culture-item">
+            <p>Official designated baijiu for high-profile gala and celebration events.</p>
+            <img src="images/Cellar Supreme 30 5.jpg" alt="Official designated baijiu event" />
+          </div>
+          <div class="culture-item">
+            <p>Designated product for multi-city cultural marketing campaigns.</p>
+            <img src="images/Dragon Vein 15 5.jpg" alt="Cultural marketing roadshow" />
+          </div>
+        </article>
+      </section>
+    </main>
+  </div>
 </body>
 </html>
