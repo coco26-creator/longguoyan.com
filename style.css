@@ -1348,7 +1348,7 @@ footer {
 /* ===== ABOUT PAGE ===== */
 /* PAGE BACKGROUND */
 .about-page {
-  background: url('../images/your-background.jpg') center/cover no-repeat fixed;
+  background: linear-gradient(rgba(13,10,6,0.82), rgba(13,10,6,0.82)), url('images/Profile.jpg') center/cover no-repeat fixed;
   padding: 40px;
   min-height: 100vh;
   position: relative;
