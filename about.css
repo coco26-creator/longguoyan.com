@@ -1,0 +1,117 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: #fff;
+  background:
+    linear-gradient(rgba(43, 29, 24, 0.78), rgba(14, 36, 41, 0.86)),
+    url('images/Hero.jpg') center/cover no-repeat fixed;
+}
+
+.overlay {
+  min-height: 100vh;
+  padding: 26px;
+  background: rgba(6, 27, 32, 0.56);
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 22px;
+}
+
+.header img {
+  width: 220px;
+  max-width: 58vw;
+  height: auto;
+}
+
+.grid {
+  display: grid;
+  gap: 14px;
+  margin-bottom: 14px;
+}
+
+.grid-4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+.grid-5 { grid-template-columns: repeat(5, minmax(0, 1fr)); }
+
+.overlay img {
+  max-width: 100%;
+}
+
+.card {
+  background: rgba(18, 36, 43, 0.78);
+  border-radius: 10px;
+  padding: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.09);
+}
+
+.card h3 {
+  margin: 0 0 8px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.22);
+  font-size: 14px;
+  line-height: 1.25;
+  letter-spacing: .4px;
+}
+
+.intro {
+  margin: 0 0 6px;
+  font-size: 10px;
+  line-height: 1.35;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.stack {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 8px;
+}
+
+.image-block {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-radius: 6px;
+  display: block;
+  background: rgba(8, 20, 26, 0.55);
+}
+
+.process-item {
+  margin-bottom: 8px;
+}
+
+.process-item p {
+  margin: 0 0 5px;
+  font-size: 10px;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.process-item img {
+  width: 100%;
+  aspect-ratio: 16 / 7;
+  object-fit: cover;
+  border-radius: 6px;
+  display: block;
+  background: rgba(8, 20, 26, 0.55);
+}
+
+/* Smaller thumbnail grid for the 5-card bottom row */
+.grid-5 .stack {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 6px;
+}
+
+.grid-5 .image-block {
+  aspect-ratio: 4 / 3;
+}
+
+@media (max-width: 1280px) {
+  .grid-4 { grid-template-columns: repeat(2, 1fr); }
+  .grid-5 { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 760px) {
+  .overlay { padding: 14px; }
+  .grid-4, .grid-5 { grid-template-columns: 1fr; }
+  .card h3 { font-size: 16px; }
+  .intro, .process-item p { font-size: 12px; }
+}
