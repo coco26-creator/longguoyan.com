@@ -1,10 +1,10 @@
 :root {
-  --bg-dark: #08151b;
-  --card: rgba(12, 33, 40, 0.66);
-  --card-border: rgba(255, 255, 255, 0.12);
-  --text-main: #f5f7f8;
-  --text-soft: rgba(245, 247, 248, 0.9);
-  --gap: 16px;
+  --bg-dark: #1a1410;
+  --card: rgba(22, 20, 18, 0.72);
+  --card-border: rgba(214, 174, 108, 0.18);
+  --text-main: #f3ead8;
+  --text-soft: rgba(235, 223, 201, 0.92);
+  --gap: 12px;
 }
 
 * { box-sizing: border-box; }
@@ -14,19 +14,19 @@ body {
   font-family: Arial, sans-serif;
   color: var(--text-main);
   background:
-    linear-gradient(rgba(25, 16, 12, 0.75), rgba(7, 24, 30, 0.84)),
+    linear-gradient(rgba(36, 26, 18, 0.78), rgba(20, 16, 12, 0.82)),
     url('images/Hero.jpg') center/cover no-repeat fixed;
 }
 
 .board-overlay {
   min-height: 100vh;
-  background: rgba(6, 23, 28, 0.52);
+  background: rgba(15, 12, 10, 0.46);
 }
 
 .board-container {
-  width: min(1800px, 100%);
+  width: min(1500px, 100%);
   margin: 0 auto;
-  padding: 24px;
+  padding: 18px;
 }
 
 
@@ -82,24 +82,24 @@ body {
 .board-card {
   background: var(--card);
   border: 1px solid var(--card-border);
-  border-radius: 12px;
-  padding: 12px;
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
+  border-radius: 10px;
+  padding: 10px;
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
   display: grid;
   gap: 8px;
   min-height: 100%;
 }
 
-.top-grid .board-card { min-height: 560px; }
-.bottom-grid .board-card { min-height: 520px; }
+.top-grid .board-card { min-height: 470px; }
+.bottom-grid .board-card { min-height: 430px; }
 
 .board-card h2 {
   margin: 0;
-  font-size: 14px;
+  font-size: 13px;
   line-height: 1.25;
   letter-spacing: .4px;
-  border-bottom: 1px solid rgba(255,255,255,0.2);
+  border-bottom: 1px solid rgba(214,174,108,0.35);
   padding-bottom: 6px;
 }
 
@@ -121,7 +121,7 @@ img {
 .culture-item p,
 .process-list figcaption {
   margin: 0;
-  font-size: 10px;
+  font-size: 9px;
   line-height: 1.35;
   color: var(--text-soft);
 }
@@ -131,7 +131,7 @@ img {
 }
 
 .profile-map {
-  aspect-ratio: 16/9;
+  aspect-ratio: 16 / 8;
 }
 
 .image-stack-3,
@@ -144,12 +144,12 @@ img {
 
 .image-stack-3 img,
 .core-region .image-stack-3 img {
-  aspect-ratio: 16/9;
+  aspect-ratio: 16 / 8;
 }
 
 .image-stack-5 img,
 .promo-strips img {
-  aspect-ratio: 16/8;
+  aspect-ratio: 16 / 7;
 }
 
 .process-list figure {
@@ -159,7 +159,7 @@ img {
 }
 
 .process-list img {
-  aspect-ratio: 16/6;
+  aspect-ratio: 16 / 5.4;
 }
 
 .honors-top {
@@ -189,7 +189,7 @@ img {
 }
 
 .distribution-top img {
-  aspect-ratio: 16/9;
+  aspect-ratio: 16 / 8;
 }
 
 .distribution-bottom {
@@ -212,7 +212,7 @@ img {
 }
 
 .culture-item img {
-  aspect-ratio: 16/9;
+  aspect-ratio: 16 / 8;
 }
 
 @media (max-width: 1320px) {
@@ -229,7 +229,7 @@ img {
   .board-container { padding: 14px; }
   .top-grid,
   .bottom-grid { grid-template-columns: 1fr; }
-  .board-card h2 { font-size: 16px; }
+  .board-card h2 { font-size: 14px; }
   .profile-text p,
   .card-note,
   .culture-item p,
