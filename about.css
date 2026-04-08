@@ -1,0 +1,93 @@
+/* BACKGROUND */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: url('images/your-background.jpg') center/cover no-repeat fixed;
+  background-color: #1b2428;
+  color: #fff;
+}
+
+/* DARK OVERLAY (very important for that look) */
+.overlay {
+  background: rgba(10, 25, 25, 0.75);
+  min-height: 100vh;
+  padding: 40px;
+}
+
+/* HEADER */
+.header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.header img {
+  width: 220px;
+}
+
+/* GRID SYSTEM */
+.grid {
+  display: grid;
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+.grid-4 {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.grid-5 {
+  grid-template-columns: repeat(5, 1fr);
+}
+
+/* CARD STYLE */
+.card {
+  background: rgba(20, 45, 45, 0.6);
+  padding: 15px;
+  border-radius: 10px;
+  backdrop-filter: blur(6px);
+}
+
+/* TITLES */
+.card h3 {
+  font-size: 13px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid rgba(255,255,255,0.2);
+  padding-bottom: 6px;
+  letter-spacing: 1px;
+}
+
+/* PLACEHOLDER BLOCKS */
+.image-block {
+  height: 90px;
+  background: rgba(255,255,255,0.1);
+  border-radius: 6px;
+  margin-bottom: 10px;
+}
+
+.text-block {
+  height: 140px;
+  background: rgba(255,255,255,0.05);
+  margin-bottom: 10px;
+}
+
+.stack {
+  display: flex;
+  flex-direction: column;
+}
+
+.process-item {
+  height: 80px;
+  background: rgba(255,255,255,0.1);
+  margin-bottom: 10px;
+  border-radius: 6px;
+}
+
+@media (max-width: 1200px) {
+  .grid-4 { grid-template-columns: repeat(2, 1fr); }
+  .grid-5 { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 700px) {
+  .overlay { padding: 20px; }
+  .grid-4, .grid-5 { grid-template-columns: 1fr; }
+}
