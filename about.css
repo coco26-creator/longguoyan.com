@@ -1,6 +1,6 @@
 :root {
   --bg-dark: #1a1410;
-  --card: rgba(22, 20, 18, 0.72);
+  --card: rgba(22, 20, 18, 0.48);
   --card-border: rgba(214, 174, 108, 0.18);
   --text-main: #f3ead8;
   --text-soft: rgba(235, 223, 201, 0.92);
@@ -77,8 +77,8 @@ body {
 }
 
 .bottom-grid {
-  width: 100%;
-  margin: 0 auto;
+  width: 106%;
+  margin: 0 auto 0 -3%;
   grid-template-columns: repeat(5, minmax(0, 1fr));
 }
 
@@ -100,11 +100,11 @@ body {
 
 .board-card h2 {
   margin: 0;
+  color: #ffffff;
   font-size: 13px;
   line-height: 1.25;
   letter-spacing: .4px;
-  border-bottom: 1px solid rgba(214,174,108,0.35);
-  padding-bottom: 6px;
+  padding-bottom: 2px;
 }
 
 img {
@@ -243,7 +243,7 @@ img {
 
 @media (max-width: 1320px) {
   .top-grid { width: 100%; grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .bottom-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .bottom-grid { width: 100%; margin: 0 auto; grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 
 @media (max-width: 760px) {
@@ -254,7 +254,7 @@ img {
   .top-grid .board-card, .bottom-grid .board-card { min-height: unset; }
   .board-container { padding: 14px; }
   .top-grid,
-  .bottom-grid { width: 100%; grid-template-columns: 1fr; }
+  .bottom-grid { width: 100%; margin: 0 auto; grid-template-columns: 1fr; }
   .board-card h2 { font-size: 14px; }
   .profile-text p,
   .card-note,
@@ -274,4 +274,12 @@ img {
   width: 420px;
   max-width: 78vw;
   opacity: 0.95;
+}
+
+
+.card-note,
+.process-list figcaption,
+.culture-intro,
+.culture-item p {
+  color: #D4AF37;
 }
