@@ -13,14 +13,12 @@ body {
   margin: 0;
   font-family: Arial, sans-serif;
   color: var(--text-main);
-  background:
-    linear-gradient(rgba(36, 26, 18, 0.78), rgba(20, 16, 12, 0.82)),
-    url('images/Hero.jpg') center/cover no-repeat fixed;
+  background: url('images/Hero.jpg') center/cover no-repeat fixed;
 }
 
 .board-overlay {
   min-height: 100vh;
-  background: rgba(15, 12, 10, 0.46);
+  background: transparent;
 }
 
 .board-container {
@@ -77,8 +75,8 @@ body {
 }
 
 .bottom-grid {
-  width: 106%;
-  margin: 0 auto 0 -3%;
+  width: 110%;
+  margin: 0 auto 0 -5%;
   grid-template-columns: repeat(5, minmax(0, 1fr));
 }
 
@@ -96,10 +94,11 @@ body {
 }
 
 .top-grid .board-card { min-height: 340px; }
-.bottom-grid .board-card { min-height: 430px; } /* equal base card height */
+.bottom-grid .board-card { min-height: 470px; } /* equal base card height */
 
 .board-card h2 {
   margin: 0;
+  text-align: center;
   color: #ffffff;
   font-size: 13px;
   line-height: 1.25;
