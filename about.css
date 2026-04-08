@@ -30,17 +30,6 @@ body {
 }
 
 
-.layout-status {
-  justify-self: end;
-  background: rgba(255,255,255,0.12);
-  border: 1px solid rgba(255,255,255,0.28);
-  color: #fff;
-  font-size: 11px;
-  letter-spacing: 1px;
-  padding: 6px 10px;
-  border-radius: 999px;
-  margin-bottom: 10px;
-}
 
 .board-header {
   display: grid;
@@ -49,9 +38,29 @@ body {
 }
 
 .board-header img {
-  width: 240px;
-  max-width: 60vw;
+  max-width: 45vw;
   height: auto;
+}
+
+.brand-lockup {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  align-items: center;
+  gap: 16px;
+}
+
+.brand-lockup img:first-child {
+  width: 210px;
+}
+
+.brand-lockup img:last-child {
+  width: 180px;
+}
+
+.brand-divider {
+  width: 1px;
+  height: 64px;
+  background: rgba(255, 225, 170, 0.6);
 }
 
 .top-grid,
@@ -81,6 +90,9 @@ body {
   gap: 8px;
   min-height: 100%;
 }
+
+.top-grid .board-card { min-height: 560px; }
+.bottom-grid .board-card { min-height: 520px; }
 
 .board-card h2 {
   margin: 0;
@@ -209,6 +221,11 @@ img {
 }
 
 @media (max-width: 760px) {
+  .brand-lockup { gap: 10px; }
+  .brand-lockup img:first-child { width: 150px; }
+  .brand-lockup img:last-child { width: 130px; }
+  .brand-divider { height: 44px; }
+  .top-grid .board-card, .bottom-grid .board-card { min-height: unset; }
   .board-container { padding: 14px; }
   .top-grid,
   .bottom-grid { grid-template-columns: 1fr; }
@@ -217,4 +234,17 @@ img {
   .card-note,
   .culture-item p,
   .process-list figcaption { font-size: 12px; }
+}
+
+
+.board-footer {
+  display: grid;
+  place-items: center;
+  margin-top: 22px;
+}
+
+.board-footer img {
+  width: 420px;
+  max-width: 78vw;
+  opacity: 0.95;
 }
