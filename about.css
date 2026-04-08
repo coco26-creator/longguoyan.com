@@ -91,7 +91,7 @@ body {
   min-height: 100%;
 }
 
-.top-grid .board-card { min-height: 470px; }
+.top-grid .board-card { min-height: 420px; }
 .bottom-grid .board-card { min-height: 430px; }
 
 .board-card h2 {
@@ -135,6 +135,7 @@ img {
 }
 
 .image-stack-3,
+.image-stack-4,
 .image-stack-5,
 .promo-strips,
 .process-list {
@@ -149,6 +150,10 @@ img {
 
 .image-stack-5 img,
 .promo-strips img {
+  aspect-ratio: 16 / 7;
+}
+
+.image-stack-4 img {
   aspect-ratio: 16 / 7;
 }
 
