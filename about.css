@@ -177,13 +177,23 @@ img {
   aspect-ratio: 4/3;
 }
 
-.honors-grid-6 {
+.honors-middle {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 6px;
 }
 
-.honors-grid-6 img {
+.honors-middle img {
+  aspect-ratio: 4/3;
+}
+
+.honors-bottom-four {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 6px;
+}
+
+.honors-bottom-four img {
   aspect-ratio: 4/3;
 }
 
@@ -209,6 +219,13 @@ img {
 
 .cultural-marketing {
   gap: 8px;
+}
+
+.culture-intro {
+  margin: 0;
+  font-size: 9px;
+  line-height: 1.35;
+  color: var(--text-soft);
 }
 
 .culture-item {
@@ -237,6 +254,7 @@ img {
   .board-card h2 { font-size: 14px; }
   .profile-text p,
   .card-note,
+  .culture-intro,
   .culture-item p,
   .process-list figcaption { font-size: 12px; }
 }
