@@ -182,6 +182,11 @@ img {
   gap: 6px;
 }
 
+.honors-top img,
+.honors-middle img {
+  aspect-ratio: 4 / 3;
+}
+
 .award-tile {
   background: rgba(102, 59, 25, 0.92);
   border: 1px solid rgba(212, 175, 124, 0.35);
