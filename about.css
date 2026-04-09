@@ -218,19 +218,21 @@ img {
 }
 
 .award-badge-row {
-  display: grid;
-  grid-template-columns: 30px 1fr;
-  gap: 6px;
-  align-items: end;
+  position: relative;
+  min-height: 24px;
+  padding-left: 28px;
 }
 
 .award-badge {
-  width: 30px;
-  height: 30px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 20px;
+  height: 20px;
   object-fit: contain;
   border-radius: 50%;
   background: rgba(239, 216, 168, 0.1);
-  padding: 1px;
+  padding: 0;
 }
 
 .award-copy {
