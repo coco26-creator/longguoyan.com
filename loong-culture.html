@@ -512,174 +512,6 @@
       flex-wrap: wrap;
     }
 
-    /* ── Poster-style overrides (match reference layout) ── */
-    .loong-hero {
-      min-height: 360px;
-      align-items: flex-end;
-      justify-content: flex-start;
-      text-align: left;
-      padding: 0;
-      background:
-        linear-gradient(180deg, rgba(8,6,4,0.15) 0%, rgba(8,6,4,0.95) 86%),
-        url('https://www.longguoyan.com/_20260302/1632544364.jpg') center 18% / cover no-repeat;
-    }
-
-    .loong-hero-bg,
-    .loong-nav,
-    .loong-intro {
-      display: none;
-    }
-
-    .loong-hero-content {
-      max-width: 1200px;
-      width: 100%;
-      margin: 0 auto;
-      padding: 90px 56px 30px;
-    }
-
-    .loong-hero-en,
-    .loong-hero-divider,
-    .loong-hero-sub {
-      display: none;
-    }
-
-    .loong-hero-title {
-      font-size: clamp(30px, 4.3vw, 58px);
-      letter-spacing: 1px;
-      text-shadow: 0 2px 10px rgba(0,0,0,0.55);
-      margin: 0;
-    }
-
-    .loong-hero-title span { color: #f4efe5; }
-
-    .loong-phase {
-      padding: 48px 0 34px;
-      border-bottom: none;
-      position: relative;
-    }
-
-    .loong-phase:nth-of-type(odd) {
-      background:
-        radial-gradient(ellipse at 20% 70%, rgba(217,171,95,0.12) 0%, transparent 55%),
-        #090909;
-    }
-
-    .loong-phase:nth-of-type(even) {
-      background:
-        radial-gradient(ellipse at 85% 30%, rgba(185,130,76,0.18) 0%, transparent 52%),
-        #efe5d2;
-    }
-
-    .loong-phase:nth-of-type(even) .loong-phase-title,
-    .loong-phase:nth-of-type(even) .loong-phase-period,
-    .loong-phase:nth-of-type(even) .loong-body-text,
-    .loong-phase:nth-of-type(even) .loong-img-caption p {
-      color: #1f1711;
-      text-shadow: none;
-    }
-
-    .loong-phase:nth-of-type(even) .loong-phase-tag {
-      color: #6b3f28;
-      border-color: rgba(107,63,40,0.38);
-      background: rgba(255,255,255,0.28);
-    }
-
-    .loong-phase .container {
-      max-width: 1120px;
-    }
-
-    .loong-phase-header {
-      grid-template-columns: 1fr;
-      gap: 8px;
-      margin-bottom: 22px;
-    }
-
-    .loong-phase-number { display: none; }
-
-    .loong-phase-tag {
-      border: none;
-      padding: 0;
-      margin-bottom: 2px;
-      font-size: 33px;
-      line-height: 0;
-      letter-spacing: 0;
-      color: #d6a486;
-      background: transparent;
-    }
-
-    .loong-phase-title {
-      font-size: clamp(26px, 2.8vw, 42px);
-      letter-spacing: 0.3px;
-      margin-bottom: 0;
-      text-transform: none;
-      font-family: 'Cormorant Garamond', serif;
-      font-weight: 600;
-    }
-
-    .loong-phase-period {
-      margin-top: 3px;
-      font-family: 'Noto Serif SC', serif;
-      font-size: 17px;
-      letter-spacing: 0.2px;
-      color: rgba(250,245,236,0.92);
-    }
-
-    .loong-grid-2,
-    .loong-grid-3,
-    .loong-grid-4,
-    .loong-grid-5,
-    .loong-grid-2-3 {
-      gap: 14px;
-      margin-bottom: 14px;
-    }
-
-    .loong-img-card {
-      background: transparent;
-      border: none;
-      padding: 0;
-      border-radius: 0;
-      box-shadow: none;
-    }
-
-    .loong-img-card img {
-      aspect-ratio: 5 / 3;
-      border-radius: 0;
-      object-fit: cover;
-      border: 1px solid rgba(233,214,174,0.25);
-      box-shadow: 0 8px 16px rgba(0,0,0,0.2);
-    }
-
-    .loong-img-caption {
-      padding: 5px 0 0;
-      min-height: auto;
-    }
-
-    .loong-img-caption p {
-      font-size: 11px;
-      line-height: 1.25;
-      color: rgba(249,238,218,0.86);
-    }
-
-    .loong-accent-bar,
-    .loong-connector {
-      display: none;
-    }
-
-    .loong-body-text {
-      margin-top: 14px;
-      padding: 0;
-      border: none;
-      font-size: 18px;
-      line-height: 1.12;
-      color: #f8ebcd;
-      font-family: 'Cormorant Garamond', serif;
-      text-shadow: 0 1px 2px rgba(0,0,0,0.35);
-    }
-
-    .loong-phase:nth-of-type(even) .loong-body-text {
-      color: #2a1d12;
-    }
-
     /* Responsive */
     @media (max-width: 900px) {
       .loong-phase-header { grid-template-columns: 1fr; gap: 16px; }
@@ -701,10 +533,7 @@
       .loong-grid-2-3 { grid-template-columns: 1fr 1fr; gap: 10px; }
       .loong-hero-content { padding: 60px 24px; }
       .loong-phase { padding: 60px 0 50px; }
-      .loong-body-text { font-size: 20px; padding-left: 0; line-height: 1.25; }
-      .loong-phase-title { font-size: 30px; }
-      .loong-phase-period { font-size: 14px; }
-      .loong-img-caption p { font-size: 10px; }
+      .loong-body-text { font-size: 14px; padding-left: 18px; }
     }
 
     @keyframes fadeInUp {
@@ -725,10 +554,9 @@
       <a href="index.html" class="logo" aria-label="LongGuoYan — Home">
         <img src="images/logo.png" class="logo-icon-img" alt="LongGuoYan Logo" />
       </a>
-            <nav id="desktop-nav" role="navigation" aria-label="Main navigation">
+      <nav id="desktop-nav" role="navigation" aria-label="Main navigation">
         <a href="index.html">Home</a>
-        <a href="about.html">About Us</a>
-        <a href="loong-culture.html" class="active" aria-current="page">Loong Culture</a>
+        <a href="about.html" class="active" aria-current="page">About Us</a>
         <a href="product.html">Products</a>
         <a href="news.html">News</a>
         <a href="cooperation.html">Partnerships</a>
@@ -742,10 +570,9 @@
     </div>
   </header>
 
-    <nav id="mobile-nav" class="mobile-nav" aria-label="Mobile navigation">
+  <nav id="mobile-nav" class="mobile-nav" aria-label="Mobile navigation">
     <a href="index.html">Home</a>
-    <a href="about.html">About Us</a>
-    <a href="loong-culture.html" class="active" aria-current="page">Loong Culture</a>
+    <a href="about.html" class="active" aria-current="page">About Us</a>
     <a href="product.html">Products</a>
     <a href="news.html">News</a>
     <a href="cooperation.html">Partnerships</a>
