@@ -4,26 +4,54 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>About Us | Longguoyan</title>
+  <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="about.css" />
 </head>
 <body>
   <div class="board-overlay">
     <main class="board-container">
-      <header class="board-header">
-        <div class="brand-lockup">
-          <img src="images/logo.png" alt="Longguoyan logo" />
-          <span class="brand-divider"></span>
-          <img src="images/guo.jpg" alt="Guizhou time-honored brand" />
+      <header id="header" class="board-header" role="banner">
+        <div class="container">
+          <a href="index.html" class="logo" aria-label="LongGuoYan — Home">
+            <img src="images/logo.png" class="logo-icon-img" alt="LongGuoYan Logo" />
+          </a>
+                <nav id="desktop-nav" role="navigation" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="about.html" class="active" aria-current="page">About Us</a>
+        <a href="loong-culture.html">Loong Culture</a>
+        <a href="product.html">Products</a>
+        <a href="news.html">News</a>
+        <a href="cooperation.html">Partnerships</a>
+        <a href="human.html">Careers</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+          <div class="header-phone" aria-label="Call us: 400-159-1958">400-159-1958</div>
+          <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobile-nav">
+            <span></span><span></span><span></span>
+          </button>
         </div>
       </header>
+
+        <nav id="mobile-nav" class="mobile-nav" aria-label="Mobile navigation">
+    <a href="index.html">Home</a>
+    <a href="about.html" class="active" aria-current="page">About Us</a>
+    <a href="loong-culture.html">Loong Culture</a>
+    <a href="product.html">Products</a>
+    <a href="news.html">News</a>
+    <a href="cooperation.html">Partnerships</a>
+    <a href="human.html">Careers</a>
+    <a href="contact.html">Contact</a>
+  </nav>
 
       <section class="top-grid" aria-label="Top presentation board">
         <article class="board-card company-profile">
           <h2>COMPANY PROFILE</h2>
           <div class="profile-text">
-            <p>Guizhou Longguoyan Distillery Co., Ltd. is rooted in Maotai Town, the world-renowned core region for premium sauce-aroma liquor production.</p>
-            <p>From raw material selection to multi-cycle fermentation and cellar aging, every step follows disciplined craftsmanship and strict quality standards.</p>
-            <p>Longguoyan combines traditional brewing wisdom with modern brand strategy to deliver premium spirits across domestic and international markets.</p>
+            <p>Guizhou Longguoyan Distillery Co., Ltd. is located in Maotai Town, Guizhou Province, China — the world-renowned core production area for sauce-aroma liquor. As a long-established and reputable liquor enterprise in Maotai Town, Longguoyan has always adhered to the inheritance and development of ancient brewing craftsmanship, and has been recognized as a Guizhou Time-Honored Brand by the Department of Commerce of Guizhou Province.</p>
+            <p>Longguoyan liquor selects high-quality local Hongyingzi glutinous sorghum, wheat and water from Guizhou as its raw materials. We uphold the concept of natural, pure-grain solid-state fermentation, and follow the scientific and unique traditional sauce-aroma brewing craftsmanship. Each product is elaborately brewed by national-level distilling masters.</p>
+            <p>Guizhou Longguoyan Distillery Co., Ltd. always adheres to the development strategy of Quality First and Long-Termism, strictly controls every link in the production process, and ensures the steady and long-term development of the enterprise.</p>
+            <p>In terms of brand building, Longguoyan launched its global cultural brand strategy in 2019, and has continuously carried out high-standard brand promotion projects, including CCTV advertising, national high-speed rail advertising, highway outdoor advertising, and high-end tasting events.</p>
+            <p>Brewed by Time, Honoring the Classics.<br>Longguoyan — A Fine Sauce-Aroma liquor.<br>Savor China, Share the Sauce-Aroma with the World.</p>
           </div>
           <img class="profile-map" src="images/Profile.jpg" alt="Global distribution map and company profile" />
         </article>
@@ -51,14 +79,16 @@
         <article class="board-card core-region">
           <h2>CORE PRODUCTION REGION</h2>
           <p class="card-note">Maotai Town, Guizhou Province</p>
-          <div class="image-stack-3">
+          <div class="image-stack-4">
             <img src="images/资源 6.png" alt="Aerial view of Maotai production region" />
             <img src="images/资源 7.png" alt="Traditional architecture and valley" />
-            <img src="images/资源 8.png" alt="Scenic landscape of production area" />
+            <img src="images/资源 8.png" alt="Sorghum fields" />
+            <img src="images/资源 6.png" alt="Scenic landscape of production area" />
           </div>
         </article>
       </section>
 
+      <!-- BOTTOM SECTION: 5 COLUMNS (WIDE) -->
       <section class="bottom-grid" aria-label="Bottom presentation board">
         <article class="board-card">
           <h2>TIME-HONORED</h2>
@@ -75,7 +105,7 @@
           <div class="honors-top">
             <article class="award-tile">
               <p class="award-series">Longguoyan·Longmai 15</p>
-              <h3 class="award-title">CONCOURS MONDIAL<br />DE BRUXELLES</h3>
+              <h3 class="award-title">CONCOURS MONDIAL<br>DE BRUXELLES</h3>
               <p class="award-rank">GOLD</p>
               <div class="award-badge-row">
                 <img class="award-badge" src="images/资源 22.png" alt="Concours Mondial De Bruxelles award badge" />
@@ -84,7 +114,7 @@
             </article>
             <article class="award-tile">
               <p class="award-series">Longguoyan·Longmai 15</p>
-              <h3 class="award-title">ISGC 2024 INTERNATIONAL<br />SPIRITS GRAND PRIX, CHINA.</h3>
+              <h3 class="award-title">ISGC 2024 INTERNATIONAL<br>SPIRITS GRAND PRIX, CHINA.</h3>
               <p class="award-rank">GOLD</p>
               <div class="award-badge-row">
                 <img class="award-badge" src="images/资源 21.png" alt="ISGC 2024 award badge" />
@@ -95,7 +125,7 @@
           <div class="honors-middle">
             <article class="award-tile">
               <p class="award-series">Longguoyan · Jiaocang jiu wu zhi zun 30</p>
-              <h3 class="award-title">2025 TGA NEW ALCOHOLIC PRODUCT<br />“QINGZHUO AWARD” FOR BAIJIU</h3>
+              <h3 class="award-title">2025 TGA NEW ALCOHOLIC PRODUCT<br>“QINGZHUO AWARD” FOR BAIJIU</h3>
               <p class="award-rank">Qingzhuo Award</p>
               <div class="award-badge-row">
                 <img class="award-badge" src="images/资源 34.png" alt="Qingzhuo award badge" />
@@ -157,10 +187,80 @@
         </article>
       </section>
 
-      <footer class="board-footer">
-        <img src="images/long.png" alt="Guizhou Longguoyan Distillery Co., Ltd." />
+      <footer role="contentinfo">
+        <div class="footer-top">
+          <div class="container">
+            <div class="footer-top-grid">
+              <div class="ft-content reveal">
+                <div class="section-en">Stay Connected</div>
+                <h2 class="section-title">Follow LongGuoYan</h2>
+                <div class="section-line"><span>◆</span></div>
+                <p class="ft-desc">Follow us for the latest news, exclusive offers, and behind-the-scenes content from our Maotai Town distillery.</p>
+                <div class="ft-contact-social">
+                  <div class="ft-social-links">
+                    <a href="https://www.facebook.com/LongguoyanOfficial" class="ft-social-link" target="_blank" rel="noopener" aria-label="Follow us on Facebook">
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.41c0-3.025 1.792-4.697 4.533-4.697 1.312 0 2.686.236 2.686.236v2.97h-1.513c-1.491 0-1.956.93-1.956 1.884v2.27h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/></svg>
+                    </a>
+                    <a href="https://www.instagram.com/longguoyanofficial/" class="ft-social-link" target="_blank" rel="noopener" aria-label="Follow us on Instagram">
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+                    </a>
+                    <a href="https://x.com/LongGuoYan" class="ft-social-link" target="_blank" rel="noopener" aria-label="Follow us on X (Twitter)">
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                    </a>
+                    <a href="https://www.tiktok.com/@longguoyanofficial" class="ft-social-link" target="_blank" rel="noopener" aria-label="Follow us on TikTok">
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.18 8.18 0 004.79 1.52V6.76a4.85 4.85 0 01-1.02-.07z"/></svg>
+                    </a>
+                    <a href="https://wa.me/4001591958" class="ft-social-link" target="_blank" rel="noopener" aria-label="Contact us on WhatsApp">
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.411 0 .01 5.403.007 12.04c0 2.12.552 4.188 1.597 6.06L0 24l6.105-1.595a11.81 11.81 0 005.936 1.598h.005c6.637 0 12.038-5.404 12.041-12.042a11.761 11.761 0 00-3.489-8.452z"/></svg>
+                    </a>
+                    <a href="https://www.youtube.com/@LongGuoYan" class="ft-social-link" target="_blank" rel="noopener" aria-label="Follow us on YouTube">
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+                    </a>
+                  </div>
+                  <div class="ft-contact-cta">
+                    <div class="ft-phone-label" style="font-size:12px; letter-spacing:1px; color:rgba(255,255,255,0.5);">Partnership:</div>
+                    <a href="tel:4001591958" class="ft-phone">400-159-1958</a>
+                  </div>
+                </div>
+              </div>
+              <div class="ft-qr-card reveal rd1">
+                <img src="https://www.longguoyan.com/_20190924/1324283689.png" alt="WeChat QR Code" loading="lazy" />
+                <div class="ft-qr-label">
+                  <span>Scan the QR code to follow the official WeChat</span>
+                  <span>Official WeChat</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-main">
+          <div class="container">
+            <div class="footer-grid">
+              <div class="footer-brand">
+                <span class="logo-cn" lang="en">LongGuoYan</span>
+                <p class="footer-brand-text">Guizhou LongGuoYan Distillery Co., Ltd. — inheriting century-old techniques, crafting premium Sauce Aroma spirits in Maotai Town.</p>
+                <address class="footer-address">Chun Shu Village, Maotai Town, Renhuai, Guizhou<br /><a href="tel:4001591958" style="color:inherit;">400-159-1958</a></address>
+              </div>
+              <div class="footer-col"><h4>About</h4><ul><li><a href="about.html">Profile</a></li><li><a href="about.html">Heritage</a></li></ul></div>
+              <div class="footer-col"><h4>Collections</h4><ul><li><a href="product.html">Sauce Aroma</a></li><li><a href="product.html">Limited</a></li></ul></div>
+              <div class="footer-col"><h4>News</h4><ul><li><a href="news.html">Updates</a></li></ul></div>
+              <div class="footer-col"><h4>Connect</h4><ul><li><a href="cooperation.html">Partners</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <div class="container">
+            <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:20px;">
+              <div class="footer-copyright">Copyright © LongGuoYan Distillery Co. ALL Rights Reserved | ICP No. 19010301-1</div>
+              <div class="footer-links"><a href="contact.html">Disclaimer</a><a href="contact.html">Privacy Policy</a></div>
+            </div>
+          </div>
+        </div>
       </footer>
     </main>
   </div>
+  <script src="nav.js" defer></script>
+  <script src="chatbot.js" defer></script>
 </body>
 </html>
