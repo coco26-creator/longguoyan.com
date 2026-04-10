@@ -40,11 +40,6 @@ body {
   height: auto;
 }
 
-.page-banner {
-  width: calc(100% + 36px);
-  margin: 0 -18px 22px;
-}
-
 .brand-lockup {
   display: grid;
   grid-template-columns: auto auto auto;
@@ -327,7 +322,6 @@ img {
   .brand-divider { height: 44px; }
   .top-grid .board-card, .bottom-grid .board-card { min-height: unset; }
   .board-container { padding: 96px 14px 14px; }
-  .page-banner { width: calc(100% + 28px); margin: 0 -14px 14px; }
   .top-grid,
   .bottom-grid { width: 100%; margin: 0 auto; grid-template-columns: 1fr; }
   .board-card h2 { font-size: 14px; }
