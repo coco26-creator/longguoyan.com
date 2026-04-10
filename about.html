@@ -7,6 +7,36 @@
   <link rel="stylesheet" href="about.css" />
 </head>
 <body>
+  <header id="header" role="banner">
+  <div class="container">
+    <a href="index.html" class="logo" aria-label="LongGuoYan — Home">
+      <img src="images/logo.png" class="logo-icon-img" alt="LongGuoYan Logo" />
+    </a>
+    <nav id="desktop-nav" role="navigation" aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="about.html" class="active" aria-current="page">About Us</a>
+      <a href="product.html">Products</a>
+      <a href="news.html">News</a>
+      <a href="cooperation.html">Partnerships</a>
+      <a href="human.html">Careers</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="header-phone">400-159-1958</div>
+    <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobile-nav">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<nav id="mobile-nav" class="mobile-nav" aria-label="Mobile navigation">
+  <a href="index.html">Home</a>
+  <a href="about.html" class="active" aria-current="page">About Us</a>
+  <a href="product.html">Products</a>
+  <a href="news.html">News</a>
+  <a href="cooperation.html">Partnerships</a>
+  <a href="human.html">Careers</a>
+  <a href="contact.html">Contact</a>
+</nav>
   <div class="board-overlay">
     <main class="board-container">
       <header class="board-header">
@@ -172,5 +202,8 @@
       </footer>
     </main>
   </div>
+  
+  <script src="nav.js" defer></script>
+  <script src="chatbot.js" defer></script>
 </body>
 </html>
