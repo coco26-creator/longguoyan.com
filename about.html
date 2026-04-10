@@ -7,6 +7,37 @@
   <link rel="stylesheet" href="about.css" />
 </head>
 <body>
+  <header id="header" role="banner">
+    <div class="container">
+      <a href="index.html" class="logo" aria-label="LongGuoYan — Home">
+        <img src="images/logo.png" class="logo-icon-img" alt="LongGuoYan Logo" />
+      </a>
+      <nav id="desktop-nav" role="navigation" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="about.html" class="active" aria-current="page">About Us</a>
+        <a href="product.html">Products</a>
+        <a href="news.html">News</a>
+        <a href="cooperation.html">Partnerships</a>
+        <a href="human.html">Careers</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <div class="header-phone">400-159-1958</div>
+      <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobile-nav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <nav id="mobile-nav" class="mobile-nav" aria-label="Mobile navigation">
+    <a href="index.html">Home</a>
+    <a href="about.html" class="active" aria-current="page">About Us</a>
+    <a href="product.html">Products</a>
+    <a href="news.html">News</a>
+    <a href="cooperation.html">Partnerships</a>
+    <a href="human.html">Careers</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
   <div class="board-overlay">
     <main class="board-container">
       <header class="board-header">
@@ -17,13 +48,16 @@
         </div>
       </header>
 
+      <!-- TOP SECTION: 4 COLUMNS (NARROW) -->
       <section class="top-grid" aria-label="Top presentation board">
         <article class="board-card company-profile">
           <h2>COMPANY PROFILE</h2>
           <div class="profile-text">
-            <p>Guizhou Longguoyan Distillery Co., Ltd. is rooted in Maotai Town, the world-renowned core region for premium sauce-aroma liquor production.</p>
-            <p>From raw material selection to multi-cycle fermentation and cellar aging, every step follows disciplined craftsmanship and strict quality standards.</p>
-            <p>Longguoyan combines traditional brewing wisdom with modern brand strategy to deliver premium spirits across domestic and international markets.</p>
+            <p>Guizhou Longguoyan Distillery Co., Ltd. is located in Maotai Town, Guizhou Province, China — the world-renowned core production area for sauce-aroma liquor. As a long-established and reputable liquor enterprise in Maotai Town, Longguoyan has always adhered to the inheritance and development of ancient brewing craftsmanship, and has been recognized as a Guizhou Time-Honored Brand by the Department of Commerce of Guizhou Province.</p>
+            <p>Longguoyan liquor selects high-quality local Hongyingzi glutinous sorghum, wheat and water from Guizhou as its raw materials. We uphold the concept of natural, pure-grain solid-state fermentation, and follow the scientific and unique traditional sauce-aroma brewing craftsmanship. Each product is elaborately brewed by national-level distilling masters.</p>
+            <p>Guizhou Longguoyan Distillery Co., Ltd. always adheres to the development strategy of Quality First and Long-Termism, strictly controls every link in the production process, and ensures the steady and long-term development of the enterprise.</p>
+            <p>In terms of brand building, Longguoyan launched its global cultural brand strategy in 2019, and has continuously carried out high-standard brand promotion projects, including CCTV advertising, national high-speed rail advertising, highway outdoor advertising, and high-end tasting events.</p>
+            <p>Brewed by Time, Honoring the Classics.<br>Longguoyan — A Fine Sauce-Aroma liquor.<br>Savor China, Share the Sauce-Aroma with the World.</p>
           </div>
           <img class="profile-map" src="images/Profile.jpg" alt="Global distribution map and company profile" />
         </article>
@@ -51,14 +85,16 @@
         <article class="board-card core-region">
           <h2>CORE PRODUCTION REGION</h2>
           <p class="card-note">Maotai Town, Guizhou Province</p>
-          <div class="image-stack-3">
+          <div class="image-stack-4">
             <img src="images/资源 6.png" alt="Aerial view of Maotai production region" />
             <img src="images/资源 7.png" alt="Traditional architecture and valley" />
-            <img src="images/资源 8.png" alt="Scenic landscape of production area" />
+            <img src="images/资源 8.png" alt="Sorghum fields" />
+            <img src="images/资源 6.png" alt="Scenic landscape of production area" />
           </div>
         </article>
       </section>
 
+      <!-- BOTTOM SECTION: 5 COLUMNS (WIDE) -->
       <section class="bottom-grid" aria-label="Bottom presentation board">
         <article class="board-card">
           <h2>TIME-HONORED</h2>
@@ -75,7 +111,7 @@
           <div class="honors-top">
             <article class="award-tile">
               <p class="award-series">Longguoyan·Longmai 15</p>
-              <h3 class="award-title">CONCOURS MONDIAL<br />DE BRUXELLES</h3>
+              <h3 class="award-title">CONCOURS MONDIAL<br>DE BRUXELLES</h3>
               <p class="award-rank">GOLD</p>
               <div class="award-badge-row">
                 <img class="award-badge" src="images/资源 22.png" alt="Concours Mondial De Bruxelles award badge" />
@@ -84,7 +120,7 @@
             </article>
             <article class="award-tile">
               <p class="award-series">Longguoyan·Longmai 15</p>
-              <h3 class="award-title">ISGC 2024 INTERNATIONAL<br />SPIRITS GRAND PRIX, CHINA.</h3>
+              <h3 class="award-title">ISGC 2024 INTERNATIONAL<br>SPIRITS GRAND PRIX, CHINA.</h3>
               <p class="award-rank">GOLD</p>
               <div class="award-badge-row">
                 <img class="award-badge" src="images/资源 21.png" alt="ISGC 2024 award badge" />
@@ -95,7 +131,7 @@
           <div class="honors-middle">
             <article class="award-tile">
               <p class="award-series">Longguoyan · Jiaocang jiu wu zhi zun 30</p>
-              <h3 class="award-title">2025 TGA NEW ALCOHOLIC PRODUCT<br />“QINGZHUO AWARD” FOR BAIJIU</h3>
+              <h3 class="award-title">2025 TGA NEW ALCOHOLIC PRODUCT<br>“QINGZHUO AWARD” FOR BAIJIU</h3>
               <p class="award-rank">Qingzhuo Award</p>
               <div class="award-badge-row">
                 <img class="award-badge" src="images/资源 34.png" alt="Qingzhuo award badge" />
