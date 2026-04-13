@@ -18,10 +18,13 @@
   <noscript><link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@300;400;500;600;700&family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap" rel="stylesheet"></noscript>
   <style>
     .honor-card-img { background: var(--card-bg); border: 1px solid var(--border); overflow: hidden; transition: var(--transition); }
+    .honor-grid { row-gap: 36px; align-items: stretch; }
+    .honor-card-img { display: flex; flex-direction: column; height: 100%; }
     .honor-card-img:hover { transform: translateY(-6px); box-shadow: 0 12px 40px rgba(212,175,55,0.15); border-color: var(--gold); }
     .honor-card-img img { width: 100%; aspect-ratio: 3/4; object-fit: contain; background: #0D0A06; display: block; transition: transform 0.5s ease; }
     .honor-card-img:hover img { transform: scale(1.04); }
     .honor-card-img .honor-caption { padding: 16px 20px; border-top: 1px solid var(--border); }
+    .honor-card-img .honor-caption { margin-top: auto; }
     .honor-card-img .honor-name { font-size: 13px; color: var(--text-main); letter-spacing: 0.5px; font-weight: 600; line-height: 1.5; margin-bottom: 6px; }
     .honor-card-img .honor-year { font-family: 'Cinzel', serif; font-size: 11px; color: var(--gold); letter-spacing: 2px; }
     .brewing-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; margin-top: 40px; }
@@ -48,9 +51,10 @@
       <a href="index.html" class="logo" aria-label="LongGuoYan — Home">
         <img src="images/logo.png" class="logo-icon-img" alt="LongGuoYan Logo" />
       </a>
-      <nav id="desktop-nav" role="navigation" aria-label="Main navigation">
+            <nav id="desktop-nav" role="navigation" aria-label="Main navigation">
         <a href="index.html">Home</a>
         <a href="about.html" class="active" aria-current="page">About Us</a>
+        <a href="loong-culture.html">Loong Culture</a>
         <a href="product.html">Products</a>
         <a href="news.html">News</a>
         <a href="cooperation.html">Partnerships</a>
@@ -64,9 +68,10 @@
     </div>
   </header>
 
-  <nav id="mobile-nav" class="mobile-nav" aria-label="Mobile navigation">
+    <nav id="mobile-nav" class="mobile-nav" aria-label="Mobile navigation">
     <a href="index.html">Home</a>
     <a href="about.html" class="active" aria-current="page">About Us</a>
+    <a href="loong-culture.html">Loong Culture</a>
     <a href="product.html">Products</a>
     <a href="news.html">News</a>
     <a href="cooperation.html">Partnerships</a>
