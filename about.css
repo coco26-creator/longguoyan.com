@@ -75,7 +75,7 @@ body {
 }
 
 .bottom-grid {
-  width: 100%;
+  width: 110%;
   margin: 0 auto 0 -5%;
   grid-template-columns: repeat(5, minmax(0, 1fr));
 }
@@ -297,7 +297,7 @@ img {
   aspect-ratio: 16 / 8;
 }
 
-@media (max-width: 1320px) {
+@media (max-width: 1300px) {
   .top-grid { width: 100%; grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .bottom-grid { width: 100%; margin: 0 auto; grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
