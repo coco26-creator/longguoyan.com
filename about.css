@@ -77,7 +77,7 @@ body {
 .bottom-grid {
   width: 110%;
   margin: 0 auto 0 -5%;
-  grid-template-columns: repeat(3, minmax(0, 1fr)) repeat(2, minmax(0, 1.25fr));
+  grid-template-columns: repeat(5, minmax(0, 1fr));
 }
 
 
@@ -95,19 +95,6 @@ body {
 
 .top-grid .board-card { min-height: 340px; }
 .bottom-grid .board-card { min-height: 470px; } /* equal base card height */
-
-
-.bottom-grid .board-card:nth-child(4),
-.bottom-grid .board-card.cultural-marketing {
-  min-height: 540px;
-}
-
-.bottom-grid .board-card:nth-child(4) .image-stack-5 img,
-.cultural-marketing .image-stack-3 img {
-  aspect-ratio: 4 / 3;
-  object-fit: contain;
-  background: rgba(60, 34, 16, 0.35);
-}
 
 .board-card h2 {
   margin: 0;
@@ -321,7 +308,7 @@ img {
   .brand-lockup img:last-child { width: 130px; }
   .brand-divider { height: 44px; }
   .top-grid .board-card, .bottom-grid .board-card { min-height: unset; }
-  .board-container { padding: 96px 14px 14px; }
+  .board-container { padding: 14px; }
   .top-grid,
   .bottom-grid { width: 100%; margin: 0 auto; grid-template-columns: 1fr; }
   .board-card h2 { font-size: 14px; }
