@@ -75,7 +75,7 @@ body {
 }
 
 .bottom-grid {
-  width: 110%;
+  width: 100%;
   margin: 0 auto 0 -5%;
   grid-template-columns: repeat(5, minmax(0, 1fr));
 }
