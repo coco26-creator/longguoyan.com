@@ -38,11 +38,11 @@ function initChatbot() {
   const knowledgeBase = [
     {
       keywords: ['hello', 'hi', 'hey', 'greetings', 'morning', 'evening'],
-      response: "Hello! Welcome to LongGuoYan. How can I help you discover our premium Jiangxiang baijiu today?"
+      response: "Hello! Welcome to LongGuoYan. How can I help you discover our premium Sauce Aroma Distillery today?"
     },
     {
       keywords: ['product', 'collection', 'series', 'liquor', 'bottles', 'buy'],
-      response: "Our premium collection includes:<br><br>• **Cellar Supreme 30** — Pinnacle 30-year aged Jiangxiang<br>• **Dragon Vein 30** — Collector's 30-year vintage<br>• **Dragon Vein 15** — Brussels International Gold Award 2024<br>• **Limited Edition** — Collectible gold-plated dragon bottle<br>• **Mastercraft Supreme** — Imperial yellow glaze, ideal for gifting<br><br>Which one would you like to know more about?"
+      response: "Our premium collection includes:<br><br>• **Cellar Supreme 30** — Pinnacle 30-year aged Sauce Aroma<br>• **Dragon Vein 30** — Collector's 30-year vintage<br>• **Dragon Vein 15** — 2024 ISGC International Spirits Gold Award<br>• **Limited Edition** — Collectible gold-plated dragon bottle<br>• **Mastercraft Supreme** — Imperial yellow glaze, ideal for gifting<br><br>Which one would you like to know more about?"
     },
     {
       keywords: ['contact', 'phone', 'call', 'number', 'reach', 'support'],
@@ -50,7 +50,7 @@ function initChatbot() {
     },
     {
       keywords: ['location', 'where', 'address', 'place', 'village', 'visit', 'guizhou'],
-      response: "Our distillery is located at **Chun Shu Village, Maotai Town, Renhuai, Guizhou, China** — the world-renowned core production area for sauce-aroma Jiangxiang baijiu."
+      response: "Our distillery is located at **Chun Shu Village, Maotai Town, Renhuai, Guizhou, China** — the world-renowned core production area for Sauce Aroma Distillery."
     },
     {
       keywords: ['heritage', 'history', 'story', 'traditional', 'brew', 'distill', 'maotai', 'founded', '1958', 'time-honored'],
@@ -58,15 +58,15 @@ function initChatbot() {
     },
     {
       keywords: ['cellar', 'supreme', 'aged', 'years', 'dragon vein', '30', '15'],
-      response: "**Our Aged Collection:**\n\n• **Cellar Supreme 30** — Nine rounds of steaming, eight of fermentation, seven of extraction. Sealed in ceramic vats and aged naturally. Dragon-scale relief bottle with leather and gold-stamped gift box.\n• **Dragon Vein 30** — Kiln-transformation glazed bottle. Daqu Kunsha technique, vintage base spirit. Elegant, layered, full-bodied.\n• **Dragon Vein 15** — Brussels International Gold Award 2024. Special ceramic micro-oxygen bottle. Mellow and delicate with a long fragrant finish."
+      response: "**Our Aged Collection:**\n\n• **Cellar Supreme 30** — Nine rounds of steaming, eight of fermentation, seven of extraction. Sealed in ceramic vats and aged naturally. Dragon-scale relief bottle with leather and gold-stamped gift box.\n• **Dragon Vein 30** — Kiln-transformation glazed bottle. Daqu Kunsha technique, vintage base spirit. Elegant, layered, full-bodied.\n• **Dragon Vein 15** — 2024 ISGC Gold Award winner. Special ceramic micro-oxygen bottle. Mellow and delicate with a long fragrant finish."
     },
     {
       keywords: ['limited', 'edition', 'mastercraft', 'supreme', 'gift', 'collector', 'rare'],
-      response: "**The Limited &amp; Rare Series:**\n\n• **Limited Edition** — Gold-plated bottle with five-clawed dragon relief and sapphire-accented metal base. Collectible vintage Jiangxiang, limited release.\n• **Mastercraft Supreme** — Imperial yellow glaze, embossed dragon patterns, rose gold badge, and silk hand strap. Large-capacity gift specification — the finest choice for gifting distinguished guests."
+      response: "**The Limited &amp; Rare Series:**\n\n• **Limited Edition** — Gold-plated bottle with five-clawed dragon relief and sapphire-accented metal base. Collectible vintage Sauce Aroma, limited release.\n• **Mastercraft Supreme** — Imperial yellow glaze, embossed dragon patterns, rose gold badge, and silk hand strap. Large-capacity gift specification — the finest choice for gifting distinguished guests."
     },
     {
       keywords: ['award', 'brussels', 'gold', 'prize', 'recognition', 'honour'],
-      response: "LongGuoYan's international recognition includes:\n\n• **Brussels International Gold Award** — Dragon Vein 15 (2024)\n• **ISGC International Spirits Gold Award** — Dragon Vein 15 (2024)\n• **2024 International Tea Expo** — Tea &amp; Spirits Tasting Grand Prize\n• **5th Hainan Island International Film Festival** — Premier Cooperation Partner"
+      response: "LongGuoYan's international recognition includes:\n\n• **Brussels International Grand Gold Award** (2021)\n• **ISGC International Spirits Gold Award** (2024)\n• **Hong Kong International Wine & Spirit Competition** — Double Gold (2023)\n• **China Spirits Industry Association \"QingZhuo\" Award** (2024)\n• **Guizhou Time-Honored Brand** — Certified by Dept. of Commerce"
     },
     {
       keywords: ['partner', 'distribute', 'wholesale', 'cooperate', 'agent', 'business'],
@@ -129,12 +129,14 @@ function initChatbot() {
   let firstOpen = true;
   if (chatOpen && chat) {
     chatOpen.addEventListener('click', () => {
-      chat.classList.remove('hidden');
-      if (chatText) chatText.focus();
-      if (firstOpen) {
-        addMessage('bot', "Welcome to **LongGuoYan** — Brewed by Time, Honoring the Classics. How can I assist your discovery today?");
-        renderOptions();
-        firstOpen = false;
+      chat.classList.toggle('hidden');
+      if (!chat.classList.contains('hidden')) {
+        if (chatText) chatText.focus();
+        if (firstOpen) {
+          addMessage('bot', "Welcome to **LongGuoYan** — Brewed by Time, Honoring the Classics. How can I assist your discovery today?");
+          renderOptions();
+          firstOpen = false;
+        }
       }
     });
   }

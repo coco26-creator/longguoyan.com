@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const product = productsData[productId];
 
   // 2. Update Page Meta
-  document.title = `${product.nameEn} | LongGuoYan Baijiu`;
+  document.title = `${product.nameEn} | LongGuoYan Distillery`;
 
   // 3. Update Hero Section
   document.querySelector('.pd-series').textContent = product.series;
@@ -125,7 +125,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // 7. Update Related Products ("Explore More")
-  const relatedGrid = document.querySelector('.products-grid');
+  const relatedGrid = document.querySelector('.pd-related .products-grid');
   if (relatedGrid) {
     const relatedKeys = Object.keys(productsData).filter(k => k !== product.id);
     const shuffled = relatedKeys.sort(() => 0.5 - Math.random()).slice(0, 3);
@@ -149,5 +149,10 @@ document.addEventListener('DOMContentLoaded', () => {
         </article>
       `;
     }).join('');
+
+    // Re-observe for reveal animations
+    if (window.revealObserver) {
+      relatedGrid.querySelectorAll('.reveal').forEach(el => window.revealObserver.observe(el));
+    }
   }
 });
