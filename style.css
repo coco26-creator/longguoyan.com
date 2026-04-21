@@ -2307,6 +2307,51 @@ footer {
 }
 
 /* ============================================================
+   LEGAL PAGES
+   ============================================================ */
+.legal-page {
+  padding: 140px 0 80px;
+  background: #f8f8f8;
+}
+
+.legal-content {
+  max-width: 900px;
+  background: #fff;
+  border: 1px solid #e8e8e8;
+  border-radius: 10px;
+  padding: 42px 36px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.04);
+}
+
+.legal-content h1 { margin-bottom: 12px; }
+
+.legal-meta {
+  margin-bottom: 26px;
+  color: #666;
+}
+
+.legal-content h2 {
+  margin: 26px 0 10px;
+  font-size: 1.28rem;
+}
+
+.legal-content p,
+.legal-content li {
+  line-height: 1.8;
+  color: #333;
+}
+
+.legal-content ul {
+  margin: 0;
+  padding-left: 22px;
+}
+
+@media (max-width: 768px) {
+  .legal-page { padding: 110px 0 54px; }
+  .legal-content { padding: 30px 22px; }
+}
+
+/* ============================================================
    PRODUCT DETAIL PAGE
    ============================================================ */
 .product-detail-page {
