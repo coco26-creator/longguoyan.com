@@ -154,6 +154,33 @@
   const cookieBanner  = document.getElementById('cookieBanner');
   const acceptBtn     = document.getElementById('cookieAccept');
   const declineBtn    = document.getElementById('cookieDecline');
+  const CONSENT_COOKIE_NAME = 'lgy_cookie_consent';
+
+  function gtagConsentUpdate(consentState) {
+    window.dataLayer = window.dataLayer || [];
+    window.gtag = window.gtag || function(){ dataLayer.push(arguments); };
+    window.gtag('consent', 'update', consentState);
+  }
+
+  function allConsentGranted() {
+    gtagConsentUpdate({
+      ad_user_data: 'granted',
+      ad_personalization: 'granted',
+      ad_storage: 'granted',
+      analytics_storage: 'granted'
+    });
+  }
+
+  function allConsentDenied() {
+    gtagConsentUpdate({
+      ad_user_data: 'denied',
+      ad_personalization: 'denied',
+      ad_storage: 'denied',
+      analytics_storage: 'denied'
+    });
+  }
+
+  window.allConsentGranted = allConsentGranted;
 
   function getCookie(name) {
     return document.cookie.split('; ').find(r => r.startsWith(name + '='));
@@ -164,19 +191,30 @@
     document.cookie = name + '=' + value + ';expires=' + d.toUTCString() + ';path=/;SameSite=Lax';
   }
 
-  if (cookieBanner && !getCookie('lgy_cookie_consent')) {
+  const consentCookie = getCookie(CONSENT_COOKIE_NAME);
+  if (consentCookie && consentCookie.endsWith('accepted')) {
+    allConsentGranted();
+  } else if (consentCookie && consentCookie.endsWith('declined')) {
+    allConsentDenied();
+  } else {
+    allConsentDenied();
+  }
+
+  if (cookieBanner && !consentCookie) {
     setTimeout(() => cookieBanner.classList.add('show'), 1200);
   }
 
   if (acceptBtn) {
     acceptBtn.addEventListener('click', () => {
-      setCookie('lgy_cookie_consent', 'accepted', 365);
+      allConsentGranted();
+      setCookie(CONSENT_COOKIE_NAME, 'accepted', 365);
       cookieBanner.classList.remove('show');
     });
   }
   if (declineBtn) {
     declineBtn.addEventListener('click', () => {
-      setCookie('lgy_cookie_consent', 'declined', 30);
+      allConsentDenied();
+      setCookie(CONSENT_COOKIE_NAME, 'declined', 30);
       cookieBanner.classList.remove('show');
     });
   }
