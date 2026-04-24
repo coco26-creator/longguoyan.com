@@ -1,0 +1,33 @@
+# robots.txt — LongGuoYan Distillery Co., Ltd.
+# https://www.longguoyan1958.com
+
+User-agent: *
+Allow: /
+
+# Block server-side files
+Disallow: /node_modules/
+Disallow: /api/
+Disallow: /server.js
+Disallow: /.env
+
+# Sitemap location
+Sitemap: https://www.longguoyan1958.com/sitemap.xml
+
+# AI Crawlers — allow for brand discovery
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
