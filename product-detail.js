@@ -8,6 +8,20 @@ document.addEventListener('DOMContentLoaded', () => {
   }
   
   const product = productsData[productId];
+  window.LongGuoYanCurrentProduct = {
+    id: product.id,
+    name: product.nameEn,
+    series: product.series,
+    image: product.images[0] || ''
+  };
+
+  const basketButton = document.querySelector('.pd-btn-basket');
+  if (basketButton) {
+    basketButton.dataset.productId = product.id;
+    basketButton.dataset.productName = product.nameEn;
+    basketButton.dataset.productSeries = product.series;
+    basketButton.dataset.productImage = product.images[0] || '';
+  }
 
   // 2. Update Page Meta
   document.title = `${product.nameEn} | LongGuoYan Distillery`;
@@ -144,7 +158,10 @@ document.addEventListener('DOMContentLoaded', () => {
             <div class="product-series">${rel.series}</div>
             <h3 class="product-name">${rel.nameHTML.replace('<br/>', ' ')}</h3>
             <p class="product-desc" style="-webkit-line-clamp: 2; line-clamp: 2">${rel.tagline.replace(/"/g, '')}</p>
-            <a href="product-detail.html?id=${rel.id}" class="product-link">Discover →</a>
+            <div class="product-card-actions">
+              <a href="product-detail.html?id=${rel.id}" class="product-link">Discover →</a>
+              <button type="button" class="product-basket-btn" data-basket-add data-product-id="${rel.id}" data-product-name="${rel.nameEn}" data-product-series="${rel.series}" data-product-image="${rel.images[0]}">Add to Basket</button>
+            </div>
           </div>
         </article>
       `;
