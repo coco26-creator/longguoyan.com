@@ -82,11 +82,36 @@ document.addEventListener('DOMContentLoaded', () => {
     `;
     observeRevealElements(switcher);
   }
+  
+  const product = productsData[productId];
+  window.LongGuoYanCurrentProduct = {
+    id: product.id,
+    name: product.nameEn,
+    series: product.series,
+    image: product.images[0] || ''
+  };
 
-  function renderGallery(product) {
-    const mainImgElem = document.getElementById('mainProductImg');
-    if (!mainImgElem || !product.images.length) return;
+  const basketButton = document.querySelector('.pd-btn-basket');
+  if (basketButton) {
+    basketButton.dataset.productId = product.id;
+    basketButton.dataset.productName = product.nameEn;
+    basketButton.dataset.productSeries = product.series;
+    basketButton.dataset.productImage = product.images[0] || '';
+  }
 
+  // 2. Update Page Meta
+  document.title = `${product.nameEn} | LongGuoYan Distillery`;
+
+  // 3. Update Hero Section
+  document.querySelector('.pd-series').textContent = product.series;
+  document.querySelector('.pd-name').innerHTML = product.nameHTML;
+  document.querySelector('.pd-name-en').textContent = product.nameEn;
+  document.querySelector('.pd-tagline').textContent = product.tagline;
+  document.querySelector('.pd-badge').textContent = product.badge;
+
+  // 4. Update Images
+  const mainImgElem = document.getElementById('mainProductImg');
+  if (product.images.length > 0) {
     mainImgElem.src = product.images[0];
     mainImgElem.alt = product.nameEn;
 
@@ -202,12 +227,12 @@ document.addEventListener('DOMContentLoaded', () => {
             <div class="product-tag">${escapeHtml(rel.badge)}</div>
           </div>
           <div class="product-info">
-            <div class="product-series">${escapeHtml(rel.series)}</div>
-            <h3 class="product-name">${escapeHtml(textName(rel))}</h3>
-            <p class="product-desc" style="-webkit-line-clamp: 2; line-clamp: 2">${escapeHtml(rel.tagline.replace(/"/g, ''))}</p>
+            <div class="product-series">${rel.series}</div>
+            <h3 class="product-name">${rel.nameHTML.replace('<br/>', ' ')}</h3>
+            <p class="product-desc" style="-webkit-line-clamp: 2; line-clamp: 2">${rel.tagline.replace(/"/g, '')}</p>
             <div class="product-card-actions">
-              <a href="product-detail.html?id=${escapeHtml(rel.id)}" class="product-link">Discover →</a>
-              <button type="button" class="product-basket-btn" data-basket-add data-product-id="${escapeHtml(rel.id)}" data-product-name="${escapeHtml(rel.nameEn)}" data-product-series="${escapeHtml(rel.series)}" data-product-image="${escapeHtml(rel.images[0])}">Add to Basket</button>
+              <a href="product-detail.html?id=${rel.id}" class="product-link">Discover →</a>
+              <button type="button" class="product-basket-btn" data-basket-add data-product-id="${rel.id}" data-product-name="${rel.nameEn}" data-product-series="${rel.series}" data-product-image="${rel.images[0]}">Add to Basket</button>
             </div>
           </div>
         </article>
