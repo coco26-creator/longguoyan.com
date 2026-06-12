@@ -1,7 +1,4 @@
-// Product database for the product detail page.
-// This lightweight data shape is merged with the richer content in products.js
-// by product-detail.js so the page can show each bottle's core information,
-// gallery, tasting notes, craftsmanship, and enquiry basket metadata.
+// Product database
 const products = {
   'cellar-supreme-30': {
     id: 'cellar-supreme-30',
@@ -17,11 +14,11 @@ const products = {
     volume: '500ml',
     series: 'Pinnacle Collection',
     images: {
-      main: 'images/Cellar Supreme 30 1.jpg',
+      main: 'images/products/cellar-supreme-30-main.jpg',
       thumbs: [
-        'images/Cellar Supreme 30 1.jpg',
-        'images/Cellar Supreme 30 2.jpg',
-        'images/Cellar Supreme 30 3.jpg'
+        'images/products/cellar-supreme-30-1.jpg',
+        'images/products/cellar-supreme-30-2.jpg',
+        'images/products/cellar-supreme-30-3.jpg'
       ]
     }
   },
@@ -39,11 +36,11 @@ const products = {
     volume: '500ml',
     series: 'Collector\'s Edition',
     images: {
-      main: 'images/Dragon Vein 30 1.jpg',
+      main: 'images/products/dragon-vein-30-main.jpg',
       thumbs: [
-        'images/Dragon Vein 30 1.jpg',
-        'images/Dragon Vein 30 2.jpg',
-        'images/Dragon Vein 30 3.jpg'
+        'images/products/dragon-vein-30-1.jpg',
+        'images/products/dragon-vein-30-2.jpg',
+        'images/products/dragon-vein-30-3.jpg'
       ]
     }
   },
@@ -61,11 +58,11 @@ const products = {
     volume: '500ml',
     series: 'Pinnacle Collection',
     images: {
-      main: 'images/Limited Edition 1.jpg',
+      main: 'images/products/limited-edition-main.jpg',
       thumbs: [
-        'images/Limited Edition 1.jpg',
-        'images/Limited Edition 2.jpg',
-        'images/Limited Edition 3.jpg'
+        'images/products/limited-edition-1.jpg',
+        'images/products/limited-edition-2.jpg',
+        'images/products/limited-edition-3.jpg'
       ]
     }
   },
@@ -83,11 +80,11 @@ const products = {
     volume: '500ml',
     series: 'Premium Collection',
     images: {
-      main: 'images/Dragon-Vein-15 主图-1.jpg',
+      main: 'images/products/dragon-vein-15-main.jpg',
       thumbs: [
-        'images/Dragon-Vein-15 主图-1.jpg',
-        'images/Dragon Vein 15 2.jpg',
-        'images/Dragon Vein 15 3.jpg'
+        'images/products/dragon-vein-15-1.jpg',
+        'images/products/dragon-vein-15-2.jpg',
+        'images/products/dragon-vein-15-3.jpg'
       ]
     }
   },
@@ -105,14 +102,98 @@ const products = {
     volume: '750ml',
     series: 'Gift Collection',
     images: {
-      main: 'images/Premium Edition 1.jpg',
+      main: 'images/products/mastercraft-supreme-main.jpg',
       thumbs: [
-        'images/Premium Edition 1.jpg',
-        'images/Premium Edition 2.jpg',
-        'images/Premium Edition 3.jpg'
+        'images/products/mastercraft-supreme-1.jpg',
+        'images/products/mastercraft-supreme-2.jpg',
+        'images/products/mastercraft-supreme-3.jpg'
       ]
     }
   }
 };
 
-window.products = products;
+// Load product data on page load
+document.addEventListener('DOMContentLoaded', function() {
+  // Get product ID from URL
+  const urlParams = new URLSearchParams(window.location.search);
+  const productId = urlParams.get('id') || 'cellar-supreme-30';
+  
+  // Get product data
+  const product = products[productId];
+  
+  if (!product) {
+    console.error('Product not found:', productId);
+    return;
+  }
+  
+  // Update page title
+  document.title = `${product.fullName} | LongGuoYan Distillery`;
+  
+  // Update product badge
+  const badge = document.querySelector('.pd-badge');
+  if (badge) badge.textContent = product.badge;
+  
+  // Update product name
+  const nameCn = document.querySelector('.pd-name');
+  if (nameCn) nameCn.innerHTML = `${product.nameCn}<br><em>${product.nameEn}</em>`;
+  
+  // Update full name
+  const fullName = document.querySelector('.pd-name-en');
+  if (fullName) fullName.textContent = product.fullName;
+  
+  // Update tagline
+  const tagline = document.querySelector('.pd-tagline');
+  if (tagline) tagline.textContent = `"${product.tagline}"`;
+  
+  // Update specs
+  const specs = {
+    'Aroma Type': product.aromaType,
+    'Ageing': product.ageing,
+    'Alcohol': product.alcohol,
+    'Origin': product.origin,
+    'Volume': product.volume,
+    'Series': product.series
+  };
+  
+  document.querySelectorAll('.pd-spec').forEach((spec, index) => {
+    const entries = Object.entries(specs);
+    if (entries[index]) {
+      const label = spec.querySelector('.pd-spec-label');
+      const value = spec.querySelector('.pd-spec-value');
+      if (label) label.textContent = entries[index][0];
+      if (value) value.textContent = entries[index][1];
+    }
+  });
+  
+  // Update main image
+  const mainImg = document.querySelector('.pd-main-img img');
+  if (mainImg) {
+    mainImg.src = product.images.main;
+    mainImg.alt = product.fullName;
+  }
+  
+  // Update thumbnail images
+  const thumbs = document.querySelectorAll('.pd-thumb img');
+  thumbs.forEach((thumb, index) => {
+    if (product.images.thumbs[index]) {
+      thumb.src = product.images.thumbs[index];
+      thumb.alt = `${product.fullName} - View ${index + 1}`;
+    }
+  });
+  
+  // Add thumbnail click handlers
+  document.querySelectorAll('.pd-thumb').forEach((thumb, index) => {
+    thumb.addEventListener('click', function() {
+      document.querySelectorAll('.pd-thumb').forEach(t => t.classList.remove('active'));
+      this.classList.add('active');
+      const mainImg = document.querySelector('.pd-main-img img');
+      if (mainImg && product.images.thumbs[index]) {
+        mainImg.src = product.images.thumbs[index];
+      }
+    });
+  });
+  
+  // Set first thumb as active
+  const firstThumb = document.querySelector('.pd-thumb');
+  if (firstThumb) firstThumb.classList.add('active');
+});
